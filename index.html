@@ -645,18 +645,18 @@
 
         <!-- Desktop links -->
         <div class="hidden lg:flex items-center gap-8">
-          <a href="#certificado" class="nav-link text-sm uppercase tracking-wider">Certificado</a>
-          <a href="#publico" class="nav-link text-sm uppercase tracking-wider">Público-Alvo</a>
-          <a href="#palestrantes" class="nav-link text-sm uppercase tracking-wider">Palestrantes</a>
-          <a href="#palestras" class="nav-link text-sm uppercase tracking-wider">Palestras</a>
-          <a href="#sobre" class="nav-link text-sm uppercase tracking-wider">Sobre</a>
-          <a href="#faq" class="nav-link text-sm uppercase tracking-wider">FAQ</a>
+          <a href="#certificado" class="nav-link text-xs uppercase tracking-wider">Certificado</a>
+          <a href="#publico" class="nav-link text-xs uppercase tracking-wider">Público-Alvo</a>
+          <a href="#palestrantes" class="nav-link text-xs uppercase tracking-wider">Palestrantes</a>
+          <a href="#palestras" class="nav-link text-xs uppercase tracking-wider">Palestras</a>
+          <a href="#sobre" class="nav-link text-xs uppercase tracking-wider">Sobre</a>
+          <a href="#faq" class="nav-link text-xs uppercase tracking-wider">FAQ</a>
         </div>
 
         <!-- CTA + Hamburger -->
         <div class="flex items-center gap-5">
           <a href="#ingressos"
-            class="hidden sm:inline-flex items-center brand-gradient-bg text-white font-bold text-xs uppercase tracking-widest px-8 py-3 signature-shape-sm hover:scale-105 transition-all shadow-lg shadow-brand-teal/20">
+            class="hidden sm:inline-flex items-center brand-gradient-bg text-white font-bold text-xs uppercase tracking-widest px-6 py-2.5 signature-shape-sm hover:scale-105 transition-all shadow-md shadow-brand-teal/20">
             GARANTIR INGRESSO
           </a>
 
@@ -730,9 +730,9 @@
               class="inline-flex items-center gap-2 bg-brand-white/5 border border-brand-teal/30 signature-shape-sm px-6 py-2 mb-10 reveal reveal-delay-1 backdrop-blur-md">
               <span class="live-dot w-2 h-2 rounded-full bg-brand-green1 shadow-[0_0_10px_#6FB03A]"
                 aria-hidden="true"></span>
-              <span class="text-brand-white text-xs font-bold tracking-widest uppercase">Vagas Limitadas</span>
+              <span class="text-brand-white text-sm font-bold tracking-widest uppercase">Vagas Limitadas</span>
               <span class="text-brand-teal/50 px-1">·</span>
-              <span class="text-brand-white/80 text-xs font-medium uppercase tracking-wider">Evento Presencial</span>
+              <span class="text-brand-white/80 text-sm font-medium uppercase tracking-wider">Evento Presencial</span>
             </div>
 
             <!-- TITLE & DESCRIPTION -->
@@ -800,7 +800,7 @@
               <form action="/api/register" method="POST" class="space-y-4 registration-form">
                 <div class="group">
                   <label for="f-name"
-                    class="block text-brand-white/40 font-black text-[11px] uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
+                    class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
                     Completo</label>
                   <input type="text" id="f-name" name="nome" placeholder="Seu nome" required
                     class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm">
@@ -808,7 +808,7 @@
 
                 <div class="group">
                   <label for="f-email"
-                    class="block text-brand-white/40 font-black text-[11px] uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
+                    class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
                     Profissional</label>
                   <input type="email" id="f-email" name="email" placeholder="seu@email.com" required
                     class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm">
@@ -817,13 +817,13 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div class="group">
                     <label for="f-tel"
-                      class="block text-brand-white/40 font-black text-[11px] uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
+                      class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
                     <input type="tel" id="f-tel" name="telefone" placeholder="(00) 00000-0000" required
                       class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm tel-input">
                   </div>
                   <div class="group">
                     <label for="f-area"
-                      class="block text-brand-white/40 font-black text-[11px] uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
+                      class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
                       Área</label>
                     <select id="f-area" name="area" required
                       class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm appearance-none">
@@ -837,7 +837,7 @@
                 </div>
 
                 <button type="submit"
-                  class="w-full brand-gradient-bg text-brand-dark font-black text-[11px] uppercase tracking-[0.2em] py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
+                  class="w-full brand-gradient-bg text-brand-dark font-black text-sm uppercase tracking-[0.2em] py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
                   <span class="btn-text">GARANTIR MINHA VAGA</span>
                 </button>
               </form>
@@ -846,29 +846,29 @@
             <!-- Countdown -->
             <div class="w-full max-w-md reveal reveal-delay-5">
               <p
-                class="text-brand-white/30 text-[9px] uppercase tracking-[0.5em] mb-6 font-black text-center lg:text-left">
+                class="text-brand-white/30 text-[11px] uppercase tracking-[0.5em] mb-6 font-black text-center lg:text-left">
                 Faltam para o início</p>
 
               <div class="grid grid-cols-4 gap-2 sm:gap-3">
                 <div class="bg-brand-white/5 border border-brand-white/10 signature-shape-sm p-4 text-center">
                   <div class="font-impact text-3xl sm:text-4xl text-brand-green1 leading-none mb-1" id="cd-days">--
                   </div>
-                  <div class="text-[8px] text-brand-white/40 uppercase tracking-widest font-bold">Dias</div>
+                  <div class="text-[11px] text-brand-white/40 uppercase tracking-widest font-bold">Dias</div>
                 </div>
                 <div class="bg-brand-white/5 border border-brand-white/10 signature-shape-sm p-4 text-center">
                   <div class="font-impact text-3xl sm:text-4xl text-brand-white leading-none mb-1" id="cd-hours">--
                   </div>
-                  <div class="text-[8px] text-brand-white/40 uppercase tracking-widest font-bold">Hrs</div>
+                  <div class="text-[11px] text-brand-white/40 uppercase tracking-widest font-bold">Hrs</div>
                 </div>
                 <div class="bg-brand-white/5 border border-brand-white/10 signature-shape-sm p-4 text-center">
                   <div class="font-impact text-3xl sm:text-4xl text-brand-white leading-none mb-1" id="cd-minutes">--
                   </div>
-                  <div class="text-[8px] text-brand-white/40 uppercase tracking-widest font-bold">Min</div>
+                  <div class="text-[11px] text-brand-white/40 uppercase tracking-widest font-bold">Min</div>
                 </div>
                 <div class="bg-brand-white/5 border border-brand-white/10 signature-shape-sm p-4 text-center">
                   <div class="font-impact text-3xl sm:text-4xl text-brand-teal leading-none mb-1" id="cd-seconds">--
                   </div>
-                  <div class="text-[8px] text-brand-white/40 uppercase tracking-widest font-bold">Seg</div>
+                  <div class="text-[11px] text-brand-white/40 uppercase tracking-widest font-bold">Seg</div>
                 </div>
               </div>
             </div>
@@ -952,15 +952,15 @@
             <div
               class="relative bg-white signature-shape p-8 border border-brand-teal/20 group hover:border-brand-teal transition-all shadow-sm">
               <div
-                class="absolute -top-3 left-8 brand-gradient-bg text-brand-dark text-[10px] font-black px-5 py-1.5 signature-shape-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20">
+                class="absolute -top-3 left-8 brand-gradient-bg text-brand-dark text-sm font-black px-5 py-1.5 signature-shape-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20">
                 Oficina de Drone</div>
               <div class="flex items-center gap-8 w-full pt-4">
                 <div class="flex flex-col items-center justify-center min-w-[80px]">
                   <span class="font-impact text-6xl text-brand-dark leading-none">14</span>
-                  <span class="text-brand-dark/40 font-black text-[10px] uppercase mt-2 tracking-[0.2em]">AGO/26</span>
+                  <span class="text-brand-dark/40 font-black text-sm uppercase mt-2 tracking-[0.2em]">AGO/26</span>
                 </div>
                 <div class="flex-1">
-                  <p class="text-[10px] font-black text-brand-teal uppercase tracking-[0.3em] mb-2">Treinamento em Campo
+                  <p class="text-sm font-black text-brand-teal uppercase tracking-[0.3em] mb-2">Treinamento em Campo
                   </p>
                   <p class="font-bold text-brand-dark text-xl sm:text-2xl leading-tight">Oficina Prática de Drone e
                     Mapeamento</p>
@@ -974,10 +974,10 @@
               <div class="flex items-center gap-8 w-full">
                 <div class="flex flex-col items-center justify-center min-w-[80px]">
                   <span class="font-impact text-6xl text-brand-dark leading-none">15</span>
-                  <span class="text-brand-dark/40 font-black text-[10px] uppercase mt-2 tracking-[0.2em]">AGO/26</span>
+                  <span class="text-brand-dark/40 font-black text-sm uppercase mt-2 tracking-[0.2em]">AGO/26</span>
                 </div>
                 <div class="flex-1">
-                  <p class="text-[10px] font-black text-brand-teal uppercase tracking-[0.3em] mb-2">Congresso</p>
+                  <p class="text-sm font-black text-brand-teal uppercase tracking-[0.3em] mb-2">Congresso</p>
                   <p class="font-bold text-brand-dark text-xl sm:text-2xl leading-tight">Palestras e Inteligência
                     Geográfica</p>
                 </div>
@@ -999,7 +999,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-[10px] uppercase tracking-widest mb-6 inline-block">Networking</span>
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-sm uppercase tracking-widest mb-6 inline-block">Networking</span>
           <h2 class="font-display font-black text-brand-white mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">PARA QUEM É O <br><span
               class="brand-gradient-text">CONGRESSO</span></h2>
@@ -1013,7 +1013,7 @@
             class="reveal reveal-delay-1 bg-brand-white/5 p-8 border border-brand-teal/10 signature-shape hover:border-brand-green1/40 transition-all group">
 
             <h3 class="font-bold text-brand-white text-xl mb-4 uppercase tracking-wider">Engenheiros e Cartógrafos</h3>
-            <p class="text-brand-white/50 text-sm leading-relaxed">Profissionais que buscam dominar as novas ferramentas
+            <p class="text-brand-white/70 text-base leading-relaxed">Profissionais que buscam dominar as novas ferramentas
               de mapeamento digital e processamento de dados geoespaciais.</p>
           </div>
 
@@ -1021,7 +1021,7 @@
             class="reveal reveal-delay-2 bg-brand-white/5 p-8 border border-brand-teal/10 signature-shape hover:border-brand-green1/40 transition-all group">
 
             <h3 class="font-bold text-brand-white text-xl mb-4 uppercase tracking-wider">Gestores Públicos</h3>
-            <p class="text-brand-white/50 text-sm leading-relaxed">Servidores e gestores que necessitam alinhar
+            <p class="text-brand-white/70 text-base leading-relaxed">Servidores e gestores que necessitam alinhar
               processos de fiscalização e monitoramento com tecnologias de ponta.</p>
           </div>
 
@@ -1029,7 +1029,7 @@
             class="reveal reveal-delay-3 bg-brand-white/5 p-8 border border-brand-teal/10 signature-shape hover:border-brand-green1/40 transition-all group">
 
             <h3 class="font-bold text-brand-white text-xl mb-4 uppercase tracking-wider">Empresas de Tecnologia</h3>
-            <p class="text-brand-white/50 text-sm leading-relaxed">Desenvolvedores e empreendedores focados em soluções
+            <p class="text-brand-white/70 text-base leading-relaxed">Desenvolvedores e empreendedores focados em soluções
               GIS, sensoriamento remoto e inteligência geoespacial.</p>
           </div>
 
@@ -1037,7 +1037,7 @@
             class="reveal reveal-delay-1 bg-brand-white/5 p-8 border border-brand-teal/10 signature-shape hover:border-brand-green1/40 transition-all group">
 
             <h3 class="font-bold text-brand-white text-xl mb-4 uppercase tracking-wider">Peritos e Consultores</h3>
-            <p class="text-brand-white/50 text-sm leading-relaxed">Profissionais que utilizam o mapeamento como prova
+            <p class="text-brand-white/70 text-base leading-relaxed">Profissionais que utilizam o mapeamento como prova
               técnica em laudos, perícias e consultorias de alto nível.</p>
           </div>
 
@@ -1045,7 +1045,7 @@
             class="reveal reveal-delay-2 bg-brand-white/5 p-8 border border-brand-teal/10 signature-shape hover:border-brand-green1/40 transition-all group">
 
             <h3 class="font-bold text-brand-white text-xl mb-4 uppercase tracking-wider">Advogados do Setor</h3>
-            <p class="text-brand-white/50 text-sm leading-relaxed">Juristas que buscam compreender a base técnica do
+            <p class="text-brand-white/70 text-base leading-relaxed">Juristas que buscam compreender a base técnica do
               mapeamento para fortalecer teses e defesas ambientais.</p>
           </div>
 
@@ -1053,7 +1053,7 @@
             class="reveal reveal-delay-3 bg-brand-white/5 p-8 border border-brand-teal/10 signature-shape hover:border-brand-green1/40 transition-all group">
 
             <h3 class="font-bold text-brand-white text-xl mb-4 uppercase tracking-wider">Estudantes e Pesquisadores</h3>
-            <p class="text-brand-white/50 text-sm leading-relaxed">Futuros profissionais em busca de networking e
+            <p class="text-brand-white/70 text-base leading-relaxed">Futuros profissionais em busca de networking e
               atualização sobre o que há de mais moderno no mercado real.</p>
           </div>
         </div>
@@ -1069,7 +1069,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-[10px] uppercase tracking-widest mb-6 inline-block">Lineup</span>
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-sm uppercase tracking-widest mb-6 inline-block">Lineup</span>
           <h2 class="font-display font-black text-brand-dark mb-6 uppercase tracking-tight break-words"
             style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">PALESTRANTES <br><span
               class="brand-gradient-text">CONFIRMADOS</span></h2>
@@ -1087,7 +1087,7 @@
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text transition-colors">
                   Vitor do Sacramento</h3>
-                <p class="text-brand-green1 text-[10px] font-black uppercase tracking-wider mb-3 leading-tight break-words">Geólogo (UNB) com MBA</p>
+                <p class="text-brand-green1 text-sm font-black uppercase tracking-wider mb-3 leading-tight break-words">Geólogo (UNB) com MBA</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1102,7 +1102,7 @@
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text transition-colors">Rodolfo Finatti</h3>
-                <p class="text-brand-green1 text-[10px] font-black uppercase tracking-wider mb-3 leading-tight break-words">Geógrafo (UNESP), PhD em Geografia (USP)</p>
+                <p class="text-brand-green1 text-sm font-black uppercase tracking-wider mb-3 leading-tight break-words">Geógrafo (UNESP), PhD em Geografia (USP)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1117,7 +1117,7 @@
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text transition-colors">Henrique Gonzalez</h3>
-                <p class="text-brand-green1 text-[10px] font-black uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental (UFRJ)</p>
+                <p class="text-brand-green1 text-sm font-black uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental (UFRJ)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1132,7 +1132,7 @@
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text transition-colors">Matheus Villela</h3>
-                <p class="text-brand-green1 text-[10px] font-black uppercase tracking-wider mb-3 leading-tight break-words">Geógrafo (UnB) – Esp. em Georreferenciamento (Faculdade Prominas)</p>
+                <p class="text-brand-green1 text-sm font-black uppercase tracking-wider mb-3 leading-tight break-words">Geógrafo (UnB) – Esp. em Georreferenciamento (Faculdade Prominas)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1146,7 +1146,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-[10px] uppercase tracking-widest mb-6 inline-block">Cronograma</span>
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-sm uppercase tracking-widest mb-6 inline-block">Cronograma</span>
           <h2 class="font-display font-black text-brand-white mb-6 uppercase tracking-tight break-words"
             style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">PROGRAMAÇÃO <br><span
               class="brand-gradient-text">TÉCNICA</span></h2>
@@ -1157,11 +1157,11 @@
         <!-- Tabs -->
         <div class="flex flex-wrap gap-4 justify-center mb-16 reveal" role="tablist" aria-label="Dias do congresso">
           <button
-            class="tab-btn active px-8 py-4 signature-shape-sm font-black text-xs uppercase tracking-widest transition-all"
+            class="tab-btn active px-8 py-4 signature-shape-sm font-black text-sm uppercase tracking-widest transition-all"
             onclick="showTab('day14')" role="tab" aria-selected="true" aria-controls="day14" id="tab-day14">14 AGO —
             OFICINA</button>
           <button
-            class="tab-btn px-8 py-4 signature-shape-sm font-black text-xs uppercase tracking-widest transition-all"
+            class="tab-btn px-8 py-4 signature-shape-sm font-black text-sm uppercase tracking-widest transition-all"
             onclick="showTab('day15')" role="tab" aria-selected="false" aria-controls="day15" id="tab-day15">15 AGO —
             CONGRESSO</button>
         </div>
@@ -1172,8 +1172,8 @@
             <div class="mb-10 text-center sm:text-left">
 
               <div>
-                <h3 class="font-bold text-brand-white text-2xl uppercase tracking-wider">Oficina de Drone</h3>
-                <p class="text-brand-green1 font-black text-[10px] uppercase tracking-[0.2em] mt-1">Treinamento Prático
+                <h3 class="font-bold text-brand-white text-2xl uppercase tracking-wider">Oficina de mapeamento com drones</h3>
+                <p class="text-brand-green1 font-black text-sm uppercase tracking-[0.2em] mt-1">Treinamento Prático
                   em Campo</p>
               </div>
             </div>
@@ -1181,10 +1181,10 @@
               class="bg-brand-dark/50 signature-shape-sm p-8 border border-brand-white/5 flex items-start gap-6 hover:border-brand-teal/30 transition-all">
 
               <div>
-                <p class="text-brand-teal font-black text-[10px] uppercase tracking-widest mb-2">Full Day · 09h às 17h
+                <p class="text-brand-teal font-black text-sm uppercase tracking-widest mb-2">Full Day · 09h às 17h
                 </p>
-                <p class="font-bold text-brand-white text-xl mb-3">Mapeamento Aéreo e Processamento</p>
-                <p class="text-brand-white/50 text-sm leading-relaxed">Dia exclusivo para inscritos no Ingresso Pro.
+                <p class="font-bold text-brand-white text-xl mb-3">Aquisição e Processamento de Dados Aerofotogramétricos com Drone RTK/PPK</p>
+                <p class="text-brand-white/70 text-base leading-relaxed">Dia exclusivo para inscritos no Ingresso Pro.
                   Abordaremos desde o plano de voo até o processamento inicial de nuvem de pontos e ortomosaico.</p>
               </div>
             </div>
@@ -1198,19 +1198,27 @@
 
               <div>
                 <h3 class="font-bold text-brand-white text-2xl uppercase tracking-wider">Congresso CBMIG</h3>
-                <p class="text-brand-green1 font-black text-[10px] uppercase tracking-[0.2em] mt-1">Ciclo de Palestras e
+                <p class="text-brand-green1 font-black text-sm uppercase tracking-[0.2em] mt-1">Ciclo de Palestras e
                   Networking</p>
               </div>
             </div>
             <div class="space-y-6">
+
               <div
                 class="bg-brand-dark/50 signature-shape-sm p-8 border border-brand-white/5 flex items-start gap-6 hover:border-brand-teal/30 transition-all">
 
                 <div>
-                  <p class="text-brand-green1 font-black text-[10px] uppercase tracking-widest mb-2">Manhã e Tarde</p>
-                  <p class="font-bold text-brand-white text-xl mb-3">Inteligência Geográfica e Mercado</p>
-                  <p class="text-brand-white/50 text-sm leading-relaxed">Série de palestras com os maiores nomes do
-                    setor, focadas em novas tecnologias, legislação e oportunidades de mercado.</p>
+                  <p class="text-brand-green1 font-black text-sm uppercase tracking-widest mb-2">15h às 16h</p>
+                  <p class="font-bold text-brand-white text-xl mb-3">Precisão Posicional em Aerofotogrametria com RPAS: limites, desafios e boas práticas</p>
+                  <p class="text-brand-white/70 text-base font-medium leading-relaxed mt-2">Palestrante: Matheus Villela</p>
+                </div>
+              </div>
+              <div
+                class="bg-brand-dark/50 signature-shape-sm p-8 border border-brand-white/5 border-dashed flex items-center justify-center opacity-70 transition-all hover:opacity-100">
+
+                <div class="w-full text-center py-4">
+                  <p class="font-bold text-brand-white/80 text-lg mb-2">Demais temas a confirmar</p>
+                  <p class="text-brand-white/50 text-sm leading-relaxed">Em breve divulgaremos a programação completa com os demais palestrantes e horários.</p>
                 </div>
               </div>
             </div>
@@ -1235,7 +1243,7 @@
                 class="inline-block w-full max-w-lg lg:max-w-xl shadow-2xl signature-shape hover:scale-105 transition-transform duration-700">
               <div
                 class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-dark signature-shape-sm backdrop-blur-xl border border-white/20 flex items-center justify-center p-4 shadow-xl">
-                <p class="text-white font-black text-[10px] text-center uppercase leading-tight">16 Horas de
+                <p class="text-white font-black text-sm text-center uppercase leading-tight">16 Horas de
                   <br>Certificação</p>
               </div>
             </div>
@@ -1244,7 +1252,7 @@
           <!-- Text -->
           <div class="reveal reveal-delay-2 text-brand-dark">
             <span
-              class="bg-brand-dark/10 px-5 py-1.5 signature-shape-sm font-black text-[10px] uppercase tracking-widest mb-8 inline-block">Reconhecimento</span>
+              class="bg-brand-dark/10 px-5 py-1.5 signature-shape-sm font-black text-sm uppercase tracking-widest mb-8 inline-block">Reconhecimento</span>
             <h2 class="font-display font-black mb-8 uppercase tracking-tight"
               style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">VALORIZE SEU <br>CURRÍCULO</h2>
             <p class="text-brand-dark/80 text-xl leading-relaxed mb-10 font-medium">
@@ -1296,7 +1304,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-[10px] uppercase tracking-widest mb-6 inline-block">Vagas
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-sm uppercase tracking-widest mb-6 inline-block">Vagas
             Limitadas</span>
           <h2 class="font-display font-black text-brand-white mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">ESCOLHA SEU <br><span
@@ -1310,12 +1318,12 @@
           <!-- Básico -->
           <div
             class="reveal reveal-delay-1 bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-teal/40 transition-all group">
-            <p class="font-black text-brand-teal text-[11px] uppercase tracking-[0.3em] mb-6">Ingresso Básico</p>
+            <p class="font-black text-brand-teal text-sm uppercase tracking-[0.3em] mb-6">Ingresso Básico</p>
             <div class="mb-2">
               <span class="font-impact text-brand-white" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 397</span>
               <span class="text-brand-white/40 text-sm font-bold">,00</span>
             </div>
-            <p class="text-brand-white/30 text-xs font-black uppercase tracking-widest mb-10">Lote de Pré-Venda</p>
+            <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-10">Lote de Pré-Venda</p>
 
             <ul class="space-y-5 mb-12 flex-1">
               <li class="flex items-start gap-4 text-brand-white/70 text-sm">
@@ -1330,7 +1338,7 @@
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="font-medium">Material de Apoio Digital</span>
+                <span class="font-medium">Gravações das Palestras</span>
               </li>
               <li class="flex items-start gap-4 text-brand-white/70 text-sm">
                 <svg class="w-5 h-5 text-brand-teal flex-shrink-0" fill="none" viewBox="0 0 24 24"
@@ -1342,7 +1350,7 @@
             </ul>
 
             <button onclick="selectTicket('basico')"
-              class="w-full py-5 signature-shape border-2 border-brand-teal text-brand-teal font-black text-xs uppercase tracking-[0.2em] group-hover:bg-brand-teal group-hover:text-brand-dark transition-all">
+              class="w-full py-5 signature-shape border-2 border-brand-teal text-brand-teal font-black text-sm uppercase tracking-[0.2em] group-hover:bg-brand-teal group-hover:text-brand-dark transition-all">
               SELECIONAR BÁSICO
             </button>
           </div>
@@ -1351,15 +1359,15 @@
           <div
             class="reveal reveal-delay-2 bg-brand-white/10 signature-shape p-10 border-2 border-brand-green1 flex flex-col relative shadow-2xl shadow-brand-green1/10 hover:scale-[1.02] transition-all">
             <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-dark font-black text-[9px] px-6 py-2 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
+              class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-dark font-black text-[11px] px-6 py-2 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
               MAIS VENDIDO</div>
 
-            <p class="font-black text-brand-green1 text-[11px] uppercase tracking-[0.3em] mb-6">Ingresso Pro</p>
+            <p class="font-black text-brand-green1 text-sm uppercase tracking-[0.3em] mb-6">Ingresso Pro</p>
             <div class="mb-2">
               <span class="font-impact text-brand-white" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 497</span>
               <span class="text-brand-white/40 text-sm font-bold">,00</span>
             </div>
-            <p class="text-brand-white/30 text-xs font-black uppercase tracking-widest mb-10">Lote de Pré-Venda</p>
+            <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-10">Lote de Pré-Venda</p>
 
             <ul class="space-y-5 mb-12 flex-1">
               <li class="flex items-start gap-4 text-brand-white/90 text-sm">
@@ -1376,17 +1384,11 @@
                 </svg>
                 <span class="font-bold">OFICINA PRÁTICA (Dia 14)</span>
               </li>
-              <li class="flex items-start gap-4 text-brand-white/90 text-sm">
-                <svg class="w-5 h-5 text-brand-green1 flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-bold">Gravação das Palestras (Overdelivery)</span>
-              </li>
+
             </ul>
 
             <button onclick="selectTicket('pro')"
-              class="w-full py-5 signature-shape brand-gradient-bg text-brand-dark font-black text-xs uppercase tracking-[0.2em] shadow-lg shadow-brand-green1/20 hover:scale-105 transition-all">
+              class="w-full py-5 signature-shape brand-gradient-bg text-brand-dark font-black text-sm uppercase tracking-[0.2em] shadow-lg shadow-brand-green1/20 hover:scale-105 transition-all">
               GARANTIR INGRESSO PRO
             </button>
           </div>
@@ -1404,7 +1406,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-[10px] uppercase tracking-widest mb-6 inline-block">Dúvidas</span>
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-dark font-black text-sm uppercase tracking-widest mb-6 inline-block">Dúvidas</span>
           <h2 class="font-display font-black text-brand-dark mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">PERGUNTAS <br><span
               class="brand-gradient-text">FREQUENTES</span></h2>
@@ -1425,7 +1427,7 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-gray-500 text-xs sm:text-sm leading-relaxed pt-1">Sim. Todos os
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Sim. Todos os
                 participantes recebem certificado digital com carga horária de 16h, válido nacionalmente. O documento é
                 enviado por e-mail na semana seguinte ao evento.</p>
             </div>
@@ -1445,7 +1447,7 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-gray-500 text-xs sm:text-sm leading-relaxed pt-1">O CBMIG 2026 é
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">O CBMIG 2026 é
                 100% presencial, focado em networking real e experiência prática. O local exato será definido em breve
                 na cidade de São Paulo/SP.</p>
             </div>
@@ -1465,7 +1467,7 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-gray-500 text-xs sm:text-sm leading-relaxed pt-1">Aceitamos cartões de crédito (com parcelamento em até 12x), boleto bancário e PIX. Para inscrições corporativas em grupo, entre em contato com nosso suporte via WhatsApp.</p>
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Aceitamos cartões de crédito (com parcelamento em até 12x), boleto bancário e PIX. Para inscrições corporativas em grupo, entre em contato com nosso suporte via WhatsApp.</p>
             </div>
           </div>
 
@@ -1483,7 +1485,7 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-gray-500 text-xs sm:text-sm leading-relaxed pt-1">A gravação completa das palestras é um benefício exclusivo dos inscritos no <strong>Ingresso Pro</strong>. Os inscritos no Ingresso Básico terão acesso apenas à experiência presencial no dia do evento.</p>
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">A gravação completa das palestras é um benefício exclusivo dos inscritos no <strong>Ingresso Pro</strong>. Os inscritos no Ingresso Básico terão acesso apenas à experiência presencial no dia do evento.</p>
             </div>
           </div>
 
@@ -1501,7 +1503,7 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-gray-500 text-xs sm:text-sm leading-relaxed pt-1">Sim, teremos coffee breaks inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Sim, teremos coffee breaks inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
             </div>
           </div>
         </div>
@@ -1533,7 +1535,7 @@
       <form action="/api/register" method="POST" class="space-y-4 registration-form">
         <div class="group">
           <label for="m-name"
-            class="block text-brand-white/40 font-black text-[11px] uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
+            class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
             Completo</label>
           <input type="text" id="m-name" name="nome" placeholder="Seu nome" required
             class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm">
@@ -1541,7 +1543,7 @@
 
         <div class="group">
           <label for="m-email"
-            class="block text-brand-white/40 font-black text-[11px] uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
+            class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
             Profissional</label>
           <input type="email" id="m-email" name="email" placeholder="seu@email.com" required
             class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm">
@@ -1550,13 +1552,13 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="group">
             <label for="m-tel"
-              class="block text-brand-white/40 font-black text-[11px] uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
+              class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
             <input type="tel" id="m-tel" name="telefone" placeholder="(00) 00000-0000" required
               class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm tel-input">
           </div>
           <div class="group">
             <label for="m-area"
-              class="block text-brand-white/40 font-black text-[11px] uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
+              class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
               Área</label>
             <select id="m-area" name="area" required
               class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm appearance-none">
@@ -1570,7 +1572,7 @@
         </div>
 
         <button type="submit"
-          class="w-full brand-gradient-bg text-brand-dark font-black text-[11px] uppercase tracking-[0.2em] py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
+          class="w-full brand-gradient-bg text-brand-dark font-black text-sm uppercase tracking-[0.2em] py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
           <span class="btn-text">GARANTIR MINHA VAGA</span>
         </button>
       </form>
@@ -1583,13 +1585,13 @@
     ============================================================ -->
     <section class="py-16 sm:py-32 bg-brand-dark relative overflow-hidden" aria-label="Realização do congresso">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal relative z-10">
-        <p class="text-brand-white/50 font-black text-[10px] uppercase tracking-[0.4em] mb-6">Realização</p>
+        <p class="text-brand-white/50 font-black text-sm uppercase tracking-[0.4em] mb-6">Realização</p>
         <img src="public/logo-ambientalpro.png" alt="Ambiental Pro" class="h-20 sm:h-24 lg:h-32 mx-auto mb-10 object-contain">
         <p class="text-brand-white/80 text-xl max-w-2xl mx-auto leading-relaxed mb-12 font-medium break-words">
           A Ambiental Pro é o maior ecossistema de geotecnologias e inteligência ambiental da América Latina.
         </p>
         <a href="#ingressos"
-          class="inline-flex items-center gap-3 brand-gradient-bg text-brand-dark px-12 py-5 signature-shape font-black text-xs uppercase tracking-widest shadow-2xl hover:scale-105 transition-all">
+          class="inline-flex items-center gap-3 brand-gradient-bg text-brand-dark px-12 py-5 signature-shape font-black text-sm uppercase tracking-widest shadow-2xl hover:scale-105 transition-all">
           GARANTIR MINHA VAGA
           <svg class="w-5 h-5 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -1609,31 +1611,31 @@
 
         <div class="lg:col-span-2">
           <img src="logo.png" alt="Ambiental Pro Logo" class="h-8 mb-6 brightness-0 opacity-80">
-          <p class="text-brand-dark/60 text-xs leading-relaxed max-w-xs font-medium">
+          <p class="text-brand-dark/60 text-sm leading-relaxed max-w-xs font-medium">
             Congresso Brasileiro de Mapeamento e Inteligência Geográfica. 14 e 15 de agosto de 2026. São Paulo, SP.
           </p>
         </div>
 
         <div>
-          <h4 class="font-black text-brand-dark text-[10px] uppercase tracking-widest mb-6">Navegação</h4>
+          <h4 class="font-black text-brand-dark text-sm uppercase tracking-widest mb-6">Navegação</h4>
           <ul class="space-y-3">
             <li><a href="#sobre"
-                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-xs uppercase tracking-widest">Sobre</a>
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Sobre</a>
             </li>
             <li><a href="#palestrantes"
-                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-xs uppercase tracking-widest">Lineup</a>
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Lineup</a>
             </li>
             <li><a href="#palestras"
-                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-xs uppercase tracking-widest">Cronograma</a>
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Cronograma</a>
             </li>
             <li><a href="#ingressos"
-                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-xs uppercase tracking-widest">Ingressos</a>
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Ingressos</a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-black text-brand-dark text-[10px] uppercase tracking-widest mb-6">Suporte</h4>
+          <h4 class="font-black text-brand-dark text-sm uppercase tracking-widest mb-6">Suporte</h4>
           <div class="space-y-4">
             <a href="https://wa.link/6on3xe" target="_blank"
               class="flex items-center gap-3 text-brand-dark/60 hover:text-brand-teal transition-colors group">
@@ -1645,18 +1647,18 @@
                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
               </div>
-              <span class="font-bold text-xs uppercase tracking-widest">+55 21 98837-4133</span>
+              <span class="font-bold text-sm uppercase tracking-widest">+55 21 98837-4133</span>
             </a>
           </div>
         </div>
 
       </div>
       <div class="border-t border-brand-dark/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <p class="text-brand-dark/40 text-[10px] font-black uppercase tracking-[0.2em]">&copy; 2026 AMBIENTAL PRO.
+        <p class="text-brand-dark/40 text-sm font-black uppercase tracking-[0.2em]">&copy; 2026 AMBIENTAL PRO.
           TODOS OS DIREITOS RESERVADOS.</p>
         <div class="flex gap-8">
           <div class="w-10 h-px brand-gradient-bg opacity-30"></div>
-          <p class="text-brand-dark/40 text-[10px] font-black uppercase tracking-[0.2em]">CBMIG 2026</p>
+          <p class="text-brand-dark/40 text-sm font-black uppercase tracking-[0.2em]">CBMIG 2026</p>
         </div>
       </div>
     </div>
@@ -1698,26 +1700,26 @@
         <!-- Básico -->
         <div
           class="bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-teal/40 transition-all group">
-          <p class="font-black text-brand-teal text-[11px] uppercase tracking-[0.3em] mb-6">Ingresso Básico</p>
+          <p class="font-black text-brand-teal text-sm uppercase tracking-[0.3em] mb-6">Ingresso Básico</p>
           <div class="mb-2">
             <span class="font-impact text-brand-white" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span>
           </div>
-          <p class="text-brand-white/30 text-[11px] font-black uppercase tracking-widest mb-8">Lote de Pré-Venda</p>
+          <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-8">Lote de Pré-Venda</p>
           
           <ul class="space-y-3 mb-8 text-left">
-            <li class="flex items-center gap-3 text-brand-white/60 text-[10px] font-bold uppercase tracking-wider">
+            <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
               Acesso Palestras (Dia 15)
             </li>
-            <li class="flex items-center gap-3 text-brand-white/60 text-[10px] font-bold uppercase tracking-wider">
+            <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
               Material de Apoio
             </li>
-            <li class="flex items-center gap-3 text-brand-white/60 text-[10px] font-bold uppercase tracking-wider">
+            <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
@@ -1725,7 +1727,7 @@
             </li>
           </ul>
           <button onclick="selectTicket('basico')"
-            class="btn-basico w-full py-4 signature-shape border-2 border-brand-teal text-brand-teal font-black text-[10px] uppercase tracking-widest group-hover:bg-brand-teal group-hover:text-brand-dark transition-all">
+            class="btn-basico w-full py-4 signature-shape border-2 border-brand-teal text-brand-teal font-black text-sm uppercase tracking-widest group-hover:bg-brand-teal group-hover:text-brand-dark transition-all">
             SELECIONAR BÁSICO
           </button>
         </div>
@@ -1734,28 +1736,28 @@
         <div
           class="bg-brand-white/10 signature-shape p-10 border-2 border-brand-green1 flex flex-col relative shadow-2xl shadow-brand-green1/10">
           <div
-            class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-dark font-black text-[8px] px-4 py-1.5 signature-shape-sm uppercase tracking-widest">
+            class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-dark font-black text-[11px] px-4 py-1.5 signature-shape-sm uppercase tracking-widest">
             RECOMENDADO</div>
-          <p class="font-black text-brand-green1 text-[11px] uppercase tracking-[0.3em] mb-6">Ingresso Pro</p>
+          <p class="font-black text-brand-green1 text-sm uppercase tracking-[0.3em] mb-6">Ingresso Pro</p>
           <div class="mb-2">
             <span class="font-impact text-brand-white" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span>
           </div>
-          <p class="text-brand-white/30 text-[11px] font-black uppercase tracking-widest mb-8">Lote de Pré-Venda</p>
+          <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-8">Lote de Pré-Venda</p>
 
           <ul class="space-y-3 mb-8 text-left">
-            <li class="flex items-center gap-3 text-brand-white/90 text-[10px] font-bold uppercase tracking-wider">
+            <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
               Tudo do Básico
             </li>
-            <li class="flex items-center gap-3 text-brand-white/90 text-[10px] font-bold uppercase tracking-wider">
+            <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
               Oficina Prática (Dia 14)
             </li>
-            <li class="flex items-center gap-3 text-brand-white/90 text-[10px] font-bold uppercase tracking-wider">
+            <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
@@ -1763,7 +1765,7 @@
             </li>
           </ul>
           <button onclick="selectTicket('pro')"
-            class="btn-pro w-full py-4 signature-shape brand-gradient-bg text-brand-dark font-black text-[10px] uppercase tracking-widest shadow-lg shadow-brand-green1/20 hover:scale-105 transition-all">
+            class="btn-pro w-full py-4 signature-shape brand-gradient-bg text-brand-dark font-black text-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20 hover:scale-105 transition-all">
             GARANTIR INGRESSO PRO
           </button>
         </div>
