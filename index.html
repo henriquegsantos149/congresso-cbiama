@@ -264,19 +264,20 @@
     #mobile-menu {
       position: fixed;
       inset: 0;
-      z-index: 60;
-      background: rgba(0, 10, 25, 0.98);
+      z-index: 9999;
+      background: rgba(0, 10, 25, 0.99);
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.4s ease;
+      transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.35s ease;
       transform: translateX(100%);
       opacity: 0;
       pointer-events: none;
-      border-left: 1px solid rgba(0, 151, 178, 0.1);
+      overflow-y: auto;
+      padding: env(safe-area-inset-top, 20px) 24px env(safe-area-inset-bottom, 20px);
     }
 
     #mobile-menu.open {
@@ -287,13 +288,17 @@
 
     .mobile-link {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.75rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      color: #fff;
-      margin: 1rem 0;
+      color: rgba(255,255,255,0.9);
+      margin: 0.5rem 0;
+      padding: 0.5rem 1.5rem;
+      text-align: center;
       transition: all 0.3s ease;
       opacity: 0;
       transform: translateY(20px);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
 
     #mobile-menu.open .mobile-link {
@@ -672,24 +677,34 @@
       </div>
     </div>
 
-    <!-- Mobile menu (Overlay) -->
-    <div id="mobile-menu" aria-label="Menu mobile">
+    <!-- Mobile menu (Full-screen overlay) -->
+    <div id="mobile-menu" aria-label="Menu mobile" role="dialog" aria-modal="true">
+      <!-- Close button -->
       <button onclick="closeMobileMenu()"
-        class="absolute top-6 right-6 p-2 text-white/60 hover:text-white transition-colors" aria-label="Fechar menu">
-        <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        class="absolute top-5 right-5 p-2 text-white/60 hover:text-white transition-colors z-10"
+        aria-label="Fechar menu">
+        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      <div class="flex flex-col items-center text-center">
-        <img src="/logo.png" alt="CBMIG 2026" class="h-20 mb-12 opacity-80 drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
-        <a href="#certificado" class="mobile-link" onclick="closeMobileMenu()">Certificado</a>
-        <a href="#publico" class="mobile-link" onclick="closeMobileMenu()">Público-Alvo</a>
-        <a href="#palestrantes" class="mobile-link" onclick="closeMobileMenu()">Palestrantes</a>
-        <a href="#palestras" class="mobile-link" onclick="closeMobileMenu()">Palestras</a>
-        <a href="#sobre" class="mobile-link" onclick="closeMobileMenu()">Sobre o Congresso</a>
-        <a href="#faq" class="mobile-link" onclick="closeMobileMenu()">FAQ</a>
+
+      <!-- Content -->
+      <div class="flex flex-col items-center text-center w-full max-w-sm mx-auto">
+        <img src="/logo.png" alt="CBMIG 2026" class="h-14 mb-8 opacity-80">
+
+        <div class="w-16 h-px bg-brand-teal/30 mb-6"></div>
+
+        <a href="#certificado" class="mobile-link hover:text-brand-green1" onclick="closeMobileMenu()">Certificado</a>
+        <a href="#publico" class="mobile-link hover:text-brand-green1" onclick="closeMobileMenu()">Público-Alvo</a>
+        <a href="#palestrantes" class="mobile-link hover:text-brand-green1" onclick="closeMobileMenu()">Palestrantes</a>
+        <a href="#palestras" class="mobile-link hover:text-brand-green1" onclick="closeMobileMenu()">Palestras</a>
+        <a href="#sobre" class="mobile-link hover:text-brand-green1" onclick="closeMobileMenu()">Sobre</a>
+        <a href="#faq" class="mobile-link hover:text-brand-green1" onclick="closeMobileMenu()">FAQ</a>
+
+        <div class="w-16 h-px bg-brand-teal/30 my-6"></div>
+
         <a href="#ingressos"
-          class="mobile-link mt-8 bg-[#FFD11A] text-[#1B6E6E] px-10 py-4 rounded-full !opacity-100 !transform-none"
+          class="mobile-link !opacity-100 !transform-none brand-gradient-bg text-brand-dark font-black px-10 py-4 signature-shape-sm !text-base tracking-widest"
           onclick="closeMobileMenu()">QUERO PARTICIPAR</a>
       </div>
     </div>
@@ -1317,13 +1332,13 @@
 
           <!-- Básico -->
           <div
-            class="reveal reveal-delay-1 bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-teal/40 transition-all group">
+            class="reveal reveal-delay-1 bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-teal/40 hover:scale-[1.02] transition-all group">
             <p class="font-black text-brand-teal text-sm uppercase tracking-[0.3em] mb-6">Ingresso Básico</p>
             <div class="mb-2">
               <span class="font-impact text-brand-white" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 397</span>
-              <span class="text-brand-white/40 text-sm font-bold">,00</span>
+              <span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base">*</span></span>
             </div>
-            <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-10">Lote de Pré-Venda</p>
+            <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-10">Lote de Pré-Venda (exclusiva para alunos)</p>
 
             <ul class="space-y-5 mb-12 flex-1">
               <li class="flex items-start gap-4 text-brand-white/70 text-sm">
@@ -1353,6 +1368,7 @@
               class="w-full py-5 signature-shape border-2 border-brand-teal text-brand-teal font-black text-sm uppercase tracking-[0.2em] group-hover:bg-brand-teal group-hover:text-brand-dark transition-all">
               SELECIONAR BÁSICO
             </button>
+            <p class="text-brand-white/40 text-sm text-center mt-3">* Preço de estudante/meia solidária</p>
           </div>
 
           <!-- PRO -->
@@ -1365,9 +1381,9 @@
             <p class="font-black text-brand-green1 text-sm uppercase tracking-[0.3em] mb-6">Ingresso Pro</p>
             <div class="mb-2">
               <span class="font-impact text-brand-white" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 497</span>
-              <span class="text-brand-white/40 text-sm font-bold">,00</span>
+              <span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base">*</span></span>
             </div>
-            <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-10">Lote de Pré-Venda</p>
+            <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-10">Lote de Pré-Venda (exclusiva para alunos)</p>
 
             <ul class="space-y-5 mb-12 flex-1">
               <li class="flex items-start gap-4 text-brand-white/90 text-sm">
@@ -1391,6 +1407,7 @@
               class="w-full py-5 signature-shape brand-gradient-bg text-brand-dark font-black text-sm uppercase tracking-[0.2em] shadow-lg shadow-brand-green1/20 hover:scale-105 transition-all">
               GARANTIR INGRESSO PRO
             </button>
+            <p class="text-brand-white/40 text-sm text-center mt-3">* Preço de estudante/meia solidária</p>
           </div>
 
         </div>
@@ -1485,7 +1502,7 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">A gravação completa das palestras é um benefício exclusivo dos inscritos no <strong>Ingresso Pro</strong>. Os inscritos no Ingresso Básico terão acesso apenas à experiência presencial no dia do evento.</p>
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Sim! A gravação completa das palestras estará disponível para todos os inscritos, independente do ingresso. Após o evento, você receberá o acesso às gravações por e-mail.</p>
             </div>
           </div>
 
@@ -1503,7 +1520,7 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Sim, teremos coffee breaks inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Não, teremos coffee breaks inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
             </div>
           </div>
         </div>
@@ -1704,7 +1721,7 @@
           <div class="mb-2">
             <span class="font-impact text-brand-white" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span>
           </div>
-          <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-8">Lote de Pré-Venda</p>
+          <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-8">Lote de Pré-Venda (exclusiva para alunos)</p>
           
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
@@ -1742,7 +1759,7 @@
           <div class="mb-2">
             <span class="font-impact text-brand-white" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span>
           </div>
-          <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-8">Lote de Pré-Venda</p>
+          <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-8">Lote de Pré-Venda (exclusiva para alunos)</p>
 
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
