@@ -32,7 +32,7 @@
   <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="public/favicon.png" />
+  <link rel="icon" type="image/png" href="/assets/favicon-DPDuy3R3.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente – Inovação e tecnologia voltada à sustentabilidade. 15 de agosto de 2026, Presencial.">
@@ -57,7 +57,7 @@
           fontFamily: {
             display: ['"Outfit"', 'sans-serif'],
             body: ['"Montserrat"', 'sans-serif'],
-            impact: ['"Outfit"', 'sans-serif'],
+            impact: ['"Bebas Neue"', 'cursive'],
           },
           backgroundImage: {
             'brand-gradient': 'linear-gradient(90deg, #038C4C 0%, #034959 100%)',
@@ -71,7 +71,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap"
     rel="stylesheet">
 
   <style>
@@ -92,32 +92,45 @@
     }
 
     .brand-gradient-text {
-      color: #038C4C;
+      background: linear-gradient(90deg, #6FA638 0%, #038C4C 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .brand-gradient-text-light {
-      color: #6FA638;
+      background: linear-gradient(90deg, #F2F2F2 0%, #6FA638 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
+
+
     .brand-gradient-text-dark {
-      color: #034959;
+      background: linear-gradient(90deg, #010A15 0%, #038C4C 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .brand-gradient-bg {
-      background: #038C4C;
-      transition: background 0.3s ease;
-    }
-    .brand-gradient-bg:hover {
-      background: #034959;
+      background: linear-gradient(90deg, #038C4C 0%, #034959 100%);
     }
 
-    /* Signature Shape Minimalist */
+    /* Signature Shape */
     .signature-shape {
-      border-radius: 24px;
+      border-top-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
     }
 
     .signature-shape-sm {
-      border-radius: 12px;
+      border-top-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
     }
 
     /* Cartographic Grid */
@@ -135,13 +148,17 @@
       background-size: 25px 25px;
     }
 
-    /* Glow Lines - Removed for minimalism */
+    /* Glow Lines */
     .glow-line-h {
-      display: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #038C4C, #034959, transparent);
+      box-shadow: 0 0 15px rgba(3, 140, 76, 0.5);
     }
 
     .glow-line-v {
-      display: none;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, #038C4C, #034959, transparent);
+      box-shadow: 0 0 15px rgba(3, 140, 76, 0.5);
     }
 
     /* ============================================================
@@ -656,10 +673,10 @@
 
         <!-- Logo nav -->
         <a href="#hero"
-          class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-green1 rounded-xl p-1 group -ml-7 sm:-ml-10 lg:-ml-12"
+          class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-green1 rounded-xl p-1 group"
           aria-label="Início – Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente">
-          <img src="/logo.webp" alt="Logo do Congresso"
-            class="h-16 sm:h-20 object-contain drop-shadow-[0_4px_16px_rgba(115,140,108,0.3)] transition-all duration-500 group-hover:-translate-y-1"
+          <img src="/logo.png" alt="Logo do Congresso"
+            class="h-14 sm:h-16 object-contain drop-shadow-[0_4px_16px_rgba(115,140,108,0.3)] transition-all duration-500 group-hover:scale-105"
             width="280" height="80">
         </a>
 
@@ -668,6 +685,7 @@
           <a href="#certificado" class="nav-link text-xs uppercase tracking-wider">Certificado</a>
           <a href="#publico" class="nav-link text-xs uppercase tracking-wider">Público-Alvo</a>
           <a href="#palestrantes" class="nav-link text-xs uppercase tracking-wider">Palestrantes</a>
+          <a href="#palestras" class="nav-link text-xs uppercase tracking-wider">Palestras</a>
           <a href="#sobre" class="nav-link text-xs uppercase tracking-wider">Sobre</a>
           <a href="#faq" class="nav-link text-xs uppercase tracking-wider">FAQ</a>
         </div>
@@ -675,7 +693,7 @@
         <!-- CTA + Hamburger -->
         <div class="flex items-center gap-5">
           <a href="#ingressos"
-            class="hidden sm:inline-flex items-center brand-gradient-bg text-white font-bold text-xs uppercase tracking-widest px-6 py-2.5 signature-shape-sm hover:-translate-y-1 transition-all shadow-md shadow-brand-teal/20">
+            class="hidden sm:inline-flex items-center brand-gradient-bg text-white font-bold text-xs uppercase tracking-widest px-6 py-2.5 signature-shape-sm hover:scale-105 transition-all shadow-md shadow-brand-teal/20">
             GARANTIR INGRESSO
           </a>
 
@@ -700,13 +718,14 @@
       <a href="#certificado" class="mobile-link" onclick="closeMobileMenu()">Certificado</a>
       <a href="#publico" class="mobile-link" onclick="closeMobileMenu()">Público-Alvo</a>
       <a href="#palestrantes" class="mobile-link" onclick="closeMobileMenu()">Palestrantes</a>
+      <a href="#palestras" class="mobile-link" onclick="closeMobileMenu()">Palestras</a>
       <a href="#sobre" class="mobile-link" onclick="closeMobileMenu()">Sobre</a>
       <a href="#faq" class="mobile-link" onclick="closeMobileMenu()">FAQ</a>
       <!-- Divider -->
       <div style="height:1px; background: rgba(0,151,178,0.2); margin: 6px 8px;"></div>
       <!-- CTA -->
       <a href="#ingressos"
-        class="mobile-link brand-gradient-bg text-brand-white font-bold text-center"
+        class="mobile-link brand-gradient-bg text-brand-white font-black text-center"
         style="border-radius:10px; margin-top:2px;"
         onclick="closeMobileMenu()">QUERO PARTICIPAR</a>
     </div>
@@ -724,122 +743,176 @@
       <div
         class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(111,166,56,0.08)_0%,transparent_50%)]">
       </div>
-      <!-- Minimalist Dark Overlay -->
-      <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark via-brand-dark/95 to-brand-teal/15 pointer-events-none"></div>
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_80%_70%,rgba(3,140,76,0.08)_0%,transparent_50%)]">
+      </div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 w-full z-10">
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
-          <!-- LADO ESQUERDO: IDENTIDADE E APRESENTAÇÃO -->
-          <div class="lg:col-span-7 text-center lg:text-left">
-            <!-- Sleek Badge -->
+      <!-- Decorative blobs -->
+      <div
+        class="absolute top-20 right-0 w-[500px] h-[500px] bg-brand-green1/10 rounded-full blur-[120px] pointer-events-none"
+        aria-hidden="true"></div>
+      <div
+        class="absolute bottom-20 left-0 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[120px] pointer-events-none"
+        aria-hidden="true"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-24 w-full">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-4 items-start">
+
+          <!-- LADO ESQUERDO: IDENTIDADE E CTA -->
+          <div class="text-center lg:text-left relative z-10">
+            <!-- SELO -->
             <div
-              class="inline-flex items-center gap-3 bg-brand-white/[0.03] border border-brand-white/10 rounded-full px-5 py-2 mb-8 reveal backdrop-blur-sm">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
-              <span class="text-brand-white/90 text-xs font-semibold tracking-widest uppercase">Inscrições Abertas</span>
-              <span class="text-brand-white/20 text-xs">|</span>
-              <span class="text-brand-white/70 text-xs font-medium uppercase tracking-wider">São Paulo · Presencial</span>
+              class="inline-flex items-center gap-2 bg-brand-white/5 border border-brand-teal/30 signature-shape-sm px-6 py-2 mb-10 reveal reveal-delay-1 backdrop-blur-md">
+              <span class="live-dot w-2 h-2 rounded-full bg-brand-green1 shadow-[0_0_10px_#038C4C]"
+                aria-hidden="true"></span>
+              <span class="text-brand-white text-sm font-bold tracking-widest uppercase">Vagas Limitadas</span>
+              <span class="text-brand-green1/50 px-1">·</span>
+              <span class="text-brand-white/80 text-sm font-medium uppercase tracking-wider">Evento Presencial</span>
             </div>
 
-            <!-- Title -->
-            <h1 class="font-display leading-[1.05] text-brand-white mb-6 reveal" style="font-size: clamp(2.2rem, 5.5vw, 3.6rem); letter-spacing: -0.02em;">
-              <span class="font-light text-brand-white/50 block text-base sm:text-lg uppercase tracking-[0.3em] mb-4">Congresso Nacional</span>
-              <span class="font-extralight block tracking-tight text-brand-white/90">Inteligência Artificial</span>
-              <span class="font-black bg-gradient-to-r from-brand-teal via-[#4F9E43] to-[#8AD341] bg-clip-text text-transparent block mt-2 pb-1">
-                Aplicada ao Meio Ambiente
-              </span>
-            </h1>
-
-            <!-- Description -->
-            <p class="text-brand-white/70 text-base sm:text-lg font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-10 reveal">
-              O maior encontro de inteligência artificial aplicada à sustentabilidade ambiental do Brasil. Domine algoritmos, processamento de dados ecológicos e tecnologias inovadoras em um dia de imersão com grandes especialistas do setor.
-            </p>
+            <!-- TITLE & DESCRIPTION -->
+            <div class="reveal reveal-delay-2 mb-10 relative">
+              <h1 class="font-display font-black text-white leading-[1.05] mb-6 sm:mb-8"
+                style="font-size: clamp(1.2rem, 5.5vw, 2.4rem); letter-spacing: -0.01em;">
+                <span class="font-medium uppercase">CONGRESSO BRASILEIRO DE</span> <br>
+                <span class="brand-gradient-text uppercase inline-block my-1.5 sm:my-2"
+                  style="font-size: clamp(2.0rem, 9.5vw, 4.2rem); line-height: 1;">INTELIGÊNCIA ARTIFICIAL</span> <br>
+                <span class="text-white uppercase">APLICADA AO MEIO AMBIENTE</span>
+              </h1>
+              <p class="text-brand-white/80 text-lg sm:text-xl font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                O maior encontro de inteligência artificial aplicada à gestão e sustentabilidade ambiental do Brasil. Domine o uso de algoritmos, processamento de dados ecológicos e tecnologias inovadoras para preservação e monitoramento em um dia intenso de imersão com os maiores especialistas do setor.
+              </p>
+            </div>
  
-            <!-- Info Row -->
+            <!-- INFO LINE -->
             <div
-              class="reveal mb-8 flex flex-wrap justify-center lg:justify-start gap-8 text-brand-white/90 font-medium uppercase tracking-wider text-xs sm:text-sm">
-              <div class="flex items-center gap-3 border-r border-brand-white/10 pr-8 last:border-0 last:pr-0">
-                <svg class="w-4 h-4 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              class="reveal reveal-delay-3 mb-10 flex flex-wrap justify-center lg:justify-start gap-8 text-brand-white font-bold uppercase tracking-[0.2em] text-sm sm:text-base">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <span>15 de Agosto, 2026</span>
+                <span>15 DE AGOSTO DE 2026</span>
               </div>
               <div class="flex items-center gap-3">
-                <svg class="w-4 h-4 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="w-5 h-5 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>São Paulo / SP</span>
+                <span>SÃO PAULO / SP</span>
               </div>
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-6 reveal">
+              <a href="#ingressos"
+                class="group relative inline-flex items-center justify-center gap-4 brand-gradient-bg text-white font-black text-sm sm:text-base uppercase tracking-[0.2em] px-14 py-6 signature-shape shadow-[0_20px_50px_rgba(115,140,108,0.3)] hover:scale-105 transition-all active:scale-95">
+                <span>INSCREVA-SE AGORA</span>
+                <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
             </div>
           </div>
 
-          <!-- LADO DIREITO: FORM CARD & COUNTDOWN -->
-          <div class="lg:col-span-5 flex flex-col items-center gap-8">
-            <!-- Minimalist Form Card -->
+          <!-- LADO DIREITO: FORMULÁRIO E COUNTDOWN -->
+          <div class="flex flex-col items-center lg:items-center gap-8">
+            <!-- Form Card -->
             <div
-              class="w-full max-w-md bg-brand-white/[0.02] backdrop-blur-2xl border border-brand-white/10 rounded-2xl p-8 shadow-2xl relative reveal">
-              
-              <h3 class="text-brand-white font-semibold text-xs uppercase tracking-widest mb-6 flex items-center gap-3 border-b border-brand-white/10 pb-4">
-                <span>INSCRIÇÃO ONLINE</span>
+              class="w-full max-w-md bg-brand-white/5 backdrop-blur-xl border border-brand-white/10 signature-shape p-8 shadow-2xl relative reveal reveal-delay-4">
+              <div
+                class="absolute -top-4 -right-4 w-24 h-24 bg-brand-green1/10 rounded-full blur-2xl pointer-events-none">
+              </div>
+
+              <h3 class="text-brand-white font-black text-sm uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
+                Me inscrever agora
               </h3>
 
-              <form action="/api/register" method="POST" class="space-y-6 registration-form">
-                <div class="group relative">
+              <form action="/api/register" method="POST" class="space-y-4 registration-form">
+                <div class="group">
                   <label for="f-name"
-                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Nome Completo</label>
-                  <input type="text" id="f-name" name="nome" placeholder="Digite seu nome completo" required
-                    class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none">
+                    class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
+                    Completo</label>
+                  <input type="text" id="f-name" name="nome" placeholder="Seu nome" required
+                    class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm">
                 </div>
 
-                <div class="group relative">
+                <div class="group">
                   <label for="f-email"
-                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">E-mail Profissional</label>
+                    class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
+                    Profissional</label>
                   <input type="email" id="f-email" name="email" placeholder="seu@email.com" required
-                    class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none">
+                    class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm">
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div class="group relative">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="group">
                     <label for="f-tel"
-                      class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Telefone</label>
+                      class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
                     <input type="tel" id="f-tel" name="telefone" placeholder="(00) 00000-0000" required
-                      class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none tel-input">
+                      class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm tel-input">
                   </div>
-                  <div class="group relative">
+                  <div class="group">
                     <label for="f-area"
-                      class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Sua Área</label>
-                    <div class="relative">
-                      <select id="f-area" name="area" required
-                        class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none appearance-none cursor-pointer">
-                        <option value="" disabled selected class="bg-brand-dark">Selecione...</option>
-                        <option value="estudante" class="bg-brand-dark">Estudante</option>
-                        <option value="engenharia" class="bg-brand-dark">Engenharia</option>
-                        <option value="consultoria" class="bg-brand-dark">Consultoria</option>
-                        <option value="outro" class="bg-brand-dark">Outro</option>
-                      </select>
-                      <span class="absolute right-0 top-3 text-brand-white/30 pointer-events-none">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                      </span>
-                    </div>
+                      class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
+                      Área</label>
+                    <select id="f-area" name="area" required
+                      class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm appearance-none">
+                      <option value="" disabled selected>Selecione...</option>
+                      <option value="estudante">Estudante</option>
+                      <option value="engenharia">Engenharia</option>
+                      <option value="consultoria">Consultoria</option>
+                      <option value="outro">Outro</option>
+                    </select>
                   </div>
                 </div>
 
                 <button type="submit"
-                  class="w-full bg-brand-teal text-brand-white font-bold text-xs uppercase tracking-widest py-4 rounded-xl shadow-lg hover:bg-brand-teal/80 active:scale-95 transition-all mt-4 btn-submit">
+                  class="w-full brand-gradient-bg text-brand-white font-black text-sm uppercase tracking-[0.2em] py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
                   <span class="btn-text">GARANTIR MINHA VAGA</span>
                 </button>
               </form>
             </div>
 
             <!-- Countdown -->
-            <div class="w-full max-w-md reveal">
+            <div class="w-full max-w-md reveal reveal-delay-5">
               <p
-                class="text-brand-white/30 text-xs uppercase tracking-widest mb-4 font-semibold text-center">
+                class="text-brand-white/30 text-sm uppercase tracking-[0.5em] mb-6 font-black text-center lg:text-left">
                 Faltam para o início</p>
+
+              <div class="grid grid-cols-4 gap-2 sm:gap-3">
+                <div class="bg-brand-white/5 border border-brand-white/10 signature-shape-sm p-4 text-center">
+                  <div class="font-impact text-3xl sm:text-4xl text-brand-white leading-none mb-1" id="cd-days">--
+                  </div>
+                  <div class="text-[11px] text-brand-white/40 uppercase tracking-widest font-bold">Dias</div>
+                </div>
+                <div class="bg-brand-white/5 border border-brand-white/10 signature-shape-sm p-4 text-center">
+                  <div class="font-impact text-3xl sm:text-4xl text-brand-white leading-none mb-1" id="cd-hours">--
+                  </div>
+                  <div class="text-[11px] text-brand-white/40 uppercase tracking-widest font-bold">Hrs</div>
+                </div>
+                <div class="bg-brand-white/5 border border-brand-white/10 signature-shape-sm p-4 text-center">
+                  <div class="font-impact text-3xl sm:text-4xl text-brand-white leading-none mb-1" id="cd-minutes">--
+                  </div>
+                  <div class="text-[11px] text-brand-white/40 uppercase tracking-widest font-bold">Min</div>
+                </div>
+                <div class="bg-brand-white/5 border border-brand-white/10 signature-shape-sm p-4 text-center">
+                  <div class="font-impact text-3xl sm:text-4xl text-brand-white leading-none mb-1" id="cd-seconds">--
+                  </div>
+                  <div class="text-[11px] text-brand-white/40 uppercase tracking-widest font-bold">Seg</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
 
       </div>
 
@@ -877,33 +950,70 @@
         </div>
 
         <!-- Content -->
-        <div class="max-w-5xl mx-auto reveal space-y-8">
-          <div class="space-y-6">
-            <p class="text-brand-dark/70 text-lg leading-relaxed">
-              O congresso foi planejado para entregar atualização direta sobre as tecnologias que estão <strong
-                class="text-brand-teal">redefinindo a sustentabilidade e a conservação ambiental</strong>, capacitando profissionais para
-              dominarem o novo ecossistema de dados, sensoriamento e modelagem preditiva com IA.
-            </p>
-            <p class="text-brand-dark/70 text-lg leading-relaxed">
-              Ao longo da imersão, a programação prioriza a <strong class="text-brand-teal">aplicação prática e a
-                estratégia técnica</strong> diante das rápidas mudanças na área de inteligência artificial voltada ao meio ambiente.
-            </p>
-          </div>
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal space-y-8">
+            <div class="space-y-6">
+              <p class="text-brand-dark/70 text-lg leading-relaxed">
+                O congresso foi planejado para entregar atualização direta sobre as tecnologias que estão <strong
+                  class="text-brand-teal">redefinindo a sustentabilidade e a conservação ambiental</strong>, capacitando profissionais para
+                dominarem o novo ecossistema de dados, sensoriamento e modelagem preditiva com IA.
+              </p>
+              <p class="text-brand-dark/70 text-lg leading-relaxed">
+                Ao longo da imersão, a programação prioriza a <strong class="text-brand-teal">aplicação prática e a
+                  estratégia técnica</strong> diante das rápidas mudanças na área de inteligência artificial voltada ao meio ambiente.
+              </p>
+            </div>
 
-          <blockquote class="border-l-4 border-brand-teal pl-8 py-4 bg-brand-dark/5 signature-shape-sm">
-            <p class="text-brand-dark font-bold text-xl italic leading-relaxed">
-              "O ponto de encontro definitivo para quem busca alinhar tecnologia, IA e inovação na sustentabilidade ambiental brasileira."
-            </p>
-          </blockquote>
+            <blockquote class="border-l-4 border-brand-teal pl-8 py-4 bg-brand-dark/5 signature-shape-sm">
+              <p class="text-brand-dark font-bold text-xl italic leading-relaxed">
+                "O ponto de encontro definitivo para quem busca alinhar tecnologia, IA e inovação na sustentabilidade ambiental brasileira."
+              </p>
+            </blockquote>
 
-          <div class="flex justify-center pt-4">
             <a href="#ingressos"
-              class="inline-flex items-center gap-3 brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-widest px-10 py-5 signature-shape shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
+              class="inline-flex items-center gap-3 brand-gradient-bg text-brand-white font-black text-sm uppercase tracking-widest px-10 py-5 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-105 transition-all">
               GARANTIR MINHA VAGA
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </a>
+          </div>
+
+          <!-- Program day cards -->
+          <div class="reveal reveal-delay-2 grid grid-cols-1 gap-6">
+            <!-- Card 1 -->
+            <div
+              class="relative bg-white signature-shape p-8 border border-brand-teal/20 group hover:border-brand-teal transition-all shadow-sm">
+              <div
+                class="absolute -top-3 left-8 brand-gradient-bg text-brand-white text-sm font-black px-5 py-1.5 signature-shape-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20">
+                Oficina Prática</div>
+              <div class="flex items-center gap-8 w-full pt-4">
+                <div class="flex flex-col items-center justify-center min-w-[80px]">
+                  <span class="font-impact text-6xl text-brand-dark leading-none">14</span>
+                  <span class="text-brand-dark/40 font-black text-sm uppercase mt-2 tracking-[0.2em]">AGO/26</span>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-black text-brand-teal uppercase tracking-[0.3em] mb-2">Treinamento em Campo
+                  </p>
+                  <p class="font-bold text-brand-dark text-xl sm:text-2xl leading-tight">Oficina de IA e Tecnologias Verdes</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="relative bg-white signature-shape p-8 border border-brand-teal/20 group hover:border-brand-teal transition-all shadow-sm">
+              <div class="flex items-center gap-8 w-full">
+                <div class="flex flex-col items-center justify-center min-w-[80px]">
+                  <span class="font-impact text-6xl text-brand-dark leading-none">15</span>
+                  <span class="text-brand-dark/40 font-black text-sm uppercase mt-2 tracking-[0.2em]">AGO/26</span>
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-black text-brand-teal uppercase tracking-[0.3em] mb-2">Congresso Principal</p>
+                  <p class="font-bold text-brand-dark text-xl sm:text-2xl leading-tight">Palestras e Inteligência Artificial Aplicada</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -920,8 +1030,8 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Networking</span>
-          <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight"
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-black text-sm uppercase tracking-widest mb-6 inline-block">Networking</span>
+          <h2 class="font-display font-black text-brand-white mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">PARA QUEM É O <br><span
               class="brand-gradient-text">CONGRESSO</span></h2>
           <p class="text-brand-white/80 text-lg max-w-2xl mx-auto font-medium">O evento foi criado para reunir
@@ -983,8 +1093,8 @@
 
         <div class="text-center mb-20 reveal">
           <span
-             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Lineup</span>
-          <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight break-words"
+             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-black text-sm uppercase tracking-widest mb-6 inline-block">Lineup</span>
+          <h2 class="font-display font-black text-brand-dark mb-6 uppercase tracking-tight break-words"
             style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">PALESTRANTES <br><span
               class="brand-gradient-text-dark">CONFIRMADOS</span></h2>
           <p class="text-gray-600 text-lg max-w-2xl mx-auto font-medium">Os maiores especialistas do mercado em inteligência artificial aplicada à gestão e sustentabilidade ambiental.</p>
@@ -994,14 +1104,14 @@
           <article class="reveal reveal-delay-1 group cursor-pointer w-full">
             <div
               class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-brand-green2/30 transition-all">
-              <img src="public/faculty/vitor.webp" alt="Vitor do Sacramento"
+              <img src="/assets/vitor-Zce_j3ya.png" alt="Vitor do Sacramento"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">
                   Vitor do Sacramento</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Geólogo (UNB) com MBA</p>
+                <p class="text-[#6FA638] text-xs font-black uppercase tracking-wider mb-3 leading-tight break-words">Geólogo (UNB) com MBA</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1010,13 +1120,13 @@
           <article class="reveal reveal-delay-2 group cursor-pointer w-full">
             <div
               class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="public/faculty/rodolfo.webp" alt="Rodolfo Finatti"
+              <img src="/assets/rodolfo-D7sc_VF2.png" alt="Rodolfo Finatti"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Rodolfo Finatti</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Geógrafo (UNESP), PhD em Geografia (USP)</p>
+                <p class="text-[#6FA638] text-xs font-black uppercase tracking-wider mb-3 leading-tight break-words">Geógrafo (UNESP), PhD em Geografia (USP)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1025,13 +1135,13 @@
           <article class="reveal reveal-delay-3 group cursor-pointer w-full">
             <div
               class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="public/faculty/henrique.webp" alt="Henrique Gonzalez"
+              <img src="/assets/henrique-Dfsp7Ku3.png" alt="Henrique Gonzalez"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Henrique Gonzalez</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental (UFRJ)</p>
+                <p class="text-[#6FA638] text-xs font-black uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental (UFRJ)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1040,13 +1150,13 @@
           <article class="reveal reveal-delay-4 group cursor-pointer w-full">
             <div
               class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="public/faculty/matheus.webp" alt="Matheus Villela"
+              <img src="/assets/matheus-D7Iyovwi.png" alt="Matheus Villela"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Matheus Villela</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Geógrafo (UnB) – Esp. em Georreferenciamento (Faculdade Prominas)</p>
+                <p class="text-[#6FA638] text-xs font-black uppercase tracking-wider mb-3 leading-tight break-words">Geógrafo (UnB) – Esp. em Georreferenciamento (Faculdade Prominas)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1055,67 +1165,193 @@
       </div>
     </section>
 
+    <section id="palestras" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Programação do congresso">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="text-center mb-20 reveal">
+          <span
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-black text-sm uppercase tracking-widest mb-6 inline-block">Cronograma</span>
+          <h2 class="font-display font-black text-brand-white mb-6 uppercase tracking-tight break-words"
+            style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">PROGRAMAÇÃO <br><span
+              class="brand-gradient-text">TÉCNICA</span></h2>
+          <p class="text-brand-white/80 text-lg max-w-2xl mx-auto font-medium">Um dia intenso com conteúdo prático e estratégico.</p>
+        </div>
+
+        <!-- Cronograma Unificado -->
+        <div class="reveal">
+          <div class="bg-white signature-shape p-8 sm:p-12 border border-gray-200/80 shadow-sm">
+            <div class="mb-10 text-center sm:text-left">
+
+              <div>
+                <h3 class="font-bold text-brand-dark text-2xl uppercase tracking-wider">Imersão Presencial</h3>
+                <p class="text-brand-green1 font-black text-sm uppercase tracking-[0.2em] mt-1">Ciclo de Palestras, Networking e Oficina Prática</p>
+              </div>
+            </div>
+            <div class="space-y-4">
+
+              <!-- 08:00 - 09:00 -->
+              <div class="bg-gray-50/40 signature-shape-sm p-6 border border-gray-200/50 flex items-start gap-6 hover:border-brand-green2/20 hover:bg-white transition-all">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">08h às 09h</p>
+                  <p class="font-bold text-brand-dark text-lg">Credenciamento dos participantes + café + abertura</p>
+                </div>
+              </div>
+
+              <!-- 09:00 - 10:00 -->
+              <div class="bg-gray-50/50 signature-shape-sm p-6 border border-gray-200/60 flex items-start gap-6 hover:border-brand-green2/30 hover:bg-white transition-all shadow-sm">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">09h às 10h</p>
+                  <p class="font-bold text-brand-dark text-lg">Palestra</p>
+                </div>
+              </div>
+
+              <!-- 10:00 - 11:00 -->
+              <div class="bg-gray-50/50 signature-shape-sm p-6 border border-gray-200/60 flex items-start gap-6 hover:border-brand-green2/30 hover:bg-white transition-all shadow-sm">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">10h às 11h</p>
+                  <p class="font-bold text-brand-dark text-lg">Palestra</p>
+                </div>
+              </div>
+
+              <!-- 11:00 - 12:00 -->
+              <div class="bg-gray-50/40 signature-shape-sm p-6 border border-gray-200/50 flex items-start gap-6 hover:border-brand-green2/20 hover:bg-white transition-all">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">11h às 12h</p>
+                  <p class="font-bold text-brand-dark text-lg">GeoTech Show</p>
+                </div>
+              </div>
+
+              <!-- 12:00 - 14:00 -->
+              <div class="bg-gray-50/30 signature-shape-sm p-5 border border-gray-300 border-dashed flex items-start gap-6 opacity-80">
+                <div class="w-full">
+                  <p class="text-brand-teal font-black text-xs uppercase tracking-widest mb-1">12h às 14h</p>
+                  <p class="font-bold text-brand-dark/70 text-lg">Almoço</p>
+                </div>
+              </div>
+
+              <!-- 14:00 - 18:00 (Trilha Paralela / Oficina Pro) -->
+              <div class="bg-brand-green1/5 signature-shape-sm p-6 border border-brand-green1/20 flex items-start gap-6 hover:bg-brand-green1/10 transition-all shadow-sm">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">14h às 18h — Sala Pro (Exclusivo Ingresso Pro)</p>
+                  <p class="font-bold text-brand-dark text-lg">Oficina Prática de Modelagem: Ciência de Dados, Modelagem Preditiva e Algoritmos de IA</p>
+                  <p class="text-brand-dark/70 text-sm mt-1">Treinamento intensivo hands-on abordando desde pipelines de dados ambientais até o treinamento de modelos ecológicos.</p>
+                </div>
+              </div>
+
+              <!-- 14:00 - 15:00 -->
+              <div class="bg-gray-50/50 signature-shape-sm p-6 border border-gray-200/60 flex items-start gap-6 hover:border-brand-green2/30 hover:bg-white transition-all shadow-sm">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">14h às 15h</p>
+                  <p class="font-bold text-brand-dark text-lg">Palestra</p>
+                </div>
+              </div>
+
+              <!-- 15:00 - 16:00 -->
+              <div class="bg-gray-50/50 signature-shape-sm p-6 border border-gray-200/60 flex items-start gap-6 hover:border-brand-green2/30 hover:bg-white transition-all shadow-sm">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">15h às 16h</p>
+                  <p class="font-bold text-brand-dark text-lg">Palestra</p>
+                </div>
+              </div>
+
+              <!-- 16:00 - 17:30 -->
+              <div class="bg-gray-50/30 signature-shape-sm p-5 border border-gray-300 border-dashed flex items-start gap-6 opacity-80">
+                <div class="w-full">
+                  <p class="text-brand-teal font-black text-xs uppercase tracking-widest mb-1">16h às 17h30</p>
+                  <p class="font-bold text-brand-dark/70 text-lg">Coffee Break</p>
+                </div>
+              </div>
+
+              <!-- 17:30 - 18:00 -->
+              <div class="bg-gray-50/40 signature-shape-sm p-6 border border-gray-200/50 flex items-start gap-6 hover:border-brand-green2/20 hover:bg-white transition-all">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">17h30 às 18h</p>
+                  <p class="font-bold text-brand-dark text-lg">Entrega das placas 10K e Diplomas</p>
+                </div>
+              </div>
+
+              <!-- 18:20 - 19:50 -->
+              <div class="bg-gray-50/40 signature-shape-sm p-6 border border-gray-200/50 flex items-start gap-6 hover:border-brand-green2/20 hover:bg-white transition-all">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">18h20 às 19h50</p>
+                  <p class="font-bold text-brand-dark text-lg">Mesa redonda</p>
+                </div>
+              </div>
+
+              <!-- 19:50 - 20:00 -->
+              <div class="bg-gray-50/40 signature-shape-sm p-6 border border-gray-200/50 flex items-start gap-6 hover:border-brand-green2/20 hover:bg-white transition-all">
+                <div class="w-full">
+                  <p class="text-brand-green1 font-black text-xs uppercase tracking-widest mb-1">19h50 às 20h</p>
+                  <p class="font-bold text-brand-dark text-lg">Fechamento</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <!-- ============================================================
          CERTIFICADO
     ============================================================ -->
-    <section id="certificado" class="py-16 sm:py-32 bg-brand-dark relative overflow-hidden"
+    <section id="certificado" class="py-16 sm:py-32 bg-[#F2F2F2] relative overflow-hidden"
       aria-label="Certificado de participação">
-      
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid lg:grid-cols-2 gap-20 items-center">
 
           <!-- Certificate mockup -->
           <div class="reveal text-center lg:text-left">
             <div class="relative inline-block">
-              <img src="public/certificado.webp" alt="Certificado Digital Modelo"
-                class="inline-block w-full max-w-lg lg:max-w-xl shadow-lg signature-shape hover:-translate-y-1 transition-transform duration-700">
+              <img src="/assets/certificado-B8L4dPnO.png" alt="Certificado Digital Modelo"
+                class="inline-block w-full max-w-lg lg:max-w-xl shadow-2xl signature-shape hover:scale-105 transition-transform duration-700">
               <div
                 class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-dark signature-shape-sm backdrop-blur-xl border border-white/20 flex items-center justify-center p-4 shadow-xl">
-                <p class="text-white font-bold text-sm text-center uppercase leading-tight">12 Horas de
+                <p class="text-white font-black text-sm text-center uppercase leading-tight">12 Horas de
                   <br>Certificação</p>
               </div>
             </div>
           </div>
 
           <!-- Text -->
-          <div class="reveal reveal-delay-2 text-brand-white">
+          <div class="reveal reveal-delay-2 text-brand-dark">
             <span
-              class="bg-brand-white/10 text-brand-white px-5 py-1.5 signature-shape-sm font-bold text-sm uppercase tracking-widest mb-8 inline-block">Reconhecimento</span>
-            <h2 class="font-display font-bold mb-8 uppercase tracking-tight text-brand-white"
+              class="bg-brand-dark/10 px-5 py-1.5 signature-shape-sm font-black text-sm uppercase tracking-widest mb-8 inline-block">Reconhecimento</span>
+            <h2 class="font-display font-black mb-8 uppercase tracking-tight"
               style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">VALORIZE SEU <br>CURRÍCULO</h2>
-            <p class="text-brand-white/80 text-xl leading-relaxed mb-10 font-medium">
-              Todos os inscritos receberão um <strong class="text-white">certificado digital de
+            <p class="text-brand-dark/80 text-xl leading-relaxed mb-10 font-medium">
+              Todos os inscritos receberão um <strong class="text-brand-dark">certificado digital de
                 participação</strong>
               válido em todo o território nacional.
             </p>
             <div class="space-y-6">
               <div class="flex items-start gap-4">
                 <div
-                  class="w-8 h-8 signature-shape-sm bg-brand-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  class="w-8 h-8 signature-shape-sm bg-brand-dark flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg class="w-5 h-5 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <p class="text-brand-white/80 font-bold">Pontuar em processos seletivos e concursos</p>
+                <p class="text-brand-dark/80 font-bold">Pontuar em processos seletivos e concursos</p>
               </div>
               <div class="flex items-start gap-4">
                 <div
-                  class="w-8 h-8 signature-shape-sm bg-brand-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  class="w-8 h-8 signature-shape-sm bg-brand-dark flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg class="w-5 h-5 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <p class="text-brand-white/80 font-bold">Comprovar horas complementares acadêmicas</p>
+                <p class="text-brand-dark/80 font-bold">Comprovar horas complementares acadêmicas</p>
               </div>
               <div class="flex items-start gap-4">
                 <div
-                  class="w-8 h-8 signature-shape-sm bg-brand-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  class="w-8 h-8 signature-shape-sm bg-brand-dark flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg class="w-5 h-5 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <p class="text-brand-white/80 font-bold">Fortalecer seu portfólio junto a clientes</p>
+                <p class="text-brand-dark/80 font-bold">Fortalecer seu portfólio junto a clientes</p>
               </div>
             </div>
           </div>
@@ -1126,91 +1362,101 @@
     <!-- ============================================================
          INGRESSOS
     ============================================================ -->
-    <section id="ingressos" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden" aria-label="Ingressos e preços">
+    <section id="ingressos" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Ingressos e preços">
+      <div class="absolute bottom-0 left-0 glow-line-h w-full opacity-20"></div>
+
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Vagas
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-black text-sm uppercase tracking-widest mb-6 inline-block">Vagas
             Limitadas</span>
-          <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight"
+          <h2 class="font-display font-black text-brand-white mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">ESCOLHA SEU <br><span
-              class="brand-gradient-text-dark">PASSAPORTE</span></h2>
-          <p class="text-brand-dark/60 text-lg max-w-xl mx-auto font-medium">Garanta seu lugar no maior evento de inteligência artificial aplicada ao meio ambiente do ano.</p>
+              class="brand-gradient-text-light">PASSAPORTE</span></h2>
+          <p class="text-brand-white/50 text-lg max-w-xl mx-auto font-medium">Garanta seu lugar no maior evento de inteligência artificial aplicada ao meio ambiente do ano.</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
 
           <!-- Básico -->
           <div
-            class="reveal reveal-delay-1 bg-white signature-shape p-10 border border-gray-200 flex flex-col hover:border-brand-deep/40 hover:scale-[1.02] transition-all group shadow-xl shadow-gray-200/50">
-            <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Básico</p>
+            class="reveal reveal-delay-1 bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
+            <p class="font-black text-brand-deep text-sm uppercase tracking-[0.3em] mb-6">Ingresso Básico</p>
             <div class="mb-2">
-              <span class="font-display font-semibold text-brand-dark dynamic-price-basico" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 397</span>
-              <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+              <span class="font-impact text-brand-white dynamic-price-basico" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 397</span>
+              <span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
             </div>
-            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+            <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
 
             <ul class="space-y-5 mb-12 flex-1">
-              <li class="flex items-start gap-4 text-brand-dark/70 text-sm">
+              <li class="flex items-start gap-4 text-brand-white/70 text-sm">
                 <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="font-medium">Acesso ao Evento Presencial</span>
+                <span class="font-medium">Acesso Presencial Completo</span>
+              </li>
+              <li class="flex items-start gap-4 text-brand-white/70 text-sm">
+                <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-medium">Gravação das Palestras</span>
+              </li>
+              <li class="flex items-start gap-4 text-brand-white/70 text-sm">
+                <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-medium">Certificado de 12 horas</span>
               </li>
             </ul>
 
             <button onclick="selectTicket('basico')"
-              class="w-full py-5 signature-shape border-2 border-brand-deep text-brand-deep font-bold text-sm uppercase tracking-wider group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
+              class="w-full py-5 signature-shape border-2 border-brand-deep text-brand-deep font-black text-sm uppercase tracking-[0.2em] group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
               SELECIONAR BÁSICO
             </button>
-            <p class="text-brand-dark/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
+            <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
           </div>
 
           <!-- PRO -->
           <div
-            class="reveal reveal-delay-2 bg-white signature-shape p-10 border-2 border-brand-deep flex flex-col relative shadow-lg shadow-brand-deep/10 hover:scale-[1.02] transition-all">
+            class="reveal reveal-delay-2 bg-brand-white/10 signature-shape p-10 border-2 border-brand-deep flex flex-col relative shadow-2xl shadow-brand-deep/10 hover:scale-[1.02] transition-all">
             <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-bold text-[11px] px-6 py-2 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
+              class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-black text-[11px] px-6 py-2 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
               MAIS VENDIDO</div>
 
-            <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Pro</p>
+            <p class="font-black text-brand-deep text-sm uppercase tracking-[0.3em] mb-6">Ingresso Pro</p>
             <div class="mb-2">
-              <span class="font-display font-semibold text-brand-dark dynamic-price-pro" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 497</span>
-              <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+              <span class="font-impact text-brand-white dynamic-price-pro" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 497</span>
+              <span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
             </div>
-            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+            <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
 
             <ul class="space-y-5 mb-12 flex-1">
-              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
+              <li class="flex items-start gap-4 text-brand-white/90 text-sm">
                 <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="font-bold">Acesso ao Evento Presencial</span>
+                <span class="font-bold">TUDO DO BÁSICO</span>
               </li>
-              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
+              <li class="flex items-start gap-4 text-brand-white/90 text-sm">
                 <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="font-bold">Acesso à Gravação do Congresso Presencial</span>
+                <span class="font-bold">OFICINA PRÁTICA EXCLUSIVA (Dia 15)</span>
               </li>
-              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
-                <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="font-bold">Todos os Congressos Online da Ambiental Pro em 2026 (incluindo gravações passadas)</span>
-              </li>
+
             </ul>
 
             <button onclick="selectTicket('pro')"
-              class="w-full py-5 signature-shape brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
+              class="w-full py-5 signature-shape brand-gradient-bg text-brand-white font-black text-sm uppercase tracking-[0.2em] shadow-lg shadow-brand-green1/20 hover:scale-105 transition-all">
               GARANTIR INGRESSO PRO
             </button>
-            <p class="text-brand-dark/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
+            <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
           </div>
 
         </div>
@@ -1221,26 +1467,25 @@
     <!-- ============================================================
          FAQ
     ============================================================ -->
-    <section id="faq" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Perguntas frequentes">
-      
+    <section id="faq" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden" aria-label="Perguntas frequentes">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Dúvidas</span>
-          <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight"
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-black text-sm uppercase tracking-widest mb-6 inline-block">Dúvidas</span>
+          <h2 class="font-display font-black text-brand-dark mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">PERGUNTAS <br><span
-              class="brand-gradient-text-light">FREQUENTES</span></h2>
+              class="brand-gradient-text-dark">FREQUENTES</span></h2>
         </div>
 
         <div class="grid gap-2">
           <div
-            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            class="faq-item reveal bg-white signature-shape border border-gray-100 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
             <button
               class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
               aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="font-bold text-brand-white text-base">O congresso terá certificado?</span>
-              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+              <span class="font-bold text-brand-dark text-base">O congresso terá certificado?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-gray-50 flex items-center justify-center flex-shrink-0">
                 <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
@@ -1248,19 +1493,19 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Sim. Todos os
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Sim. Todos os
                 participantes recebem certificado digital com carga horária de 12h, válido nacionalmente. O documento é
                 enviado por e-mail na semana seguinte ao evento.</p>
             </div>
           </div>
 
           <div
-            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            class="faq-item reveal bg-white signature-shape border border-gray-100 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
             <button
               class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
               aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="font-bold text-brand-white text-base">O evento é presencial ou online?</span>
-              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+              <span class="font-bold text-brand-dark text-base">O evento é presencial ou online?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-gray-50 flex items-center justify-center flex-shrink-0">
                 <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
@@ -1268,19 +1513,19 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">O evento é
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">O evento é
                 100% presencial, focado em networking real e experiência prática. O local exato será definido em breve
                 na cidade de São Paulo/SP.</p>
             </div>
           </div>
 
           <div
-            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            class="faq-item reveal bg-white signature-shape border border-gray-100 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
             <button
               class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
               aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="font-bold text-brand-white text-base">Quais são as formas de pagamento?</span>
-              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+              <span class="font-bold text-brand-dark text-base">Quais são as formas de pagamento?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-gray-50 flex items-center justify-center flex-shrink-0">
                 <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
@@ -1288,17 +1533,17 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Aceitamos cartões de crédito (com parcelamento em até 12x), boleto bancário e PIX. Para inscrições corporativas em grupo, entre em contato com nosso suporte via WhatsApp.</p>
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Aceitamos cartões de crédito (com parcelamento em até 12x), boleto bancário e PIX. Para inscrições corporativas em grupo, entre em contato com nosso suporte via WhatsApp.</p>
             </div>
           </div>
 
           <div
-            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            class="faq-item reveal bg-white signature-shape border border-gray-100 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
             <button
               class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
               aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="font-bold text-brand-white text-base">Haverá gravação das palestras?</span>
-              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+              <span class="font-bold text-brand-dark text-base">Haverá gravação das palestras?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-gray-50 flex items-center justify-center flex-shrink-0">
                 <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
@@ -1306,17 +1551,17 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Sim! A gravação completa das palestras estará disponível para todos os inscritos, independente do ingresso. Após o evento, você receberá o acesso às gravações por e-mail.</p>
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Sim! A gravação completa das palestras estará disponível para todos os inscritos, independente do ingresso. Após o evento, você receberá o acesso às gravações por e-mail.</p>
             </div>
           </div>
 
           <div
-            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            class="faq-item reveal bg-white signature-shape border border-gray-100 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
             <button
               class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
               aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="font-bold text-brand-white text-base">O evento oferece alimentação inclusa?</span>
-              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+              <span class="font-bold text-brand-dark text-base">O evento oferece alimentação inclusa?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-gray-50 flex items-center justify-center flex-shrink-0">
                 <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
@@ -1324,7 +1569,7 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Não, teremos coffee breaks inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
+              <p class="px-6 pb-4 text-gray-500 text-base leading-relaxed pt-1">Não, teremos coffee breaks inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
             </div>
           </div>
         </div>
@@ -1339,7 +1584,7 @@
   ============================================================ -->
   <div id="inscricao-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300"
     style="background: rgba(0, 16, 39, 0.9); backdrop-filter: blur(12px);">
-    <div class="bg-brand-dark signature-shape max-w-lg w-full p-8 border border-brand-white/10 shadow-lg relative transform scale-95 transition-transform duration-300">
+    <div class="bg-brand-dark signature-shape max-w-lg w-full p-8 border border-brand-white/10 shadow-2xl relative transform scale-95 transition-transform duration-300">
       
       <button onclick="closeRegistrationModal()"
         class="absolute top-4 right-4 text-brand-white/40 hover:text-brand-white transition-colors">
@@ -1348,7 +1593,7 @@
         </svg>
       </button>
 
-      <h3 class="text-brand-white font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-3">
+      <h3 class="text-brand-white font-black text-sm uppercase tracking-[0.3em] mb-6 flex items-center gap-3">
         <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
         Me inscrever agora
       </h3>
@@ -1356,7 +1601,7 @@
       <form action="/api/register" method="POST" class="space-y-4 registration-form">
         <div class="group">
           <label for="m-name"
-            class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
+            class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
             Completo</label>
           <input type="text" id="m-name" name="nome" placeholder="Seu nome" required
             class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm">
@@ -1364,7 +1609,7 @@
 
         <div class="group">
           <label for="m-email"
-            class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
+            class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
             Profissional</label>
           <input type="email" id="m-email" name="email" placeholder="seu@email.com" required
             class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm">
@@ -1373,13 +1618,13 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="group">
             <label for="m-tel"
-              class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
+              class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
             <input type="tel" id="m-tel" name="telefone" placeholder="(00) 00000-0000" required
               class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm tel-input">
           </div>
           <div class="group">
             <label for="m-area"
-              class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
+              class="block text-brand-white/40 font-black text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
               Área</label>
             <select id="m-area" name="area" required
               class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm appearance-none">
@@ -1393,13 +1638,33 @@
         </div>
 
         <button type="submit"
-          class="w-full brand-gradient-bg text-brand-dark font-bold text-sm uppercase tracking-wider py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
+          class="w-full brand-gradient-bg text-brand-dark font-black text-sm uppercase tracking-[0.2em] py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
           <span class="btn-text">GARANTIR MINHA VAGA</span>
         </button>
       </form>
     </div>
   </div>
 
+
+    <!-- ============================================================
+         REALIZAÇÃO
+    ============================================================ -->
+    <section class="py-16 sm:py-32 bg-brand-dark relative overflow-hidden" aria-label="Realização do congresso">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal relative z-10">
+        <p class="text-brand-white/50 font-black text-sm uppercase tracking-[0.4em] mb-6">Realização</p>
+        <img src="/assets/logo-ambientalpro-BIXIb-_V.png" alt="Ambiental Pro" class="h-20 sm:h-24 lg:h-32 mx-auto mb-10 object-contain">
+        <p class="text-brand-white/80 text-xl max-w-2xl mx-auto leading-relaxed mb-12 font-medium break-words">
+          A Ambiental Pro é o maior ecossistema de geotecnologias e inteligência ambiental da América Latina.
+        </p>
+        <a href="#ingressos"
+          class="inline-flex items-center gap-3 brand-gradient-bg text-brand-white px-12 py-5 signature-shape font-black text-sm uppercase tracking-widest shadow-2xl hover:scale-105 transition-all">
+          GARANTIR MINHA VAGA
+          <svg class="w-5 h-5 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+    </section>
 
   </main>
 
@@ -1411,14 +1676,14 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
 
         <div class="lg:col-span-2">
-          <img src="logo.webp" alt="Ambiental Pro Logo" class="h-8 mb-6 brightness-0 opacity-80">
+          <img src="logo.png" alt="Ambiental Pro Logo" class="h-8 mb-6 brightness-0 opacity-80">
           <p class="text-brand-dark/60 text-sm leading-relaxed max-w-xs font-medium">
             Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente. 15 de agosto de 2026. São Paulo, SP.
           </p>
         </div>
 
         <div>
-          <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-6">Navegação</h4>
+          <h4 class="font-black text-brand-dark text-sm uppercase tracking-widest mb-6">Navegação</h4>
           <ul class="space-y-3">
             <li><a href="#sobre"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Sobre</a>
@@ -1426,7 +1691,9 @@
             <li><a href="#palestrantes"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Lineup</a>
             </li>
-
+            <li><a href="#palestras"
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Cronograma</a>
+            </li>
             <li><a href="#ingressos"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Ingressos</a>
             </li>
@@ -1434,7 +1701,7 @@
         </div>
 
         <div>
-          <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-6">Suporte</h4>
+          <h4 class="font-black text-brand-dark text-sm uppercase tracking-widest mb-6">Suporte</h4>
           <div class="space-y-4">
             <a href="https://wa.link/6on3xe" target="_blank"
               class="flex items-center gap-3 text-brand-dark/60 hover:text-brand-teal transition-colors group">
@@ -1453,11 +1720,11 @@
 
       </div>
       <div class="border-t border-brand-dark/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-wider">&copy; 2026 AMBIENTAL PRO.
+        <p class="text-brand-dark/40 text-sm font-black uppercase tracking-[0.2em]">&copy; 2026 AMBIENTAL PRO.
           TODOS OS DIREITOS RESERVADOS.</p>
         <div class="flex gap-8">
           <div class="w-10 h-px brand-gradient-bg opacity-30"></div>
-          <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-wider">Congresso IA & Meio Ambiente 2026</p>
+          <p class="text-brand-dark/40 text-sm font-black uppercase tracking-[0.2em]">Congresso IA & Meio Ambiente 2026</p>
         </div>
       </div>
     </div>
@@ -1469,7 +1736,7 @@
   <div id="success-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6"
     style="background: rgba(1, 10, 21, 0.9); backdrop-filter: blur(12px);">
     <div
-      class="bg-brand-dark signature-shape max-w-5xl w-full max-h-[90vh] overflow-y-auto p-10 sm:p-16 border border-brand-white/10 shadow-lg relative animate-in">
+      class="bg-brand-dark signature-shape max-w-5xl w-full max-h-[90vh] overflow-y-auto p-10 sm:p-16 border border-brand-white/10 shadow-2xl relative animate-in">
 
       <div class="absolute top-0 right-0 p-8">
         <button
@@ -1483,7 +1750,7 @@
 
       <div class="text-center mb-12">
         <h2 id="modal-title"
-          class="font-display font-bold text-brand-white text-4xl sm:text-5xl mb-6 uppercase tracking-tight">QUASE LÁ!
+          class="font-display font-black text-brand-white text-4xl sm:text-5xl mb-6 uppercase tracking-tight">QUASE LÁ!
         </h2>
         <p class="text-brand-white/50 text-xl max-w-xl mx-auto font-medium">Seu interesse foi registrado. Agora, escolha
           seu lote para garantir o valor atual.</p>
@@ -1493,22 +1760,34 @@
         <!-- Básico -->
         <div
           class="bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-deep/40 transition-all group">
-          <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Básico</p>
+          <p class="font-black text-brand-deep text-sm uppercase tracking-[0.3em] mb-6">Ingresso Básico</p>
           <div class="mb-2">
-            <span class="font-display font-semibold text-brand-white dynamic-price-basico" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+            <span class="font-impact text-brand-white dynamic-price-basico" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
           </div>
-          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+          <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-8 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
           
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
-              Acesso Presencial ao Evento
+              Acesso Presencial Completo
+            </li>
+            <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
+              <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              Gravação das Palestras
+            </li>
+            <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
+              <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              Certificado de 12 horas
             </li>
           </ul>
           <button onclick="selectTicket('basico')"
-            class="btn-basico w-full py-4 signature-shape border-2 border-brand-deep text-brand-deep font-bold text-sm uppercase tracking-widest group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
+            class="btn-basico w-full py-4 signature-shape border-2 border-brand-deep text-brand-deep font-black text-sm uppercase tracking-widest group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
             SELECIONAR BÁSICO
           </button>
           <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
@@ -1516,38 +1795,32 @@
 
         <!-- PRO -->
         <div
-          class="bg-brand-white/10 signature-shape p-10 border-2 border-brand-deep flex flex-col relative shadow-lg shadow-brand-deep/10">
+          class="bg-brand-white/10 signature-shape p-10 border-2 border-brand-deep flex flex-col relative shadow-2xl shadow-brand-deep/10">
           <div
-            class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-bold text-[11px] px-4 py-1.5 signature-shape-sm uppercase tracking-widest">
+            class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-black text-[11px] px-4 py-1.5 signature-shape-sm uppercase tracking-widest">
             RECOMENDADO</div>
-          <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Pro</p>
+          <p class="font-black text-brand-deep text-sm uppercase tracking-[0.3em] mb-6">Ingresso Pro</p>
           <div class="mb-2">
-            <span class="font-display font-semibold text-brand-white dynamic-price-pro" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+            <span class="font-impact text-brand-white dynamic-price-pro" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
           </div>
-          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+          <p class="text-brand-white/30 text-sm font-black uppercase tracking-widest mb-8 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
 
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
-              Acesso ao Evento Presencial
+              TUDO DO BÁSICO
             </li>
             <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
               </svg>
-              Acesso à Gravação do Congresso Presencial
-            </li>
-            <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
-              <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-              </svg>
-              Todos os Congressos Online em 2026 (com Gravações)
+              OFICINA PRÁTICA EXCLUSIVA (Dia 15)
             </li>
           </ul>
           <button onclick="selectTicket('pro')"
-            class="btn-pro w-full py-4 signature-shape brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
+            class="btn-pro w-full py-4 signature-shape brand-gradient-bg text-brand-white font-black text-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20 hover:scale-105 transition-all">
             GARANTIR INGRESSO PRO
           </button>
           <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
