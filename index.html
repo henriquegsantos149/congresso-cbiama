@@ -1594,10 +1594,14 @@
           email: formData.get('email'),
           phone: formData.get('telefone'),
           area: formData.get('area'),
-          graduacao: formData.get('graduacao'),
+          graduacao: formData.get('graduacao') || '',
           utm_source: utms['utm_source'] || '',
           utm_medium: utms['utm_medium'] || '',
-          utm_campaign: utms['utm_campaign'] || ''
+          utm_campaign: utms['utm_campaign'] || '',
+          utm_content: utms['utm_content'] || '',
+          utm_term: utms['utm_term'] || '',
+          utm_possui_graduacao: utms['utm_possui_graduacao'] || utms['utm_grad'] || utms['utm_graduacao'] || '',
+          utm_area_de_formacao: utms['utm_area_de_formacao'] || utms['utm_area'] || ''
         };
 
         currentContactId = formData.get('email');
@@ -1614,14 +1618,24 @@
           openSuccessModal();
         }
 
-        // Envia para a API em segundo plano (fire & forget)
+        // Envia para o ActiveCampaign via Vercel Serverless Function
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => console.log('ActiveCampaign Sync Success:', data))
+        .catch(err => console.error('ActiveCampaign Sync Error:', err));
+
+        // Envia para a API do Google Sheets em segundo plano (fire & forget)
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbc5ij7lcYBMHABEuCMFlAZZLfXo_5pSH2hbT2TnwPVZWcU7tkMjdPtDfTcvFnr0u9Aw/exec';
         fetch(SCRIPT_URL, {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
-        }).catch(err => console.warn('Erro ao enviar dados:', err));
+        }).catch(err => console.warn('Erro ao enviar dados para Google Sheets:', err));
       });
     });
 
