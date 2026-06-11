@@ -665,11 +665,11 @@
 
         <!-- Desktop links -->
         <div class="hidden lg:flex items-center gap-8">
-          <a href="#certificado" class="nav-link text-xs uppercase tracking-wider">Certificado</a>
-          <a href="#local" class="nav-link text-xs uppercase tracking-wider">Local</a>
+          <a href="#sobre" class="nav-link text-xs uppercase tracking-wider">Sobre</a>
           <a href="#publico" class="nav-link text-xs uppercase tracking-wider">Público-Alvo</a>
           <a href="#palestrantes" class="nav-link text-xs uppercase tracking-wider">Palestrantes</a>
-          <a href="#sobre" class="nav-link text-xs uppercase tracking-wider">Sobre</a>
+          <a href="#certificado" class="nav-link text-xs uppercase tracking-wider">Certificado</a>
+          <a href="#local" class="nav-link text-xs uppercase tracking-wider">Local</a>
           <a href="#faq" class="nav-link text-xs uppercase tracking-wider">FAQ</a>
         </div>
 
@@ -698,11 +698,11 @@
     <!-- Mobile menu (Dropdown panel) -->
     <div id="mobile-menu" aria-label="Menu mobile" role="dialog">
       <!-- Links -->
-      <a href="#certificado" class="mobile-link" onclick="closeMobileMenu()">Certificado</a>
-      <a href="#local" class="mobile-link" onclick="closeMobileMenu()">Local</a>
+      <a href="#sobre" class="mobile-link" onclick="closeMobileMenu()">Sobre</a>
       <a href="#publico" class="mobile-link" onclick="closeMobileMenu()">Público-Alvo</a>
       <a href="#palestrantes" class="mobile-link" onclick="closeMobileMenu()">Palestrantes</a>
-      <a href="#sobre" class="mobile-link" onclick="closeMobileMenu()">Sobre</a>
+      <a href="#certificado" class="mobile-link" onclick="closeMobileMenu()">Certificado</a>
+      <a href="#local" class="mobile-link" onclick="closeMobileMenu()">Local</a>
       <a href="#faq" class="mobile-link" onclick="closeMobileMenu()">FAQ</a>
       <!-- Divider -->
       <div style="height:1px; background: rgba(0,151,178,0.2); margin: 6px 8px;"></div>
@@ -1927,9 +1927,21 @@
     }
 
     // ============================================================
-    // STICKY CTA VISIBILITY
+    // SMOOTH SCROLL WITHOUT HASH IN URL
     // ============================================================
-
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
 
   </script>
 
