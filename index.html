@@ -666,6 +666,7 @@
         <!-- Desktop links -->
         <div class="hidden lg:flex items-center gap-8">
           <a href="#certificado" class="nav-link text-xs uppercase tracking-wider">Certificado</a>
+          <a href="#local" class="nav-link text-xs uppercase tracking-wider">Local</a>
           <a href="#publico" class="nav-link text-xs uppercase tracking-wider">Público-Alvo</a>
           <a href="#palestrantes" class="nav-link text-xs uppercase tracking-wider">Palestrantes</a>
           <a href="#sobre" class="nav-link text-xs uppercase tracking-wider">Sobre</a>
@@ -698,6 +699,7 @@
     <div id="mobile-menu" aria-label="Menu mobile" role="dialog">
       <!-- Links -->
       <a href="#certificado" class="mobile-link" onclick="closeMobileMenu()">Certificado</a>
+      <a href="#local" class="mobile-link" onclick="closeMobileMenu()">Local</a>
       <a href="#publico" class="mobile-link" onclick="closeMobileMenu()">Público-Alvo</a>
       <a href="#palestrantes" class="mobile-link" onclick="closeMobileMenu()">Palestrantes</a>
       <a href="#sobre" class="mobile-link" onclick="closeMobileMenu()">Sobre</a>
@@ -768,7 +770,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>São Paulo / SP</span>
+                <span>CREA-SP - Coworking Nestor Pestana</span>
               </div>
             </div>
           </div>
@@ -1127,6 +1129,59 @@
     </section>
 
     <!-- ============================================================
+         LOCAL DO EVENTO
+    ============================================================ -->
+    <section id="local" class="py-16 sm:py-24 bg-white relative overflow-hidden" aria-label="Local do evento">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center mb-16 reveal">
+          <div class="accent-line mx-auto mb-5"></div>
+          <h2 class="font-display font-bold text-brand-dark mb-4 uppercase tracking-tight"
+            style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">LOCAL DO EVENTO</h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto font-medium">
+            CREA-SP - Coworking Nestor Pestana
+          </p>
+          <p class="text-brand-teal font-bold text-base mt-2 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Rua Nestor Pestana, 87 – Consolação, São Paulo – SP
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
+          <!-- Imagem 1 -->
+          <div class="reveal reveal-delay-1 overflow-hidden signature-shape shadow-lg hover:shadow-xl transition-shadow group border border-gray-200">
+            <img src="/crea-1.webp" alt="CREA-SP Coworking Nestor Pestana - Área Interna"
+              class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="400">
+          </div>
+
+          <!-- Imagem 2 -->
+          <div class="reveal reveal-delay-2 overflow-hidden signature-shape shadow-lg hover:shadow-xl transition-shadow group border border-gray-200">
+            <img src="/crea-2.webp" alt="CREA-SP Coworking Nestor Pestana - Espaço de Trabalho"
+              class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="400">
+          </div>
+        </div>
+
+        <!-- Google Maps Link Button -->
+        <div class="text-center mt-12 reveal">
+          <a href="https://maps.google.com/?q=CREA-SP+Coworking+Nestor+Pestana+Rua+Nestor+Pestana+87" target="_blank"
+            class="inline-flex items-center gap-3 border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white font-bold text-sm uppercase tracking-wider px-8 py-4 signature-shape transition-all">
+            <span>COMO CHEGAR (GOOGLE MAPS)</span>
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
          INGRESSOS
     ============================================================ -->
     <section id="ingressos" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden" aria-label="Ingressos e preços">
@@ -1142,14 +1197,14 @@
           <p class="text-brand-dark/60 text-lg max-w-xl mx-auto font-medium">Garanta seu lugar no maior evento de inteligência artificial aplicada ao meio ambiente do ano.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
 
           <!-- Básico -->
           <div
-            class="reveal reveal-delay-1 bg-white signature-shape p-10 border border-gray-200 flex flex-col hover:border-brand-deep/40 hover:scale-[1.02] transition-all group shadow-xl shadow-gray-200/50">
+            class="reveal reveal-delay-1 bg-white signature-shape p-8 border border-gray-200 flex flex-col hover:border-brand-deep/40 hover:scale-[1.02] transition-all group shadow-xl shadow-gray-200/50">
             <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Básico</p>
             <div class="mb-2">
-              <span class="font-display font-semibold text-brand-dark dynamic-price-basico" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 397</span>
+              <span class="font-display font-semibold text-brand-dark dynamic-price-basico" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 397</span>
               <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
             </div>
             <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
@@ -1173,14 +1228,14 @@
 
           <!-- PRO -->
           <div
-            class="reveal reveal-delay-2 bg-white signature-shape p-10 border-2 border-brand-deep flex flex-col relative shadow-lg shadow-brand-deep/10 hover:scale-[1.02] transition-all">
+            class="reveal reveal-delay-2 bg-white signature-shape p-8 border-2 border-brand-deep flex flex-col relative shadow-lg shadow-brand-deep/10 hover:scale-[1.02] transition-all">
             <div
               class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-bold text-[11px] px-6 py-2 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
               MAIS VENDIDO</div>
 
             <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Pro</p>
             <div class="mb-2">
-              <span class="font-display font-semibold text-brand-dark dynamic-price-pro" style="font-size: clamp(3rem, 15vw, 4.5rem); line-height: 1;">R$ 497</span>
+              <span class="font-display font-semibold text-brand-dark dynamic-price-pro" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 497</span>
               <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
             </div>
             <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
@@ -1272,8 +1327,7 @@
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">O evento é
-                100% presencial, focado em networking real e experiência prática. O local exato será definido em breve
-                na cidade de São Paulo/SP.</p>
+                100% presencial, focado em networking real e experiência prática. O local do evento será o CREA-SP - Coworking Nestor Pestana (Rua Nestor Pestana, 87 - Consolação, São Paulo - SP).</p>
             </div>
           </div>
 
@@ -1432,7 +1486,9 @@
             <li><a href="#palestrantes"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Lineup</a>
             </li>
-
+            <li><a href="#local"
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Local</a>
+            </li>
             <li><a href="#ingressos"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Ingressos</a>
             </li>
