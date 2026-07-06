@@ -28,6 +28,7 @@ export default async function handler(req, res) {
       utm_possui_graduacao,
       utm_graduacao,
       utm_grad,
+      graduacao,
       utm_area_de_formacao,
       utm_area,
       estado
@@ -54,7 +55,7 @@ export default async function handler(req, res) {
     }
 
     // [VENDA DIRETA][C1][CBIAMA] UTM Possui Graduação -> 826
-    const possuiGrad = utm_possui_graduacao || utm_graduacao || utm_grad;
+    const possuiGrad = utm_possui_graduacao || utm_graduacao || utm_grad || graduacao;
     if (possuiGrad) {
       fieldValues.push({ field: '826', value: possuiGrad });
     }
