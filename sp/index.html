@@ -810,24 +810,40 @@
                       class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none tel-input">
                   </div>
                   <div class="group relative">
-                    <label for="f-area"
-                      class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Sua Área</label>
+                    <label for="f-graduacao"
+                      class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Possui Graduação?</label>
                     <div class="relative">
-                      <select id="f-area" name="area" required
+                      <select id="f-graduacao" name="graduacao" required
                         class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none appearance-none cursor-pointer">
                         <option value="" disabled selected class="bg-brand-dark">Selecione...</option>
-                        <option value="biologia" class="bg-brand-dark">Biologia</option>
-                        <option value="geografia" class="bg-brand-dark">Geografia</option>
-                        <option value="engenharia" class="bg-brand-dark">Engenharia</option>
-                        <option value="direito" class="bg-brand-dark">Direito</option>
-                        <option value="tecnologia" class="bg-brand-dark">Tecnologia</option>
-                        <option value="estudante" class="bg-brand-dark">Estudante</option>
-                        <option value="outro" class="bg-brand-dark">Outro</option>
+                        <option value="Sim" class="bg-brand-dark">Sim</option>
+                        <option value="Não" class="bg-brand-dark">Não</option>
                       </select>
                       <span class="absolute right-0 top-3 text-brand-white/30 pointer-events-none">
                         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                       </span>
                     </div>
+                  </div>
+                </div>
+
+                <div class="group relative hidden area-container">
+                  <label for="f-area"
+                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Sua Área de Formação</label>
+                  <div class="relative">
+                    <select id="f-area" name="area"
+                      class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none appearance-none cursor-pointer">
+                      <option value="" disabled selected class="bg-brand-dark">Selecione...</option>
+                      <option value="biologia" class="bg-brand-dark">Biologia</option>
+                      <option value="geografia" class="bg-brand-dark">Geografia</option>
+                      <option value="engenharia" class="bg-brand-dark">Engenharia</option>
+                      <option value="direito" class="bg-brand-dark">Direito</option>
+                      <option value="tecnologia" class="bg-brand-dark">Tecnologia</option>
+                      <option value="estudante" class="bg-brand-dark">Estudante</option>
+                      <option value="outro" class="bg-brand-dark">Outro</option>
+                    </select>
+                    <span class="absolute right-0 top-3 text-brand-white/30 pointer-events-none">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
                   </div>
                 </div>
 
@@ -1661,6 +1677,23 @@
     const modal = document.getElementById('success-modal');
 
     forms.forEach(form => {
+      const gradSelect = form.querySelector('select[name="graduacao"]');
+      const areaContainer = form.querySelector('.area-container');
+      const areaSelect = form.querySelector('select[name="area"]');
+
+      if (gradSelect && areaContainer && areaSelect) {
+        gradSelect.addEventListener('change', (e) => {
+          if (e.target.value === 'Sim') {
+            areaContainer.classList.remove('hidden');
+            areaSelect.setAttribute('required', 'required');
+          } else {
+            areaContainer.classList.add('hidden');
+            areaSelect.removeAttribute('required');
+            areaSelect.value = '';
+          }
+        });
+      }
+
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
