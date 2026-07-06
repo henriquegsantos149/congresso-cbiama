@@ -1702,7 +1702,7 @@
         }
 
         // Envia para o ActiveCampaign via Vercel Serverless Function
-        fetch('/api/subscribe', {
+        fetch('/api/subscribe-vd', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
@@ -1710,15 +1710,6 @@
         .then(res => res.json())
         .then(data => console.log('ActiveCampaign Sync Success:', data))
         .catch(err => console.error('ActiveCampaign Sync Error:', err));
-
-        // Envia para a API do Google Sheets em segundo plano (fire & forget)
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbc5ij7lcYBMHABEuCMFlAZZLfXo_5pSH2hbT2TnwPVZWcU7tkMjdPtDfTcvFnr0u9Aw/exec';
-        fetch(SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        }).catch(err => console.warn('Erro ao enviar dados para Google Sheets:', err));
       });
     });
 
