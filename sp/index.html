@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MTZ9NFFN');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '142282980');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/webp" href="/favicon.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente – Inovação e tecnologia voltada à sustentabilidade. 15 de agosto de 2026, Presencial.">
+  <title>Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#010A15',
+              white: '#F2F2F2',
+              green1: '#038C4C',
+              green2: '#034959',
+              teal: '#038C4C',
+              deep: '#6FA638',
+            }
+          },
+          fontFamily: {
+            display: ['"Outfit"', 'sans-serif'],
+            body: ['"Montserrat"', 'sans-serif'],
+            impact: ['"Outfit"', 'sans-serif'],
+          },
+          backgroundImage: {
+            'brand-gradient': 'linear-gradient(90deg, #038C4C 0%, #034959 100%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       BASE
+    ============================================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #010A15;
+      color: #F2F2F2;
+      overflow-x: hidden;
+    }
+
+    .brand-gradient-text {
+      color: #038C4C;
+    }
+
+    .brand-gradient-text-light {
+      color: #6FA638;
+    }
+
+    .brand-gradient-text-dark {
+      color: #034959;
+    }
+
+    .brand-gradient-bg {
+      background: #038C4C;
+      transition: background 0.3s ease;
+    }
+    .brand-gradient-bg:hover {
+      background: #034959;
+    }
+
+    /* Signature Shape Minimalist */
+    .signature-shape {
+      border-radius: 24px;
+    }
+
+    .signature-shape-sm {
+      border-radius: 12px;
+    }
+
+    /* Cartographic Grid */
+    .carto-grid {
+      background-image:
+        linear-gradient(to right, rgba(3, 140, 76, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(3, 140, 76, 0.05) 1px, transparent 1px);
+      background-size: 50px 50px;
+    }
+
+    .carto-grid-subtle {
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 25px 25px;
+    }
+
+    /* Glow Lines - Removed for minimalism */
+    .glow-line-h {
+      display: none;
+    }
+
+    .glow-line-v {
+      display: none;
+    }
+
+    /* ============================================================
+       COUNTDOWN
+    ============================================================ */
+    .cd-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+      padding: 10px 16px;
+      min-width: 72px;
+      text-align: center;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .cd-box:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .cd-num {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 2.2rem;
+      line-height: 1;
+      color: #038C4C;
+      text-shadow: 0 0 15px rgba(3, 140, 76, 0.3);
+    }
+
+    .cd-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-top: 4px;
+    }
+
+    /* ============================================================
+       LIVE BADGE PULSE
+    ============================================================ */
+    @keyframes live-pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.45;
+        transform: scale(1.4);
+      }
+    }
+
+    .live-dot {
+      animation: live-pulse 1.6s ease-in-out infinite;
+    }
+
+    /* ============================================================
+       NAVBAR & MENU OPTIMIZATION
+    ============================================================ */
+    #navbar {
+      height: 80px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      #navbar {
+        height: 96px;
+      }
+    }
+
+    #navbar.scrolled {
+      height: 70px;
+      background: rgba(1, 10, 21, 0.92) !important;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media (min-width: 1024px) {
+      #navbar.scrolled {
+        height: 80px;
+      }
+    }
+
+    .nav-link {
+      position: relative;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #6FA638;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .nav-link:hover {
+      color: #6FA638;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile Menu (Dropdown Panel) */
+    #mobile-menu {
+      position: fixed;
+      top: 72px;
+      right: 12px;
+      z-index: 9999;
+      width: min(320px, calc(100vw - 24px));
+      background: rgba(1, 10, 21, 0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(3, 140, 76, 0.25);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(3, 140, 76, 0.1);
+      padding: 8px;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+      transform: translateY(-10px) scale(0.96);
+      transform-origin: top right;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #mobile-menu.open {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-link {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      padding: 12px 16px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: background 0.2s ease, color 0.2s ease;
+      opacity: 1;
+      transform: none;
+    }
+
+    .mobile-link:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #F2F2F2;
+    }
+
+    /* Backdrop click-outside to close */
+    #menu-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      display: none;
+    }
+
+    #menu-backdrop.open {
+      display: block;
+    }
+
+    /* Delays para animação sequencial no menu mobile */
+    .mobile-link:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .mobile-link:nth-child(2) {
+      transition-delay: 0.15s;
+    }
+
+    .mobile-link:nth-child(3) {
+      transition-delay: 0.2s;
+    }
+
+    .mobile-link:nth-child(4) {
+      transition-delay: 0.25s;
+    }
+
+    .mobile-link:nth-child(5) {
+      transition-delay: 0.3s;
+    }
+
+    .mobile-link:nth-child(6) {
+      transition-delay: 0.35s;
+    }
+
+    .mobile-link:nth-child(7) {
+      transition-delay: 0.4s;
+    }
+
+    .nav-cta {
+      background: #038C4C;
+      color: #F2F2F2;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(3, 140, 76, 0.25);
+    }
+
+    .nav-cta:hover {
+      background: #034959;
+      color: #F2F2F2;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(3, 140, 76, 0.4);
+    }
+
+    /* ============================================================
+       SPEAKER CARDS  — gradientes teal da logo
+    ============================================================ */
+    .speaker-card {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      width: calc(100% - 1.25rem);
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 640px) {
+      .speaker-card {
+        width: calc(50% - 1.25rem);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .speaker-card {
+        width: calc(33.333% - 1.25rem);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .speaker-card {
+        width: calc(25% - 1.25rem);
+        max-width: 300px;
+      }
+    }
+
+    .speaker-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(1, 10, 21, 0.12);
+    }
+
+    /* Gradientes extraídos */
+    .grad-a {
+      background: linear-gradient(135deg, #038C4C, #010A15);
+    }
+
+    .grad-b {
+      background: linear-gradient(135deg, #034959, #010A15);
+    }
+
+    .grad-c {
+      background: linear-gradient(135deg, #010A15, #038C4C);
+    }
+
+    .grad-d {
+      background: linear-gradient(135deg, #038C4C, #034959);
+    }
+
+    /* ============================================================
+       SCHEDULE TABS
+    ============================================================ */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-btn {
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #010A15;
+      background: #fff;
+      border: 2px solid #e5e7eb;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      border-color: #038C4C;
+      color: #038C4C;
+    }
+
+    .tab-btn.active {
+      background: #038C4C;
+      border-color: #038C4C;
+      color: #F2F2F2;
+    }
+
+    /* ============================================================
+       FAQ ACCORDION
+    ============================================================ */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.38s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        opacity: 0;
+        transform: translateY(26px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .reveal-delay-1 {
+        transition-delay: 0.1s;
+      }
+
+      .reveal-delay-2 {
+        transition-delay: 0.2s;
+      }
+
+      .reveal-delay-3 {
+        transition-delay: 0.3s;
+      }
+
+      .reveal-delay-4 {
+        transition-delay: 0.4s;
+      }
+    }
+
+    /* ============================================================
+       GRADIENT TEXT
+    ============================================================ */
+    .text-gradient {
+      background: linear-gradient(135deg, #6FA638 0%, #034959 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       SECTION ACCENT LINE
+    ============================================================ */
+    .accent-line {
+      width: 56px;
+      height: 4px;
+      background: linear-gradient(90deg, #034959, #038C4C);
+      border-radius: 2px;
+    }
+
+    /* ============================================================
+       PRICING CARD POPULAR — gradiente teal da logo
+    ============================================================ */
+    .pricing-popular {
+      background: linear-gradient(155deg, #010A15 0%, #034959 100%);
+      box-shadow: 0 12px 40px rgba(1, 10, 21, 0.32);
+    }
+
+    /* ============================================================
+       FORM
+    ============================================================ */
+    .form-input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #010A15;
+      background: #fff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: #038C4C;
+      box-shadow: 0 0 0 3px rgba(3, 140, 76, 0.15);
+    }
+
+    .form-input::placeholder {
+      color: #9ca3af;
+    }
+
+    /* ============================================================
+       STATS COUNTER
+    ============================================================ */
+    .stat-num {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 2.8rem;
+      line-height: 1;
+      color: #010A15;
+    }
+
+    .wave-bottom {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    /* ============================================================
+       SUCCESS MODAL
+    ============================================================ */
+    #success-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(1, 10, 21, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    #success-modal.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-card {
+      transform: scale(0.95);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    #success-modal.open .modal-card {
+      transform: scale(1);
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F2F2F2;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #038C4C;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body class="font-body bg-[#F2F2F2] text-[#010A15] overflow-x-hidden">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTZ9NFFN" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Meta Pixel Code (noscript) -->
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=142282980&ev=PageView&noscript=1" /></noscript>
+
+  <!-- Skip to main content (accessibility) -->
+  <a href="#hero"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-[#038C4C] focus:text-[#F2F2F2] focus:font-bold focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">
+    Pular para o conteúdo principal
+  </a>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 border-b border-brand-teal/20 backdrop-blur-md"
+    role="navigation" aria-label="Navegação principal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="flex items-center justify-between w-full h-24">
+
+        <!-- Logo nav -->
+        <a href="#hero"
+          class="flex items-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-green1 rounded-xl p-1 group -ml-7 sm:-ml-10 lg:-ml-12"
+          aria-label="Início – Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente">
+          <img src="/logo.webp" alt="Logo do Congresso"
+            class="h-16 sm:h-20 object-contain drop-shadow-[0_4px_16px_rgba(115,140,108,0.3)] transition-all duration-500 group-hover:-translate-y-1"
+            width="280" height="80">
+        </a>
+
+        <!-- Desktop links -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#sobre" class="nav-link text-xs uppercase tracking-wider">Sobre</a>
+          <a href="#publico" class="nav-link text-xs uppercase tracking-wider">Público-Alvo</a>
+          <a href="#palestrantes" class="nav-link text-xs uppercase tracking-wider">Palestrantes</a>
+          <a href="#certificado" class="nav-link text-xs uppercase tracking-wider">Certificado</a>
+          <a href="#local" class="nav-link text-xs uppercase tracking-wider">Local</a>
+          <a href="#faq" class="nav-link text-xs uppercase tracking-wider">FAQ</a>
+        </div>
+
+        <!-- CTA + Hamburger -->
+        <div class="flex items-center gap-5">
+          <a href="#ingressos"
+            class="hidden sm:inline-flex items-center brand-gradient-bg text-white font-bold text-xs uppercase tracking-widest px-6 py-2.5 signature-shape-sm hover:-translate-y-1 transition-all shadow-md shadow-brand-teal/20">
+            GARANTIR INGRESSO
+          </a>
+
+          <button id="hamburger-btn"
+            class="lg:hidden p-2 text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-green1 rounded-lg transition-transform active:scale-95"
+            aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="icon-menu" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backdrop (click outside to close) -->
+    <div id="menu-backdrop" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile menu (Dropdown panel) -->
+    <div id="mobile-menu" aria-label="Menu mobile" role="dialog">
+      <!-- Links -->
+      <a href="#sobre" class="mobile-link" onclick="closeMobileMenu()">Sobre</a>
+      <a href="#publico" class="mobile-link" onclick="closeMobileMenu()">Público-Alvo</a>
+      <a href="#palestrantes" class="mobile-link" onclick="closeMobileMenu()">Palestrantes</a>
+      <a href="#certificado" class="mobile-link" onclick="closeMobileMenu()">Certificado</a>
+      <a href="#local" class="mobile-link" onclick="closeMobileMenu()">Local</a>
+      <a href="#faq" class="mobile-link" onclick="closeMobileMenu()">FAQ</a>
+      <!-- Divider -->
+      <div style="height:1px; background: rgba(0,151,178,0.2); margin: 6px 8px;"></div>
+      <!-- CTA -->
+      <a href="#ingressos"
+        class="mobile-link brand-gradient-bg text-brand-white font-bold text-center"
+        style="border-radius:10px; margin-top:2px;"
+        onclick="closeMobileMenu()">QUERO PARTICIPAR</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+          HERO
+    ============================================================ -->
+        <section id="hero" class="relative bg-brand-dark min-h-screen flex items-center pt-24 pb-20 overflow-hidden carto-grid-subtle"
+      aria-label="Apresentação do congresso">
+
+      <!-- Minimalist Dark Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark via-brand-dark/95 to-brand-teal/15 pointer-events-none"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 w-full z-10">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+          <!-- LADO ESQUERDO: IDENTIDADE E APRESENTAÇÃO -->
+          <div class="lg:col-span-7 text-center lg:text-left">
+            <!-- Sleek Badge -->
+            <div
+              class="inline-flex items-center gap-3 bg-brand-white/[0.03] border border-brand-white/10 rounded-full px-5 py-2 mb-8 reveal backdrop-blur-sm">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+              <span class="text-brand-white/90 text-xs font-semibold tracking-widest uppercase">Inscrições Abertas</span>
+              <span class="text-brand-white/20 text-xs">|</span>
+              <span class="text-brand-white/70 text-xs font-medium uppercase tracking-wider">São Paulo · Presencial</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="font-display leading-[1.05] text-brand-white mb-6 reveal" style="font-size: clamp(2.2rem, 5.5vw, 3.6rem); letter-spacing: -0.02em;">
+              <span class="font-light text-brand-white/50 block text-base sm:text-lg uppercase tracking-[0.3em] mb-4">Congresso Nacional</span>
+              <span class="font-extralight block tracking-tight text-brand-white/90">Inteligência Artificial</span>
+              <span class="font-black bg-gradient-to-r from-brand-teal via-[#4F9E43] to-[#8AD341] bg-clip-text text-transparent block mt-2 pb-1">
+                Aplicada ao Meio Ambiente
+              </span>
+            </h1>
+
+            <!-- Description -->
+            <div class="text-brand-white/70 text-base sm:text-lg font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-10 reveal space-y-4">
+              <p>O epicentro da Inteligência Artificial aplicada ao Meio Ambiente acontece em São Paulo. E você está a poucos minutos dele.</p>
+              <p>Participe do maior encontro do Brasil focado exclusivamente na intersecção entre tecnologia e sustentabilidade. Prepare-se para dominar algoritmos, processar dados complexos e aplicar tecnologias inovadoras em um dia de imersão absoluta com os maiores especialistas do setor.</p>
+              <p>O futuro da IA aplicada ao meio ambiente está sendo decidido perto de você. Falta só dar o próximo passo.</p>
+            </div>
+ 
+            <!-- Info Row -->
+            <div
+              class="reveal mb-8 flex flex-wrap justify-center lg:justify-start gap-8 text-brand-white/90 font-medium uppercase tracking-wider text-xs sm:text-sm">
+              <div class="flex items-center gap-3 border-r border-brand-white/10 pr-8 last:border-0 last:pr-0">
+                <svg class="w-4 h-4 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span>15 de Agosto, 2026</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>CREA-SP - Coworking Nestor Pestana</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- LADO DIREITO: FORM CARD & COUNTDOWN -->
+          <div class="lg:col-span-5 flex flex-col items-center gap-8">
+            <!-- Minimalist Form Card -->
+            <div
+              class="w-full max-w-md bg-brand-white/[0.02] backdrop-blur-2xl border border-brand-white/10 rounded-2xl p-8 shadow-2xl relative reveal">
+              
+              <h3 class="text-brand-white font-semibold text-xs uppercase tracking-widest mb-6 flex items-center gap-3 border-b border-brand-white/10 pb-4">
+                <span>INSCRIÇÃO ONLINE</span>
+              </h3>
+
+              <form action="/api/register" method="POST" class="space-y-6 registration-form">
+                <div class="group relative">
+                  <label for="f-name"
+                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Nome Completo</label>
+                  <input type="text" id="f-name" name="nome" placeholder="Digite seu nome completo" required
+                    class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none">
+                </div>
+
+                <div class="group relative">
+                  <label for="f-email"
+                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">E-mail Profissional</label>
+                  <input type="email" id="f-email" name="email" placeholder="seu@email.com" required
+                    class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="group relative">
+                    <label for="f-tel"
+                      class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Telefone</label>
+                    <input type="tel" id="f-tel" name="telefone" placeholder="(00) 00000-0000" required
+                      class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none tel-input">
+                  </div>
+                  <div class="group relative">
+                    <label for="f-area"
+                      class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Sua Área</label>
+                    <div class="relative">
+                      <select id="f-area" name="area" required
+                        class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none appearance-none cursor-pointer">
+                        <option value="" disabled selected class="bg-brand-dark">Selecione...</option>
+                        <option value="biologia" class="bg-brand-dark">Biologia</option>
+                        <option value="geografia" class="bg-brand-dark">Geografia</option>
+                        <option value="engenharia" class="bg-brand-dark">Engenharia</option>
+                        <option value="direito" class="bg-brand-dark">Direito</option>
+                        <option value="tecnologia" class="bg-brand-dark">Tecnologia</option>
+                        <option value="estudante" class="bg-brand-dark">Estudante</option>
+                        <option value="outro" class="bg-brand-dark">Outro</option>
+                      </select>
+                      <span class="absolute right-0 top-3 text-brand-white/30 pointer-events-none">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit"
+                  class="w-full bg-brand-teal text-brand-white font-bold text-xs uppercase tracking-widest py-4 rounded-xl shadow-lg hover:bg-brand-teal/80 active:scale-95 transition-all mt-4 btn-submit">
+                  <span class="btn-text">GARANTIR MINHA VAGA</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Countdown -->
+            <div class="w-full max-w-md reveal">
+              <p
+                class="text-brand-white/30 text-xs uppercase tracking-widest mb-4 font-semibold text-center">
+                Faltam para o início</p>
+
+              <div class="grid grid-cols-4 gap-4">
+                <div class="bg-brand-white/[0.01] border border-brand-white/5 rounded-xl py-3 px-2 text-center">
+                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1" id="cd-days">--</div>
+                  <div class="text-[10px] text-brand-white/40 uppercase tracking-wider font-semibold">Dias</div>
+                </div>
+                <div class="bg-brand-white/[0.01] border border-brand-white/5 rounded-xl py-3 px-2 text-center">
+                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1" id="cd-hours">--</div>
+                  <div class="text-[10px] text-brand-white/40 uppercase tracking-wider font-semibold">Hrs</div>
+                </div>
+                <div class="bg-brand-white/[0.01] border border-brand-white/5 rounded-xl py-3 px-2 text-center">
+                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1" id="cd-minutes">--</div>
+                  <div class="text-[10px] text-brand-white/40 uppercase tracking-wider font-semibold">Min</div>
+                </div>
+                <div class="bg-brand-white/[0.01] border border-brand-white/5 rounded-xl py-3 px-2 text-center">
+                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1" id="cd-seconds">--</div>
+                  <div class="text-[10px] text-brand-white/40 uppercase tracking-wider font-semibold">Seg</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SOBRE O CONGRESSO
+    ============================================================ -->
+    <section id="sobre" class="py-16 sm:py-20 lg:py-24 bg-[#F2F2F2]" aria-label="Sobre o congresso">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-16 reveal">
+          <div class="accent-line mx-auto mb-5"></div>
+          <h2 class="font-display font-bold text-[#010A15] mb-4"
+            style="font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -0.01em;">SOBRE O CONGRESSO</h2>
+          <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+            O <strong class="text-[#010A15]">Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente 2026</strong> é o maior evento nacional dedicado a soluções inteligentes, focado em tecnologia, dados e inovação prática na área ambiental.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
+          <div class="reveal reveal-delay-1 bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
+            <div class="stat-num">1</div>
+            <div class="text-[#038C4C] font-semibold text-sm uppercase tracking-wide mt-1">Dia de Evento</div>
+          </div>
+          <div class="reveal reveal-delay-2 bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
+            <div class="stat-num">12h</div>
+            <div class="text-[#038C4C] font-semibold text-sm uppercase tracking-wide mt-1">de Certificação</div>
+          </div>
+          <div class="reveal reveal-delay-3 bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 flex flex-col justify-center overflow-hidden">
+            <div class="stat-num !text-xl sm:!text-3xl mb-1">Presencial</div>
+            <div class="text-[#038C4C] font-semibold text-sm uppercase tracking-wide mt-1">Networking Real</div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="max-w-5xl mx-auto reveal space-y-8">
+          <div class="space-y-6">
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              O congresso foi planejado para entregar atualização direta sobre as tecnologias que estão <strong
+                class="text-brand-teal">redefinindo a sustentabilidade e a conservação ambiental</strong>, capacitando profissionais para
+              dominarem o novo ecossistema de dados, sensoriamento e modelagem preditiva com IA.
+            </p>
+            <p class="text-brand-dark/70 text-lg leading-relaxed">
+              Ao longo da imersão, a programação prioriza a <strong class="text-brand-teal">aplicação prática e a
+                estratégia técnica</strong> diante das rápidas mudanças na área de inteligência artificial voltada ao meio ambiente.
+            </p>
+          </div>
+
+          <blockquote class="border-l-4 border-brand-teal pl-8 py-4 bg-brand-dark/5 signature-shape-sm">
+            <p class="text-brand-dark font-bold text-xl italic leading-relaxed">
+              "O ponto de encontro definitivo para quem busca alinhar tecnologia, IA e inovação na sustentabilidade ambiental brasileira."
+            </p>
+          </blockquote>
+
+          <div class="flex justify-center pt-4">
+            <a href="#ingressos"
+              class="inline-flex items-center gap-3 brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-widest px-10 py-5 signature-shape shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
+              GARANTIR MINHA VAGA
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PÚBLICO-ALVO
+    ============================================================ -->
+    <section id="publico" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Público-alvo do congresso">
+      <div class="absolute top-0 right-0 glow-line-h w-1/3 opacity-30"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="text-center mb-20 reveal">
+          <span
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Networking</span>
+          <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight"
+            style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">PARA QUEM É O <br><span
+              class="brand-gradient-text">CONGRESSO</span></h2>
+          <p class="text-brand-white/80 text-lg max-w-2xl mx-auto font-medium">O evento foi criado para reunir
+            profissionais e
+            estudantes interessados no futuro da sustentabilidade e inteligência artificial aplicada ao meio ambiente.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="reveal reveal-delay-1 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
+
+            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Engenheiros e Ambientais</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Profissionais focados em dominar novas ferramentas de IA e análise de dados aplicadas ao setor ambiental.</p>
+          </div>
+
+          <div
+            class="reveal reveal-delay-2 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
+
+            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Gestores e Fiscais</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Gestores que buscam otimizar a fiscalização e o monitoramento ambiental com inteligência artificial.</p>
+          </div>
+
+          <div
+            class="reveal reveal-delay-3 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
+
+            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Empresas de Tecnologia</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Empresas e startups desenvolvendo soluções sustentáveis and análises ecológicas inteligentes.</p>
+          </div>
+
+          <div
+            class="reveal reveal-delay-1 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
+
+            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Peritos e Consultores</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Especialistas focados em acelerar laudos, perícias e relatórios técnicos usando ferramentas de IA.</p>
+          </div>
+
+          <div
+            class="reveal reveal-delay-2 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
+
+            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Advogados do Setor</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Advogados que buscam usar IA para gerar dados periciais sólidos e embasar teses jurídicas ambientais.</p>
+          </div>
+
+          <div
+            class="reveal reveal-delay-3 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
+
+            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Estudantes e Pesquisadores</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Pesquisadores e estudantes que buscam novas tecnologias e conexões com o mercado de trabalho.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     PALESTRANTES
+============================================================ -->
+    <section id="palestrantes" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden"
+      aria-label="Palestrantes do congresso">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="text-center mb-20 reveal">
+          <span
+             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Lineup</span>
+          <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight break-words"
+            style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">PALESTRANTES <br><span
+              class="brand-gradient-text-dark">CONFIRMADOS</span></h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto font-medium">Os maiores especialistas do mercado em inteligência artificial aplicada à gestão e sustentabilidade ambiental.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+          <article class="reveal reveal-delay-1 group cursor-pointer w-full">
+            <div
+              class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-brand-green2/30 transition-all">
+              <img src="/faculty/henrique.webp" alt="Henrique Gonzalez"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Henrique Gonzalez</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental (UFRJ)</p>
+                <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal reveal-delay-2 group cursor-pointer w-full">
+            <div
+              class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/hermann.webp" alt="Hermann Fernandes"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Hermann Fernandes</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental (UFRJ) e Especialista em Ciência de Dados</p>
+                <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal reveal-delay-3 group cursor-pointer w-full">
+            <div
+              class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/vinicius.webp" alt="Vinícius Ragghianti"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Vinícius Ragghianti</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental e Sanitarista, MBA em Gestão de Projetos</p>
+                <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal reveal-delay-4 group cursor-pointer w-full">
+            <div
+              class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/victor.webp" alt="Victor Valente Silvestre"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Victor Valente Silvestre</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Sanitarista e Ambiental, Mestre e Pesquisador</p>
+                <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<!-- ============================================================
+     CERTIFICADO
+    ============================================================ -->
+    <section id="certificado" class="py-16 sm:py-32 bg-brand-dark relative overflow-hidden"
+      aria-label="Certificado de participação">
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+          <!-- Certificate mockup -->
+          <div class="reveal text-center lg:text-left">
+            <div class="relative inline-block">
+              <img src="/certificado.webp" alt="Certificado Digital Modelo"
+                class="inline-block w-full max-w-lg lg:max-w-xl shadow-lg signature-shape hover:-translate-y-1 transition-transform duration-700">
+              <div
+                class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-dark signature-shape-sm backdrop-blur-xl border border-white/20 flex items-center justify-center p-4 shadow-xl">
+                <p class="text-white font-bold text-sm text-center uppercase leading-tight">12 Horas de
+                  <br>Certificação</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="reveal reveal-delay-2 text-brand-white">
+            <span
+              class="bg-brand-white/10 text-brand-white px-5 py-1.5 signature-shape-sm font-bold text-sm uppercase tracking-widest mb-8 inline-block">Reconhecimento</span>
+            <h2 class="font-display font-bold mb-8 uppercase tracking-tight text-brand-white"
+              style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">VALORIZE SEU <br>CURRÍCULO</h2>
+            <p class="text-brand-white/80 text-xl leading-relaxed mb-10 font-medium">
+              Todos os inscritos receberão um <strong class="text-white">certificado digital de
+                participação</strong>
+              válido em todo o território nacional.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 signature-shape-sm bg-brand-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-5 h-5 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-brand-white/80 font-bold">Pontuar em processos seletivos e concursos</p>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 signature-shape-sm bg-brand-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-5 h-5 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-brand-white/80 font-bold">Comprovar horas complementares acadêmicas</p>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-8 h-8 signature-shape-sm bg-brand-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-5 h-5 text-brand-green1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-brand-white/80 font-bold">Fortalecer seu portfólio junto a clientes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LOCAL DO EVENTO
+    ============================================================ -->
+    <section id="local" class="py-16 sm:py-24 bg-white relative overflow-hidden" aria-label="Local do evento">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center mb-16 reveal">
+          <div class="accent-line mx-auto mb-5"></div>
+          <h2 class="font-display font-bold text-brand-dark mb-4 uppercase tracking-tight"
+            style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">LOCAL DO EVENTO</h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto font-medium">
+            CREA-SP - Coworking Nestor Pestana
+          </p>
+          <p class="text-brand-teal font-bold text-base mt-2 flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Rua Nestor Pestana, 87 – Consolação, São Paulo – SP
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
+          <!-- Imagem 1 -->
+          <div class="reveal reveal-delay-1 overflow-hidden signature-shape shadow-lg hover:shadow-xl transition-shadow group border border-gray-200">
+            <img src="/crea-1.webp" alt="CREA-SP Coworking Nestor Pestana - Área Interna"
+              class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="400">
+          </div>
+
+          <!-- Imagem 2 -->
+          <div class="reveal reveal-delay-2 overflow-hidden signature-shape shadow-lg hover:shadow-xl transition-shadow group border border-gray-200">
+            <img src="/crea-2.webp" alt="CREA-SP Coworking Nestor Pestana - Espaço de Trabalho"
+              class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="400">
+          </div>
+        </div>
+
+        <!-- Google Maps Link Button -->
+        <div class="text-center mt-12 reveal">
+          <a href="https://maps.google.com/?q=Condomínio+Edifício+Guaporé+-+R.+Nestor+Pestana,+87+-+Consolação,+São+Paulo+-+SP,+01303-010" target="_blank"
+            class="inline-flex items-center gap-3 border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white font-bold text-sm uppercase tracking-wider px-8 py-4 signature-shape transition-all">
+            <span>COMO CHEGAR (GOOGLE MAPS)</span>
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INGRESSOS
+    ============================================================ -->
+    <section id="ingressos" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden" aria-label="Ingressos e preços">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="text-center mb-20 reveal">
+          <span
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Vagas
+            Limitadas</span>
+          <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight"
+            style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">ESCOLHA SEU <br><span
+              class="brand-gradient-text-dark">PASSAPORTE</span></h2>
+          <p class="text-brand-dark/60 text-lg max-w-xl mx-auto font-medium">Garanta seu lugar no maior evento de inteligência artificial aplicada ao meio ambiente do ano.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
+
+          <!-- Básico -->
+          <div
+            class="reveal reveal-delay-1 bg-white signature-shape p-8 border border-gray-200 flex flex-col hover:border-brand-deep/40 hover:scale-[1.02] transition-all group shadow-xl shadow-gray-200/50">
+            <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Básico</p>
+            <div class="mb-2">
+              <span class="font-display font-semibold text-brand-dark dynamic-price-basico" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 397</span>
+              <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+            </div>
+            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+
+            <ul class="space-y-5 mb-12 flex-1">
+              <li class="flex items-start gap-4 text-brand-dark/70 text-sm">
+                <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-medium">Acesso ao Evento Presencial</span>
+              </li>
+            </ul>
+
+            <button onclick="selectTicket('basico')"
+              class="w-full py-5 signature-shape border-2 border-brand-deep text-brand-deep font-bold text-sm uppercase tracking-wider group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
+              SELECIONAR BÁSICO
+            </button>
+            <p class="text-brand-dark/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
+          </div>
+
+          <!-- PRO -->
+          <div
+            class="reveal reveal-delay-2 bg-white signature-shape p-8 border-2 border-brand-deep flex flex-col relative shadow-lg shadow-brand-deep/10 hover:scale-[1.02] transition-all">
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-bold text-[11px] px-6 py-2 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
+              MAIS VENDIDO</div>
+
+            <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Pro</p>
+            <div class="mb-2">
+              <span class="font-display font-semibold text-brand-dark dynamic-price-pro" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 497</span>
+              <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+            </div>
+            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+
+            <ul class="space-y-5 mb-12 flex-1">
+              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
+                <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-bold">Acesso ao Evento Presencial</span>
+              </li>
+              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
+                <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-bold">Acesso à Gravação do Congresso Presencial</span>
+              </li>
+              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
+                <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-bold">Acesso a todos os Congressos Online da Ambiental Pro em 2026 (incluindo gravações passadas)</span>
+              </li>
+            </ul>
+
+            <button onclick="selectTicket('pro')"
+              class="w-full py-5 signature-shape brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
+              GARANTIR INGRESSO PRO
+            </button>
+            <p class="text-brand-dark/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FAQ
+    ============================================================ -->
+    <section id="faq" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Perguntas frequentes">
+      
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="text-center mb-20 reveal">
+          <span
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Dúvidas</span>
+          <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight"
+            style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">PERGUNTAS <br><span
+              class="brand-gradient-text-light">FREQUENTES</span></h2>
+        </div>
+
+        <div class="grid gap-2">
+          <div
+            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            <button
+              class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
+              aria-expanded="false" onclick="toggleFaq(this)">
+              <span class="font-bold text-brand-white text-base">O congresso terá certificado?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+                <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Sim. Todos os
+                participantes recebem certificado digital com carga horária de 12h, válido nacionalmente. O documento é
+                enviado por e-mail na semana seguinte ao evento.</p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            <button
+              class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
+              aria-expanded="false" onclick="toggleFaq(this)">
+              <span class="font-bold text-brand-white text-base">O evento é presencial ou online?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+                <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">O evento é
+                100% presencial, focado em networking real e experiência prática. O local do evento será o CREA-SP - Coworking Nestor Pestana (Rua Nestor Pestana, 87 - Consolação, São Paulo - SP).</p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            <button
+              class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
+              aria-expanded="false" onclick="toggleFaq(this)">
+              <span class="font-bold text-brand-white text-base">Quais são as formas de pagamento?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+                <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Aceitamos cartões de crédito (com parcelamento em até 12x), boleto bancário e PIX. Para inscrições corporativas em grupo, entre em contato com nosso suporte via WhatsApp.</p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            <button
+              class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
+              aria-expanded="false" onclick="toggleFaq(this)">
+              <span class="font-bold text-brand-white text-base">Haverá gravação das palestras?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+                <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Sim! Mas o acesso à gravação completa das palestras é um benefício exclusivo do Ingresso PRO.</p>
+            </div>
+          </div>
+
+          <div
+            class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+            <button
+              class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
+              aria-expanded="false" onclick="toggleFaq(this)">
+              <span class="font-bold text-brand-white text-base">O evento oferece alimentação inclusa?</span>
+              <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+                <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
+                  viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Não, teremos coffee breaks inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FORMULÁRIO / INSCRIÇÃO
+    ============================================================ -->
+  <!-- ============================================================
+       REGISTRATION MODAL
+  ============================================================ -->
+  <div id="inscricao-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300"
+    style="background: rgba(0, 16, 39, 0.9); backdrop-filter: blur(12px);">
+    <div class="bg-brand-dark signature-shape max-w-lg w-full p-8 border border-brand-white/10 shadow-lg relative transform scale-95 transition-transform duration-300">
+      
+      <button onclick="closeRegistrationModal()"
+        class="absolute top-4 right-4 text-brand-white/40 hover:text-brand-white transition-colors">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <h3 class="text-brand-white font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-3">
+        <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
+        Me inscrever agora
+      </h3>
+
+      <form action="/api/register" method="POST" class="space-y-4 registration-form">
+        <div class="group">
+          <label for="m-name"
+            class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
+            Completo</label>
+          <input type="text" id="m-name" name="nome" placeholder="Seu nome" required
+            class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm">
+        </div>
+
+        <div class="group">
+          <label for="m-email"
+            class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
+            Profissional</label>
+          <input type="email" id="m-email" name="email" placeholder="seu@email.com" required
+            class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="group">
+            <label for="m-tel"
+              class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
+            <input type="tel" id="m-tel" name="telefone" placeholder="(00) 00000-0000" required
+              class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm tel-input">
+          </div>
+          <div class="group">
+            <label for="m-area"
+              class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
+              Área</label>
+            <select id="m-area" name="area" required
+              class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm appearance-none">
+              <option value="" disabled selected>Selecione...</option>
+              <option value="biologia">Biologia</option>
+              <option value="geografia">Geografia</option>
+              <option value="engenharia">Engenharia</option>
+              <option value="direito">Direito</option>
+              <option value="tecnologia">Tecnologia</option>
+              <option value="estudante">Estudante</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit"
+          class="w-full brand-gradient-bg text-brand-dark font-bold text-sm uppercase tracking-wider py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
+          <span class="btn-text">GARANTIR MINHA VAGA</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="bg-[#F2F2F2] border-t border-brand-dark/10 py-10 text-brand-dark" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
+
+        <div class="lg:col-span-2">
+          <img src="logo.webp" alt="Ambiental Pro Logo" class="h-8 mb-6 brightness-0 opacity-80">
+          <p class="text-brand-dark/60 text-sm leading-relaxed max-w-xs font-medium">
+            Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente. 15 de agosto de 2026. São Paulo, SP.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-6">Navegação</h4>
+          <ul class="space-y-3">
+            <li><a href="#sobre"
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Sobre</a>
+            </li>
+            <li><a href="#palestrantes"
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Lineup</a>
+            </li>
+            <li><a href="#local"
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Local</a>
+            </li>
+            <li><a href="#ingressos"
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Ingressos</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-6">Suporte</h4>
+          <div class="space-y-4">
+            <a href="https://wa.link/6on3xe" target="_blank"
+              class="flex items-center gap-3 text-brand-dark/60 hover:text-brand-teal transition-colors group">
+              <div
+                class="w-8 h-8 signature-shape-sm bg-brand-dark/5 flex items-center justify-center group-hover:bg-brand-teal/20">
+                <svg class="w-4 h-4 text-brand-dark/80 group-hover:text-brand-teal" fill="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </div>
+              <span class="font-bold text-sm uppercase tracking-widest">+55 21 98837-4133</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="border-t border-brand-dark/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-wider">&copy; 2026 AMBIENTAL PRO.
+          TODOS OS DIREITOS RESERVADOS.</p>
+        <div class="flex gap-8">
+          <div class="w-10 h-px brand-gradient-bg opacity-30"></div>
+          <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-wider">Congresso IA & Meio Ambiente 2026</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SUCCESS MODAL (TICKET SELECTION)
+  ============================================================ -->
+  <div id="success-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6"
+    style="background: rgba(1, 10, 21, 0.9); backdrop-filter: blur(12px);">
+    <div
+      class="bg-brand-dark signature-shape max-w-5xl w-full max-h-[90vh] overflow-y-auto p-10 sm:p-16 border border-brand-white/10 shadow-lg relative animate-in">
+
+      <div class="absolute top-0 right-0 p-8">
+        <button
+          onclick="closeSuccessModal()"
+          class="text-brand-white/20 hover:text-brand-white transition-colors">
+          <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="text-center mb-12">
+        <h2 id="modal-title"
+          class="font-display font-bold text-brand-white text-4xl sm:text-5xl mb-6 uppercase tracking-tight">QUASE LÁ!
+        </h2>
+        <p class="text-brand-white/50 text-xl max-w-xl mx-auto font-medium">Seu interesse foi registrado. Agora, escolha
+          seu lote para garantir o valor atual.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+        <!-- Básico -->
+        <div
+          class="bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-deep/40 transition-all group">
+          <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Básico</p>
+          <div class="mb-2">
+            <span class="font-display font-semibold text-brand-white dynamic-price-basico" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+          </div>
+          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+          
+          <ul class="space-y-3 mb-8 text-left">
+            <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
+              <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              Acesso Presencial ao Evento
+            </li>
+          </ul>
+          <button onclick="selectTicket('basico')"
+            class="btn-basico w-full py-4 signature-shape border-2 border-brand-deep text-brand-deep font-bold text-sm uppercase tracking-widest group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
+            SELECIONAR BÁSICO
+          </button>
+          <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
+        </div>
+
+        <!-- PRO -->
+        <div
+          class="bg-brand-white/10 signature-shape p-10 border-2 border-brand-deep flex flex-col relative shadow-lg shadow-brand-deep/10">
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-bold text-[11px] px-4 py-1.5 signature-shape-sm uppercase tracking-widest">
+            RECOMENDADO</div>
+          <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Pro</p>
+          <div class="mb-2">
+            <span class="font-display font-semibold text-brand-white dynamic-price-pro" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+          </div>
+          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+
+          <ul class="space-y-3 mb-8 text-left">
+            <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
+              <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              Acesso ao Evento Presencial
+            </li>
+            <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
+              <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              Acesso à Gravação do Congresso Presencial
+            </li>
+            <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
+              <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              Todos os Congressos Online em 2026 (com Gravações)
+            </li>
+          </ul>
+          <button onclick="selectTicket('pro')"
+            class="btn-pro w-full py-4 signature-shape brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
+            GARANTIR INGRESSO PRO
+          </button>
+          <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ============================================================
+    // UTMS & ACTIVE CAMPAIGN INTEGRATION
+    // ============================================================
+    let currentContactId = null;
+    let pendingTicket = null;
+
+    function getUtms() {
+      const utms = {};
+      const params = new URLSearchParams(window.location.search);
+      for (const [key, value] of params.entries()) {
+        const lowerKey = key.toLowerCase();
+        if (lowerKey.startsWith('utm_') || lowerKey.startsWith('cbmig_') || lowerKey.startsWith('ia_')) {
+          utms[key] = value;
+        }
+      }
+      return utms;
+    }
+
+    const forms = document.querySelectorAll('.registration-form');
+    const modal = document.getElementById('success-modal');
+
+    forms.forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const btnSubmit = form.querySelector('.btn-submit');
+        const btnText = form.querySelector('.btn-text');
+
+        // Coleta dados
+        const formData = new FormData(form);
+        const utms = getUtms();
+
+        const payload = {
+          name: formData.get('nome'),
+          email: formData.get('email'),
+          phone: formData.get('telefone'),
+          area: formData.get('area'),
+          graduacao: formData.get('graduacao') || '',
+          utm_source: utms['utm_source'] || '',
+          utm_medium: utms['utm_medium'] || '',
+          utm_campaign: utms['utm_campaign'] || '',
+          utm_content: utms['utm_content'] || '',
+          utm_term: utms['utm_term'] || '',
+          utm_possui_graduacao: utms['utm_possui_graduacao'] || utms['utm_grad'] || utms['utm_graduacao'] || '',
+          utm_area_de_formacao: utms['utm_area_de_formacao'] || utms['utm_area'] || ''
+        };
+
+        currentContactId = formData.get('email');
+
+        // Abre o modal IMEDIATAMENTE
+        const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
+        
+        if (pendingTicket === 'basico') {
+          window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/QTSkah' : 'https://pay.voompcreators.com.br/14712/offer/4iFfHo';
+        } else if (pendingTicket === 'pro') {
+          window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/fIOTQu' : 'https://pay.voompcreators.com.br/14712/offer/OSkouA';
+        } else {
+          closeRegistrationModal();
+          openSuccessModal();
+        }
+
+        // Envia para o ActiveCampaign via Vercel Serverless Function
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => console.log('ActiveCampaign Sync Success:', data))
+        .catch(err => console.error('ActiveCampaign Sync Error:', err));
+
+        // Envia para a API do Google Sheets em segundo plano (fire & forget)
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbc5ij7lcYBMHABEuCMFlAZZLfXo_5pSH2hbT2TnwPVZWcU7tkMjdPtDfTcvFnr0u9Aw/exec';
+        fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(err => console.warn('Erro ao enviar dados para Google Sheets:', err));
+      });
+    });
+
+    async function selectTicket(type) {
+      pendingTicket = type;
+
+      if (!currentContactId) {
+        openRegistrationModal();
+        return;
+      }
+
+      // Se já tiver o ID, redireciona direto
+      const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
+      
+      if (type === 'basico') {
+        window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/QTSkah' : 'https://pay.voompcreators.com.br/14712/offer/4iFfHo';
+      } else {
+        window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/fIOTQu' : 'https://pay.voompcreators.com.br/14712/offer/OSkouA';
+      }
+    }
+
+    // ============================================================
+    // VIRADA DE LOTE AUTOMÁTICA
+    // ============================================================
+    function checkLoteTurn() {
+      const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
+      if (isLote1) {
+        document.querySelectorAll('.dynamic-price-basico').forEach(el => el.textContent = 'R$ 597');
+        document.querySelectorAll('.dynamic-price-pro').forEach(el => el.textContent = 'R$ 697');
+        document.querySelectorAll('.dynamic-lote-text').forEach(el => el.textContent = 'Lote 1');
+        document.querySelectorAll('.dynamic-asterisk').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.dynamic-student-text').forEach(el => el.style.display = 'none');
+      }
+    }
+    checkLoteTurn();
+    setInterval(checkLoteTurn, 1000);
+
+    // ============================================================
+    // COUNTDOWN
+    // ============================================================
+    function updateCountdown() {
+      const target = new Date('2026-08-14T08:00:00-03:00').getTime();
+      const now = Date.now();
+      const diff = target - now;
+      if (diff <= 0) {
+        ['cd-days', 'cd-hours', 'cd-minutes', 'cd-seconds'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = '00';
+        });
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+
+      const setEl = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = String(val).padStart(2, '0');
+      };
+
+      setEl('cd-days', d);
+      setEl('cd-hours', h);
+      setEl('cd-minutes', m);
+      setEl('cd-seconds', s);
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ============================================================
+    // NAVBAR SCROLL & LOGO RESIZE
+    // ============================================================
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // ============================================================
+    // MOBILE MENU (DROPDOWN PANEL)
+    // ============================================================
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuBackdrop = document.getElementById('menu-backdrop');
+    let menuOpen = false;
+
+    function openMobileMenu() {
+      menuOpen = true;
+      mobileMenu.classList.add('open');
+      menuBackdrop.classList.add('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      menuBackdrop.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    if (hamburgerBtn) {
+      hamburgerBtn.addEventListener('click', () => {
+        menuOpen ? closeMobileMenu() : openMobileMenu();
+      });
+    }
+
+    // ============================================================
+    // SCHEDULE TABS
+    // ============================================================
+    function showTab(id) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      });
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
+
+      const btn = document.querySelector(`[aria-controls="${id}"]`);
+      if (btn) { btn.classList.add('active'); btn.setAttribute('aria-selected', 'true'); }
+    }
+
+    // ============================================================
+    // FAQ ACCORDION
+    // ============================================================
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // ============================================================
+    // SCROLL REVEAL
+    // ============================================================
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+
+    // ============================================================
+    // PHONE MASK
+    // ============================================================
+    const telInputs = document.querySelectorAll('.tel-input');
+    telInputs.forEach(input => {
+      input.addEventListener('input', (e) => {
+        let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+        if (v.length > 6) v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+        else if (v.length > 2) v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+        else if (v.length > 0) v = `(${v}`;
+        e.target.value = v;
+      });
+    });
+
+    // ============================================================
+    // REGISTRATION MODAL LOGIC
+    // ============================================================
+    const regModal = document.getElementById('inscricao-modal');
+    
+    function openRegistrationModal() {
+      if(regModal) {
+        regModal.classList.remove('hidden');
+        regModal.classList.add('flex');
+        // trigger animation
+        setTimeout(() => {
+          regModal.classList.remove('opacity-0');
+          regModal.querySelector('div').classList.remove('scale-95');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeRegistrationModal() {
+      if(regModal) {
+        regModal.classList.add('opacity-0');
+        regModal.querySelector('div').classList.add('scale-95');
+        setTimeout(() => {
+          regModal.classList.add('hidden');
+          regModal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }, 300);
+      }
+    }
+
+    function openSuccessModal() {
+      const modal = document.getElementById('success-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        setTimeout(() => {
+          modal.classList.add('open');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeSuccessModal() {
+      const modal = document.getElementById('success-modal');
+      if (modal) {
+        modal.classList.remove('open');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }, 300);
+      }
+    }
+
+    // ============================================================
+    // SMOOTH SCROLL WITHOUT HASH IN URL
+    // ============================================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+  </script>
+
+
+
+</body>
+
+</html>
