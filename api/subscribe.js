@@ -48,45 +48,45 @@ export default async function handler(req, res) {
     // Map custom fields (fieldValues)
     const fieldValues = [];
 
-    // [C1][CBIAMA] UTM Term -> 780
+    // [VENDA DIRETA][C1][CBIAMA] UTM Term -> 825
     if (utm_term) {
-      fieldValues.push({ field: '780', value: utm_term });
+      fieldValues.push({ field: '825', value: utm_term });
     }
 
-    // [C1][CBIAMA] UTM Possui Graduação -> 782
+    // [VENDA DIRETA][C1][CBIAMA] UTM Possui Graduação -> 826
     const possuiGrad = utm_possui_graduacao || utm_graduacao || utm_grad;
     if (possuiGrad) {
-      fieldValues.push({ field: '782', value: possuiGrad });
+      fieldValues.push({ field: '826', value: possuiGrad });
     }
 
-    // [C1][CBIAMA] UTM Área de Formação -> 783 (fallback to the selected 'area' form field)
+    // [VENDA DIRETA][C1][CBIAMA] UTM Área de Formação -> 827 (fallback to the selected 'area' form field)
     const areaFormacao = utm_area_de_formacao || utm_area || area;
     if (areaFormacao) {
-      fieldValues.push({ field: '783', value: areaFormacao });
+      fieldValues.push({ field: '827', value: areaFormacao });
     }
 
-    // [C1][CBIAMA] UTM Campaign -> 784
+    // [VENDA DIRETA][C1][CBIAMA] UTM Campaign -> 814
     if (utm_campaign) {
-      fieldValues.push({ field: '784', value: utm_campaign });
+      fieldValues.push({ field: '814', value: utm_campaign });
     }
 
-    // [C1][CBIAMA] UTM Source -> 785
+    // [VENDA DIRETA][C1][CBIAMA] UTM Source -> 822
     if (utm_source) {
-      fieldValues.push({ field: '785', value: utm_source });
+      fieldValues.push({ field: '822', value: utm_source });
     }
 
-    // [C1][CBIAMA] UTM Medium -> 786
+    // [VENDA DIRETA][C1][CBIAMA] UTM Medium -> 823
     if (utm_medium) {
-      fieldValues.push({ field: '786', value: utm_medium });
+      fieldValues.push({ field: '823', value: utm_medium });
     }
 
-    // [C1][CBIAMA] UTM Content -> 787
+    // [VENDA DIRETA][C1][CBIAMA] UTM Content -> 824
     if (utm_content) {
-      fieldValues.push({ field: '787', value: utm_content });
+      fieldValues.push({ field: '824', value: utm_content });
     }
 
-    // UTM Data de Inscrição (Preencha com new Date().toISOString()) -> 781
-    fieldValues.push({ field: '781', value: new Date().toISOString() });
+    // [VENDA DIRETA][C1][CBIAMA] UTM Data de Inscrição -> 828
+    fieldValues.push({ field: '828', value: new Date().toISOString() });
 
     // [VENDA DIRETA][C1][CBIAMA] UTM Estado -> 830
     if (estado) {
