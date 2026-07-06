@@ -29,7 +29,8 @@ export default async function handler(req, res) {
       utm_graduacao,
       utm_grad,
       utm_area_de_formacao,
-      utm_area
+      utm_area,
+      estado
     } = req.body;
 
     if (!email) {
@@ -86,6 +87,11 @@ export default async function handler(req, res) {
 
     // UTM Data de Inscrição (Preencha com new Date().toISOString()) -> 781
     fieldValues.push({ field: '781', value: new Date().toISOString() });
+
+    // [VENDA DIRETA][C1][CBIAMA] UTM Estado -> 830
+    if (estado) {
+      fieldValues.push({ field: '830', value: estado });
+    }
 
     const contactPayload = {
       contact: {

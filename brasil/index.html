@@ -831,6 +831,47 @@
                   </div>
                 </div>
 
+                <div class="group relative">
+                  <label for="f-estado"
+                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Estado</label>
+                  <div class="relative">
+                    <select id="f-estado" name="estado" required
+                      class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none appearance-none cursor-pointer">
+                      <option value="" disabled selected class="bg-brand-dark">Selecione seu estado...</option>
+                      <option value="AC" class="bg-brand-dark">Acre</option>
+                      <option value="AL" class="bg-brand-dark">Alagoas</option>
+                      <option value="AP" class="bg-brand-dark">Amapá</option>
+                      <option value="AM" class="bg-brand-dark">Amazonas</option>
+                      <option value="BA" class="bg-brand-dark">Bahia</option>
+                      <option value="CE" class="bg-brand-dark">Ceará</option>
+                      <option value="DF" class="bg-brand-dark">Distrito Federal</option>
+                      <option value="ES" class="bg-brand-dark">Espírito Santo</option>
+                      <option value="GO" class="bg-brand-dark">Goiás</option>
+                      <option value="MA" class="bg-brand-dark">Maranhão</option>
+                      <option value="MT" class="bg-brand-dark">Mato Grosso</option>
+                      <option value="MS" class="bg-brand-dark">Mato Grosso do Sul</option>
+                      <option value="MG" class="bg-brand-dark">Minas Gerais</option>
+                      <option value="PA" class="bg-brand-dark">Pará</option>
+                      <option value="PB" class="bg-brand-dark">Paraíba</option>
+                      <option value="PR" class="bg-brand-dark">Paraná</option>
+                      <option value="PE" class="bg-brand-dark">Pernambuco</option>
+                      <option value="PI" class="bg-brand-dark">Piauí</option>
+                      <option value="RJ" class="bg-brand-dark">Rio de Janeiro</option>
+                      <option value="RN" class="bg-brand-dark">Rio Grande do Norte</option>
+                      <option value="RS" class="bg-brand-dark">Rio Grande do Sul</option>
+                      <option value="RO" class="bg-brand-dark">Rondônia</option>
+                      <option value="RR" class="bg-brand-dark">Roraima</option>
+                      <option value="SC" class="bg-brand-dark">Santa Catarina</option>
+                      <option value="SP" class="bg-brand-dark">São Paulo</option>
+                      <option value="SE" class="bg-brand-dark">Sergipe</option>
+                      <option value="TO" class="bg-brand-dark">Tocantins</option>
+                    </select>
+                    <span class="absolute right-0 top-3 text-brand-white/30 pointer-events-none">
+                      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </span>
+                  </div>
+                </div>
+
                 <button type="submit"
                   class="w-full bg-brand-teal text-brand-white font-bold text-xs uppercase tracking-widest py-4 rounded-xl shadow-lg hover:bg-brand-teal/80 active:scale-95 transition-all mt-4 btn-submit">
                   <span class="btn-text">GARANTIR MEU ACESSO</span>
@@ -1678,7 +1719,8 @@
           utm_content: utms['c1cbiama_utm_content'] || utms['utm_content'] || '',
           utm_term: utms['c1cbiama_utm_term'] || utms['utm_term'] || '',
           utm_possui_graduacao: utms['c1cbiama_utm_possui_graduacao'] || utms['utm_possui_graduacao'] || utms['utm_grad'] || utms['utm_graduacao'] || '',
-          utm_area_de_formacao: utms['c1cbiama_utm_area_de_formacao'] || utms['utm_area_de_formacao'] || utms['utm_area'] || ''
+          utm_area_de_formacao: utms['c1cbiama_utm_area_de_formacao'] || utms['utm_area_de_formacao'] || utms['utm_area'] || '',
+          estado: formData.get('estado') || ''
         };
 
         currentContactId = formData.get('email');
