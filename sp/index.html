@@ -1650,7 +1650,7 @@
       const params = new URLSearchParams(window.location.search);
       for (const [key, value] of params.entries()) {
         const lowerKey = key.toLowerCase();
-        if (lowerKey.startsWith('utm_') || lowerKey.startsWith('cbmig_') || lowerKey.startsWith('ia_')) {
+        if (lowerKey.startsWith('utm_') || lowerKey.startsWith('cbmig_') || lowerKey.startsWith('ia_') || lowerKey.startsWith('c1cbiama_')) {
           utms[key] = value;
         }
       }
@@ -1677,13 +1677,13 @@
           phone: formData.get('telefone'),
           area: formData.get('area'),
           graduacao: formData.get('graduacao') || '',
-          utm_source: utms['utm_source'] || '',
-          utm_medium: utms['utm_medium'] || '',
-          utm_campaign: utms['utm_campaign'] || '',
-          utm_content: utms['utm_content'] || '',
-          utm_term: utms['utm_term'] || '',
-          utm_possui_graduacao: utms['utm_possui_graduacao'] || utms['utm_grad'] || utms['utm_graduacao'] || '',
-          utm_area_de_formacao: utms['utm_area_de_formacao'] || utms['utm_area'] || ''
+          utm_source: utms['c1cbiama_utm_source'] || utms['utm_source'] || '',
+          utm_medium: utms['c1cbiama_utm_medium'] || utms['utm_medium'] || '',
+          utm_campaign: utms['c1cbiama_utm_campaign'] || utms['utm_campaign'] || '',
+          utm_content: utms['c1cbiama_utm_content'] || utms['utm_content'] || '',
+          utm_term: utms['c1cbiama_utm_term'] || utms['utm_term'] || '',
+          utm_possui_graduacao: utms['c1cbiama_utm_possui_graduacao'] || utms['utm_possui_graduacao'] || utms['utm_grad'] || utms['utm_graduacao'] || '',
+          utm_area_de_formacao: utms['c1cbiama_utm_area_de_formacao'] || utms['utm_area_de_formacao'] || utms['utm_area'] || ''
         };
 
         currentContactId = formData.get('email');

@@ -116,7 +116,7 @@ export default async function handler(req, res) {
     const contactId = syncData.contact.id;
     console.log(`Contato sincronizado com sucesso. ID: ${contactId}`);
 
-    // 2. Add Tag [C1][CBIAMA] Lead (ID: 454) to Contact
+    // 2. Add Tag [VENDA DIRETA][C1][CBIAMA] Lead (ID: 464) to Contact
     const tagResponse = await fetch(`${apiBase}/contactTags`, {
       method: 'POST',
       headers: {
@@ -126,7 +126,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         contactTag: {
           contact: contactId,
-          tag: '454'
+          tag: '464'
         }
       }),
     });
@@ -135,7 +135,7 @@ export default async function handler(req, res) {
       const tagData = await tagResponse.json();
       console.warn(`Aviso: Falha ao adicionar tag ao contato. ${tagData.message || ''}`);
     } else {
-      console.log(`Tag [C1][CBIAMA] Lead adicionada com sucesso ao contato ${contactId}`);
+      console.log(`Tag [VENDA DIRETA][C1][CBIAMA] Lead adicionada com sucesso ao contato ${contactId}`);
     }
 
     return res.status(200).json({
