@@ -1701,7 +1701,7 @@
       const utms = {};
       const params = new URLSearchParams(window.location.search);
       for (const [key, value] of params.entries()) {
-        const lowerKey = key.toLowerCase();
+        const lowerKey = key.trim().toLowerCase();
         if (lowerKey.startsWith('utm_') || lowerKey.startsWith('cbmig_') || lowerKey.startsWith('ia_') || lowerKey.startsWith('c1cbiama_') || lowerKey.startsWith('venda_diretac1cbiama_')) {
           utms[lowerKey] = value;
         }
