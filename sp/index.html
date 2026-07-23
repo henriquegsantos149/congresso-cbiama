@@ -719,11 +719,11 @@
     <!-- ============================================================
           HERO
     ============================================================ -->
-        <section id="hero" class="relative bg-brand-dark min-h-screen flex items-center pt-24 pb-20 overflow-hidden carto-grid-subtle"
+        <section id="hero" class="relative bg-brand-dark min-h-screen flex items-center pt-24 pb-20 overflow-hidden carto-grid-subtle" style="background-image: url('/hero-bg.png'); background-size: cover; background-position: right center;"
       aria-label="Apresentação do congresso">
 
       <!-- Minimalist Dark Overlay -->
-      <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark via-brand-dark/95 to-brand-teal/15 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-brand-dark/70 bg-gradient-to-tr from-brand-dark/90 via-brand-dark/70 to-brand-teal/30 pointer-events-none"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 w-full z-10">
         <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -783,7 +783,7 @@
             <div
               class="w-full max-w-md bg-brand-white/[0.02] backdrop-blur-2xl border border-brand-white/10 rounded-2xl p-8 shadow-2xl relative reveal">
               
-              <h3 class="text-brand-white font-semibold text-xs uppercase tracking-widest mb-6 flex items-center gap-3 border-b border-brand-white/10 pb-4">
+              <h3 class="text-brand-white font-semibold text-xs uppercase tracking-widest mb-4 flex items-center gap-3 border-b border-brand-white/10 pb-4">
                 <span>INSCRIÇÃO ONLINE</span>
               </h3>
 
@@ -963,7 +963,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Networking</span>
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Networking</span>
           <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">PARA QUEM É O <br><span
               class="brand-gradient-text">CONGRESSO</span></h2>
@@ -1026,7 +1026,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Lineup</span>
+             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Lineup</span>
           <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight break-words"
             style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">PALESTRANTES <br><span
               class="brand-gradient-text-dark">CONFIRMADOS</span></h2>
@@ -1097,6 +1097,58 @@
       </div>
     </section>
 
+
+<!-- ============================================================
+     PROGRAMAÇÃO
+    ============================================================ -->
+    <section id="programacao" class="py-16 sm:py-24 bg-white relative overflow-hidden"
+      aria-label="Programação e Temas das Palestras">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="text-center mb-16 reveal">
+          <span
+             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Programação</span>
+          <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight break-words"
+            style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">TEMAS DAS <br><span
+              class="brand-gradient-text-dark">PALESTRAS</span></h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-6">
+          <!-- Henrique -->
+          <div class="reveal reveal-delay-1 bg-[#F2F2F2] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 border border-gray-200 hover:border-brand-green2/50 transition-colors">
+            <div>
+              <h3 class="font-display font-black text-brand-teal text-xl md:text-2xl uppercase tracking-wide mb-2">Henrique Gonzalez</h3>
+              <p class="text-gray-700 font-medium">Geotecnologias e IA: Estratégias Práticas para Profissionais de Vanguarda</p>
+            </div>
+          </div>
+
+          <!-- Hermann -->
+          <div class="reveal reveal-delay-2 bg-[#F2F2F2] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 border border-gray-200 hover:border-[#6FA638]/50 transition-colors">
+            <div>
+              <h3 class="font-display font-black text-brand-teal text-xl md:text-2xl uppercase tracking-wide mb-2">Hermann Fernandes</h3>
+              <p class="text-gray-700 font-medium">Arquitetura e Governança de Dados Ambientais</p>
+            </div>
+          </div>
+
+          <!-- Vinícius -->
+          <div class="reveal reveal-delay-3 bg-[#F2F2F2] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 border border-gray-200 hover:border-[#6FA638]/50 transition-colors">
+            <div>
+              <h3 class="font-display font-black text-brand-teal text-xl md:text-2xl uppercase tracking-wide mb-2">Vinícius Ragghianti</h3>
+              <p class="text-gray-700 font-medium">Gêmeos Digitais</p>
+            </div>
+          </div>
+
+          <!-- Victor -->
+          <div class="reveal reveal-delay-4 bg-[#F2F2F2] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 border border-gray-200 hover:border-[#6FA638]/50 transition-colors">
+            <div>
+              <h3 class="font-display font-black text-brand-teal text-xl md:text-2xl uppercase tracking-wide mb-2">Victor Valente Silvestre</h3>
+              <p class="text-gray-700 font-medium">Consultoria Ambiental 5.0: como a IA está redefinindo o mercado e tornando a atuação mais segura, ágil e lucrativa</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 <!-- ============================================================
      CERTIFICADO
     ============================================================ -->
@@ -1217,6 +1269,74 @@
       </div>
     </section>
 
+    
+    <!-- ============================================================
+         DIVERSIDADE GEOGRÁFICA
+    ============================================================ -->
+    <section id="diversidade" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden"
+      aria-label="Diversidade geográfica dos inscritos">
+      
+      <!-- Background elements -->
+      <div class="absolute inset-0 z-0 opacity-10">
+        <div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-brand-green2/30 rounded-full blur-[120px]"></div>
+        <div class="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-brand-teal/30 rounded-full blur-[120px]"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="reveal">
+          <span class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Networking Nacional</span>
+          <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight break-words"
+            style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">O BRASIL TODO <br><span class="brand-gradient-text-light">REUNIDO</span></h2>
+          <p class="text-brand-white/80 text-lg max-w-2xl mx-auto font-medium mb-12">Profissionais de todas as regiões já garantiram sua vaga no CBIAMA.</p>
+        </div>
+
+        <div class="reveal flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 mt-8">
+          <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm max-w-sm w-full">
+            <p class="text-6xl font-bold brand-gradient-text-light mb-2">+8</p>
+            <p class="text-brand-white font-medium uppercase tracking-wider text-sm">Estados Diferentes</p>
+          </div>
+          <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm max-w-sm w-full">
+            <p class="text-6xl font-bold brand-gradient-text-light mb-2">100%</p>
+            <p class="text-brand-white font-medium uppercase tracking-wider text-sm">Focado em Inovação</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    
+    <!-- ============================================================
+         CASHBACK
+    ============================================================ -->
+    <section id="cashback" class="py-16 sm:py-20 bg-brand-dark relative overflow-hidden"
+      aria-label="Benefício de Cashback">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-8 lg:gap-12 reveal">
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <span class="bg-brand-dark text-brand-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Bônus Exclusivo</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-dark mb-4 uppercase leading-tight">100% do seu ingresso vira <span class="text-brand-teal">cashback</span></h2>
+            <p class="text-gray-600 text-lg mb-6">O valor integral pago no seu ingresso presencial poderá ser abatido na matrícula de qualquer curso da Ambiental Pro disponível na data do evento.</p>
+            <p class="text-sm text-gray-500 font-medium">* O cashback é válido para novas matrículas realizadas nos dias do evento e não é cumulativo com outras promoções.</p>
+          </div>
+          <div class="lg:w-1/2 flex justify-center">
+            <div class="relative w-56 h-56 md:w-80 md:h-80 bg-brand-dark/5 rounded-full flex items-center justify-center p-8">
+              <!-- Rotating border -->
+              <div class="absolute inset-0 border-4 border-dashed border-brand-teal/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
+              
+              <!-- Content -->
+              <div class="text-center relative z-10">
+                <p class="text-5xl md:text-7xl font-bold text-brand-teal mb-2">100%</p>
+                <p class="text-brand-dark font-black uppercase tracking-widest text-lg md:text-xl">De Retorno</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- ============================================================
          INGRESSOS
     ============================================================ -->
@@ -1225,7 +1345,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Vagas
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Vagas
             Limitadas</span>
           <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">ESCOLHA SEU <br><span
@@ -1238,7 +1358,7 @@
           <!-- Básico -->
           <div
             class="reveal reveal-delay-1 bg-white signature-shape p-8 border border-gray-200 flex flex-col hover:border-brand-deep/40 hover:scale-[1.02] transition-all group shadow-xl shadow-gray-200/50">
-            <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Básico</p>
+            <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Básico</p>
             <div class="mb-2">
               <span class="font-display font-semibold text-brand-dark dynamic-price-basico" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 397</span>
               <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
@@ -1269,7 +1389,7 @@
               class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-bold text-[11px] px-6 py-2 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
               MAIS VENDIDO</div>
 
-            <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Pro</p>
+            <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Pro</p>
             <div class="mb-2">
               <span class="font-display font-semibold text-brand-dark dynamic-price-pro" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 497</span>
               <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
@@ -1311,8 +1431,7 @@
       </div>
     </section>
 
-
-    <!-- ============================================================
+<!-- ============================================================
          FAQ
     ============================================================ -->
     <section id="faq" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Perguntas frequentes">
@@ -1321,7 +1440,7 @@
 
         <div class="text-center mb-20 reveal">
           <span
-            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-6 inline-block">Dúvidas</span>
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Dúvidas</span>
           <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">PERGUNTAS <br><span
               class="brand-gradient-text-light">FREQUENTES</span></h2>
@@ -1441,7 +1560,7 @@
         </svg>
       </button>
 
-      <h3 class="text-brand-white font-bold text-sm uppercase tracking-widest mb-6 flex items-center gap-3">
+      <h3 class="text-brand-white font-bold text-sm uppercase tracking-widest mb-4 flex items-center gap-3">
         <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
         Me inscrever agora
       </h3>
@@ -1502,19 +1621,19 @@
   <!-- ============================================================
        FOOTER
   ============================================================ -->
-  <footer class="bg-[#F2F2F2] border-t border-brand-dark/10 py-10 text-brand-dark" role="contentinfo">
+  <footer class="bg-[#F2F2F2] border-t border-brand-dark/10 py-6 text-brand-dark" role="contentinfo">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
 
         <div class="lg:col-span-2">
-          <img src="logo.webp" alt="Ambiental Pro Logo" class="h-8 mb-6 brightness-0 opacity-80">
+          <img src="logo.webp" alt="Ambiental Pro Logo" class="h-8 mb-4 brightness-0 opacity-80">
           <p class="text-brand-dark/60 text-sm leading-relaxed max-w-xs font-medium">
             Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente. 15 de agosto de 2026. São Paulo, SP.
           </p>
         </div>
 
         <div>
-          <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-6">Navegação</h4>
+          <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-4">Navegação</h4>
           <ul class="space-y-3">
             <li><a href="#sobre"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Sobre</a>
@@ -1532,7 +1651,7 @@
         </div>
 
         <div>
-          <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-6">Suporte</h4>
+          <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-4">Suporte</h4>
           <div class="space-y-4">
             <a href="https://wa.link/6on3xe" target="_blank"
               class="flex items-center gap-3 text-brand-dark/60 hover:text-brand-teal transition-colors group">
@@ -1550,7 +1669,7 @@
         </div>
 
       </div>
-      <div class="border-t border-brand-dark/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="border-t border-brand-dark/10 pt-4 flex flex-col sm:flex-row items-center justify-between gap-6">
         <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-wider">&copy; 2026 AMBIENTAL PRO.
           TODOS OS DIREITOS RESERVADOS.</p>
         <div class="flex gap-8">
@@ -1591,7 +1710,7 @@
         <!-- Básico -->
         <div
           class="bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-deep/40 transition-all group">
-          <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Básico</p>
+          <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Básico</p>
           <div class="mb-2">
             <span class="font-display font-semibold text-brand-white dynamic-price-basico" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
           </div>
@@ -1618,7 +1737,7 @@
           <div
             class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-bold text-[11px] px-4 py-1.5 signature-shape-sm uppercase tracking-widest">
             RECOMENDADO</div>
-          <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-6">Ingresso Pro</p>
+          <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Pro</p>
           <div class="mb-2">
             <span class="font-display font-semibold text-brand-white dynamic-price-pro" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
           </div>
