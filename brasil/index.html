@@ -1854,6 +1854,10 @@
 
         const btnSubmit = form.querySelector('.btn-submit');
         const btnText = form.querySelector('.btn-text');
+        const originalText = btnText ? btnText.textContent : 'INSCREVER-SE AGORA';
+
+        if (btnSubmit) btnSubmit.disabled = true;
+        if (btnText) btnText.textContent = 'PROCESSANDO...';
 
         // Coleta dados
         const formData = new FormData(form);
@@ -1877,7 +1881,40 @@
 
         currentContactId = formData.get('email');
 
-        // Abre o modal IMEDIATAMENTE
+        // 1. Dispara evento de Lead no Meta Pixel
+        if (typeof window.fbq === 'function') {
+          try {
+            window.fbq('track', 'Lead', {
+              content_name: 'CBIAMA Brasil Lead',
+              value: pendingTicket === 'pro' ? 697 : 597,
+              currency: 'BRL'
+            });
+          } catch (pixelErr) {
+            console.warn('Meta Pixel Lead track error:', pixelErr);
+          }
+        }
+
+        // 2. Envia para o ActiveCampaign via Vercel Serverless Function aguardando resposta (com timeout de 2.5s)
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 2500);
+
+          await fetch('/api/subscribe-vd', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            signal: controller.signal
+          })
+          .then(res => res.json())
+          .then(data => console.log('ActiveCampaign Sync Success:', data))
+          .catch(err => console.error('ActiveCampaign Sync Error/Timeout:', err));
+
+          clearTimeout(timeoutId);
+        } catch (err) {
+          console.error('ActiveCampaign Sync Exception:', err);
+        }
+
+        // 3. Redireciona para o checkout da Voomp Creators ou abre modal de sucesso
         const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
         
         if (pendingTicket === 'basico') {
@@ -1887,17 +1924,9 @@
         } else {
           closeRegistrationModal();
           openSuccessModal();
+          if (btnSubmit) btnSubmit.disabled = false;
+          if (btnText) btnText.textContent = originalText;
         }
-
-        // Envia para o ActiveCampaign via Vercel Serverless Function
-        fetch('/api/subscribe-vd', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        })
-        .then(res => res.json())
-        .then(data => console.log('ActiveCampaign Sync Success:', data))
-        .catch(err => console.error('ActiveCampaign Sync Error:', err));
       });
     });
 
