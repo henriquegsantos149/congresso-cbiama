@@ -1317,6 +1317,45 @@
 
 
     <!-- ============================================================
+         PROMOÇÃO
+    ============================================================ -->
+    <section id="promocao" class="py-16 sm:py-20 brand-gradient-bg relative overflow-hidden"
+      aria-label="Promoção Compre 1 Leve 2">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-8 lg:gap-12 reveal">
+          <div class="lg:w-3/5 text-center lg:text-left">
+            <span class="bg-brand-dark text-brand-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Promoção Especial</span>
+            <h2 class="text-3xl sm:text-5xl font-display font-bold text-white mb-4 uppercase leading-tight">Na compra de 1 ingresso, <br><span class="text-brand-dark font-black">LEVE OUTRO!</span></h2>
+            <p class="text-white/90 text-lg mb-8 font-medium">Não vá sozinho! Garanta o seu passaporte para o Congresso Presencial e ganhe um ingresso extra para levar um acompanhante. Compartilhem juntos a maior experiência de inteligência artificial aplicada ao meio ambiente do ano.</p>
+            <a href="#ingressos" class="inline-block py-4 px-10 bg-brand-dark text-brand-white font-bold text-sm uppercase tracking-wider rounded-md shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all">Garantir Meu Ingresso Duplo</a>
+          </div>
+          <div class="lg:w-2/5 flex justify-center relative">
+            <div class="relative w-48 h-48 md:w-64 md:h-64 transform rotate-[-5deg] hover:rotate-0 transition-all duration-500">
+              <!-- Back Ticket -->
+              <div class="absolute inset-0 bg-brand-dark rounded-xl shadow-2xl transform translate-x-4 translate-y-4 rotate-[10deg] flex items-center justify-center border border-white/10 overflow-hidden">
+                <div class="absolute left-0 w-4 h-8 bg-brand-teal/20 rounded-r-full border-r border-t border-b border-white/10 top-1/2 -translate-y-1/2"></div>
+                <div class="absolute right-0 w-4 h-8 bg-brand-teal/20 rounded-l-full border-l border-t border-b border-white/10 top-1/2 -translate-y-1/2"></div>
+                <div class="text-center">
+                  <p class="text-white/30 text-xs font-bold uppercase tracking-widest mb-1">Acompanhante</p>
+                  <p class="text-brand-teal text-xl font-black uppercase">Ingresso 2</p>
+                </div>
+              </div>
+              <!-- Front Ticket -->
+              <div class="absolute inset-0 bg-white rounded-xl shadow-2xl flex items-center justify-center border-2 border-brand-teal overflow-hidden">
+                <div class="absolute left-0 w-4 h-8 bg-brand-teal/20 rounded-r-full border-r-2 border-t-2 border-b-2 border-brand-teal top-1/2 -translate-y-1/2"></div>
+                <div class="absolute right-0 w-4 h-8 bg-brand-teal/20 rounded-l-full border-l-2 border-t-2 border-b-2 border-brand-teal top-1/2 -translate-y-1/2"></div>
+                <div class="text-center">
+                  <p class="text-brand-dark/40 text-xs font-bold uppercase tracking-widest mb-1">Titular</p>
+                  <p class="text-brand-dark text-xl font-black uppercase">Ingresso 1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          INGRESSOS
     ============================================================ -->
     <section id="ingressos" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden" aria-label="Ingressos e preços">
@@ -1342,7 +1381,14 @@
               <span class="font-display font-semibold text-brand-dark dynamic-price-basico" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 397</span>
               <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
             </div>
-            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-6 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+
+            <div class="bg-brand-teal/10 text-brand-deep rounded-md p-3 mb-8 text-center border border-brand-teal/30 font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm">
+              <svg class="w-5 h-5 text-brand-teal flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+              </svg>
+              <span>Na compra de 1 ingresso, <span class="text-brand-teal font-black">leve outro!</span></span>
+            </div>
 
             <ul class="space-y-5 mb-12 flex-1">
               <li class="flex items-start gap-4 text-brand-dark/70 text-sm">
@@ -1373,7 +1419,14 @@
               <span class="font-display font-semibold text-brand-dark dynamic-price-pro" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 497</span>
               <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
             </div>
-            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-6 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+
+            <div class="brand-gradient-bg text-brand-white rounded-md p-3 mb-8 text-center font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md">
+              <svg class="w-5 h-5 text-brand-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+              </svg>
+              <span>Na compra de 1 ingresso, <span class="text-brand-dark font-black bg-white/20 px-2 py-0.5 rounded ml-1">leve outro!</span></span>
+            </div>
 
             <ul class="space-y-5 mb-12 flex-1">
               <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
@@ -1693,8 +1746,15 @@
           <div class="mb-2">
             <span class="font-display font-semibold text-brand-white dynamic-price-basico" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
           </div>
-          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-6 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
           
+          <div class="bg-brand-white/10 text-brand-white rounded-md p-3 mb-8 text-center border border-brand-white/20 font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 text-brand-teal flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+            </svg>
+            <span>Na compra de 1 ingresso, <span class="text-brand-teal font-black">leve outro!</span></span>
+          </div>
+
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
               <svg class="w-3 h-3 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1720,7 +1780,14 @@
           <div class="mb-2">
             <span class="font-display font-semibold text-brand-white dynamic-price-pro" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
           </div>
-          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-6 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
+
+          <div class="brand-gradient-bg text-brand-white rounded-md p-3 mb-8 text-center font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md">
+            <svg class="w-5 h-5 text-brand-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+            </svg>
+            <span>Na compra de 1 ingresso, <span class="text-brand-dark font-black bg-white/20 px-2 py-0.5 rounded ml-1">leve outro!</span></span>
+          </div>
 
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
