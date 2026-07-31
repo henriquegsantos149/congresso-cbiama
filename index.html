@@ -863,7 +863,7 @@
                   <div class="group relative">
                     <label for="f-tel"
                       class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Telefone</label>
-                    <input type="tel" id="f-tel" name="telefone" placeholder="(00) 00000-0000" required
+                    <input type="tel" id="f-tel" name="telefone" placeholder="11900000000 ou +..." required
                       class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none tel-input">
                   </div>
                   <div class="group relative">
@@ -1767,7 +1767,7 @@
             <div class="group">
               <label for="m-tel"
                 class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
-              <input type="tel" id="m-tel" name="telefone" placeholder="(00) 00000-0000" required
+              <input type="tel" id="m-tel" name="telefone" placeholder="11900000000 ou +..." required
                 class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm tel-input">
             </div>
             <div class="group">
@@ -2233,10 +2233,12 @@
       const telInputs = document.querySelectorAll('.tel-input');
       telInputs.forEach(input => {
         input.addEventListener('input', (e) => {
-          let v = e.target.value.replace(/\D/g, '').slice(0, 11);
-          if (v.length > 6) v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
-          else if (v.length > 2) v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
-          else if (v.length > 0) v = `(${v}`;
+          let v = e.target.value;
+          if (v.startsWith('+')) {
+            v = '+' + v.replace(/\D/g, '').slice(0, 15);
+          } else {
+            v = v.replace(/\D/g, '').slice(0, 15);
+          }
           e.target.value = v;
         });
       });
