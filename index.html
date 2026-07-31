@@ -422,40 +422,6 @@
       background: linear-gradient(135deg, #038C4C, #034959);
     }
 
-    /* ============================================================
-       SCHEDULE TABS
-    ============================================================ */
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    .tab-btn {
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      color: #010A15;
-      background: #fff;
-      border: 2px solid #e5e7eb;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .tab-btn:hover {
-      border-color: #038C4C;
-      color: #038C4C;
-    }
-
-    .tab-btn.active {
-      background: #038C4C;
-      border-color: #038C4C;
-      color: #F2F2F2;
-    }
 
     /* ============================================================
        FAQ ACCORDION
@@ -1000,7 +966,6 @@
           </div>
         </div>
       </div>
-      </div>
     </section>
 
     <!-- ============================================================
@@ -1109,7 +1074,7 @@
           <article class="reveal reveal-delay-1 group cursor-pointer w-full">
             <div
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-brand-green2/30 transition-all">
-              <img src="/faculty/henrique.webp" alt="Henrique Gonzalez"
+              <img src="/faculty/henrique.webp" alt="Henrique Gonzalez" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
@@ -1127,7 +1092,7 @@
           <article class="reveal reveal-delay-2 group cursor-pointer w-full">
             <div
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="/faculty/hermann.webp" alt="Hermann Fernandes"
+              <img src="/faculty/hermann.webp" alt="Hermann Fernandes" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
@@ -1145,7 +1110,7 @@
           <article class="reveal reveal-delay-3 group cursor-pointer w-full">
             <div
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="/faculty/vinicius.webp" alt="Vinícius Ragghianti"
+              <img src="/faculty/vinicius.webp" alt="Vinícius Ragghianti" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
@@ -1163,7 +1128,7 @@
           <article class="reveal reveal-delay-4 group cursor-pointer w-full">
             <div
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="/faculty/victor.webp" alt="Victor Valente Silvestre"
+              <img src="/faculty/victor.webp" alt="Victor Valente Silvestre" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
@@ -1181,7 +1146,7 @@
           <article class="reveal reveal-delay-4 group cursor-pointer w-full">
             <div
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="/faculty/gabriela.webp" alt="Gabriela Luchetti"
+              <img src="/faculty/gabriela.webp" alt="Gabriela Luchetti" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
@@ -1535,12 +1500,10 @@
             <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Básico</p>
             <div class="mb-2">
               <span class="font-display font-semibold text-brand-dark dynamic-price-basico"
-                style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 397</span>
-              <span class="text-brand-dark/40 text-sm font-bold">,00<span
-                  class="text-base dynamic-asterisk">*</span></span>
+                style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 597</span>
+              <span class="text-brand-dark/40 text-sm font-bold">,00</span>
             </div>
-            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de
-              Pré-Venda (exclusiva para alunos)</p>
+            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote 1</p>
 
             <ul class="space-y-5 mb-12 flex-1">
               <li class="flex items-start gap-4 text-brand-dark/70 text-base">
@@ -1556,8 +1519,6 @@
               class="w-full py-5 signature-shape border-2 border-brand-deep text-brand-deep font-bold text-sm uppercase tracking-wider group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
               SELECIONAR BÁSICO
             </button>
-            <p class="text-brand-dark/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia
-              solidária</p>
           </div>
 
           <!-- PRO -->
@@ -1570,12 +1531,10 @@
             <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Pro</p>
             <div class="mb-2">
               <span class="font-display font-semibold text-brand-dark dynamic-price-pro"
-                style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 497</span>
-              <span class="text-brand-dark/40 text-sm font-bold">,00<span
-                  class="text-base dynamic-asterisk">*</span></span>
+                style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 697</span>
+              <span class="text-brand-dark/40 text-sm font-bold">,00</span>
             </div>
-            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote de
-              Pré-Venda (exclusiva para alunos)</p>
+            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Lote 1</p>
 
             <ul class="space-y-5 mb-12 flex-1">
               <li class="flex items-start gap-4 text-brand-dark/90 text-base">
@@ -1606,8 +1565,6 @@
               class="w-full py-5 signature-shape brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
               GARANTIR INGRESSO PRO
             </button>
-            <p class="text-brand-dark/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia
-              solidária</p>
           </div>
 
         </div>
@@ -1921,11 +1878,10 @@
           <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Básico</p>
           <div class="mb-2">
             <span class="font-display font-semibold text-brand-white dynamic-price-basico"
-              style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span><span
-              class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+              style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 597</span><span
+              class="text-brand-white/40 text-sm font-bold">,00</span>
           </div>
-          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote de
-            Pré-Venda (exclusiva para alunos)</p>
+          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote 1</p>
 
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
@@ -1939,8 +1895,6 @@
             class="btn-basico w-full py-4 signature-shape border-2 border-brand-deep text-brand-deep font-bold text-sm uppercase tracking-widest group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
             SELECIONAR BÁSICO
           </button>
-          <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia
-            solidária</p>
         </div>
 
         <!-- PRO -->
@@ -1952,11 +1906,10 @@
           <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Pro</p>
           <div class="mb-2">
             <span class="font-display font-semibold text-brand-white dynamic-price-pro"
-              style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span><span
-              class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+              style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 697</span><span
+              class="text-brand-white/40 text-sm font-bold">,00</span>
           </div>
-          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote de
-            Pré-Venda (exclusiva para alunos)</p>
+          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Lote 1</p>
 
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
@@ -1982,8 +1935,6 @@
             class="btn-pro w-full py-4 signature-shape brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
             GARANTIR INGRESSO PRO
           </button>
-          <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia
-            solidária</p>
         </div>
       </div>
     </div>
@@ -2039,7 +1990,25 @@
 
           currentContactId = formData.get('email');
 
-          // Abre o modal IMEDIATAMENTE
+          // Envia para o ActiveCampaign via Vercel Serverless Function
+          const p1 = fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).catch(err => console.error('ActiveCampaign Sync Error:', err));
+
+          // Envia para a API do Google Sheets em segundo plano
+          const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbc5ij7lcYBMHABEuCMFlAZZLfXo_5pSH2hbT2TnwPVZWcU7tkMjdPtDfTcvFnr0u9Aw/exec';
+          const p2 = fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).catch(err => console.warn('Erro ao enviar dados para Google Sheets:', err));
+
+          // Aguarda envios antes do redirecionamento
+          await Promise.all([p1, p2]);
+
           const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
 
           if (pendingTicket === 'basico') {
@@ -2050,25 +2019,6 @@
             closeRegistrationModal();
             openSuccessModal();
           }
-
-          // Envia para o ActiveCampaign via Vercel Serverless Function
-          fetch('/api/subscribe', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          })
-            .then(res => res.json())
-            .then(data => console.log('ActiveCampaign Sync Success:', data))
-            .catch(err => console.error('ActiveCampaign Sync Error:', err));
-
-          // Envia para a API do Google Sheets em segundo plano (fire & forget)
-          const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbc5ij7lcYBMHABEuCMFlAZZLfXo_5pSH2hbT2TnwPVZWcU7tkMjdPtDfTcvFnr0u9Aw/exec';
-          fetch(SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          }).catch(err => console.warn('Erro ao enviar dados para Google Sheets:', err));
         });
       });
 
@@ -2090,21 +2040,7 @@
         }
       }
 
-      // ============================================================
-      // VIRADA DE LOTE AUTOMÁTICA
-      // ============================================================
-      function checkLoteTurn() {
-        const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
-        if (isLote1) {
-          document.querySelectorAll('.dynamic-price-basico').forEach(el => el.textContent = 'R$ 597');
-          document.querySelectorAll('.dynamic-price-pro').forEach(el => el.textContent = 'R$ 697');
-          document.querySelectorAll('.dynamic-lote-text').forEach(el => el.textContent = 'Lote 1');
-          document.querySelectorAll('.dynamic-asterisk').forEach(el => el.style.display = 'none');
-          document.querySelectorAll('.dynamic-student-text').forEach(el => el.style.display = 'none');
-        }
-      }
-      checkLoteTurn();
-      setInterval(checkLoteTurn, 1000);
+
 
       // ============================================================
       // WEEKEND PROMO & COUNTDOWN
@@ -2231,21 +2167,7 @@
         });
       }
 
-      // ============================================================
-      // SCHEDULE TABS
-      // ============================================================
-      function showTab(id) {
-        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-          btn.classList.remove('active');
-          btn.setAttribute('aria-selected', 'false');
-        });
-        const target = document.getElementById(id);
-        if (target) target.classList.add('active');
 
-        const btn = document.querySelector(`[aria-controls="${id}"]`);
-        if (btn) { btn.classList.add('active'); btn.setAttribute('aria-selected', 'true'); }
-      }
 
       // ============================================================
       // FAQ ACCORDION
