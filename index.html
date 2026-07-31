@@ -1480,6 +1480,46 @@
       aria-label="Ingressos e preços">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
+        <!-- CASHBACK CARD -->
+        <div id="cashback-card" style="display: none;" class="bg-[#010A15] rounded-3xl p-8 sm:p-12 shadow-2xl shadow-brand-teal/20 max-w-4xl mx-auto border border-brand-teal/30 reveal reveal-delay-1 mb-16 text-center relative overflow-hidden transform hover:-translate-y-1 transition-all">
+          <div class="absolute top-0 left-0 w-full h-1.5 brand-gradient-bg"></div>
+          
+          <!-- Ambient Glows -->
+          <div class="absolute top-0 right-0 w-64 h-64 bg-brand-teal/20 rounded-full blur-[80px] z-0 translate-x-1/2 -translate-y-1/2"></div>
+          <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-green1/20 rounded-full blur-[80px] z-0 -translate-x-1/2 translate-y-1/2"></div>
+          
+          <div class="relative z-10">
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-brand-white mb-4 uppercase leading-tight tracking-tight">
+              100% do seu ingresso vira <br class="hidden sm:block">
+              <span class="brand-gradient-text-light text-4xl sm:text-5xl lg:text-6xl mt-2 inline-block">CASHBACK</span>
+            </h3>
+            <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-medium">O valor integral pago no seu ingresso presencial poderá ser abatido na matrícula de qualquer curso da Ambiental Pro.</p>
+            
+            <!-- Cashback Timer -->
+            <div class="flex items-center justify-center gap-2 sm:gap-4 mt-8">
+              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
+                <div class="font-display font-black text-2xl sm:text-3xl text-yellow-500 leading-none cd-days">--</div>
+                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Dias</div>
+              </div>
+              <span class="text-white/30 font-black text-xl">:</span>
+              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
+                <div class="font-display font-black text-2xl sm:text-3xl text-yellow-500 leading-none cd-hours">--</div>
+                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Hrs</div>
+              </div>
+              <span class="text-white/30 font-black text-xl">:</span>
+              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
+                <div class="font-display font-black text-2xl sm:text-3xl text-yellow-500 leading-none cd-minutes">--</div>
+                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Min</div>
+              </div>
+              <span class="text-white/30 font-black text-xl">:</span>
+              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
+                <div class="font-display font-black text-2xl sm:text-3xl text-yellow-500 leading-none cd-seconds">--</div>
+                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Seg</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="text-center mb-20 reveal">
           <span
             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Vagas
@@ -1567,46 +1607,6 @@
             </button>
           </div>
 
-        </div>
-
-        <!-- CASHBACK CARD -->
-        <div id="cashback-card" style="display: none;" class="bg-[#010A15] rounded-3xl p-8 sm:p-12 shadow-2xl shadow-brand-teal/20 max-w-4xl mx-auto border border-brand-teal/30 reveal reveal-delay-1 mt-14 text-center relative overflow-hidden transform hover:-translate-y-1 transition-all">
-          <div class="absolute top-0 left-0 w-full h-1.5 brand-gradient-bg"></div>
-          
-          <!-- Ambient Glows -->
-          <div class="absolute top-0 right-0 w-64 h-64 bg-brand-teal/20 rounded-full blur-[80px] z-0 translate-x-1/2 -translate-y-1/2"></div>
-          <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-green1/20 rounded-full blur-[80px] z-0 -translate-x-1/2 translate-y-1/2"></div>
-          
-          <div class="relative z-10">
-            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-brand-white mb-4 uppercase leading-tight tracking-tight">
-              100% do seu ingresso vira <br class="hidden sm:block">
-              <span class="brand-gradient-text-light text-4xl sm:text-5xl lg:text-6xl mt-2 inline-block">CASHBACK</span>
-            </h3>
-            <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-medium">O valor integral pago no seu ingresso presencial poderá ser abatido na matrícula de qualquer curso da Ambiental Pro.</p>
-            
-            <!-- Cashback Timer -->
-            <div class="flex items-center justify-center gap-2 sm:gap-4 mt-8">
-              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
-                <div class="font-display font-black text-2xl sm:text-3xl text-brand-teal leading-none cd-days">--</div>
-                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Dias</div>
-              </div>
-              <span class="text-white/30 font-black text-xl">:</span>
-              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
-                <div class="font-display font-black text-2xl sm:text-3xl text-brand-teal leading-none cd-hours">--</div>
-                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Hrs</div>
-              </div>
-              <span class="text-white/30 font-black text-xl">:</span>
-              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
-                <div class="font-display font-black text-2xl sm:text-3xl text-brand-teal leading-none cd-minutes">--</div>
-                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Min</div>
-              </div>
-              <span class="text-white/30 font-black text-xl">:</span>
-              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
-                <div class="font-display font-black text-2xl sm:text-3xl text-brand-teal leading-none cd-seconds">--</div>
-                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Seg</div>
-              </div>
-            </div>
-          </div>
         </div>
 
       </div>
