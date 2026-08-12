@@ -26,13 +26,13 @@
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '142282980');
+    fbq('init', '1373287802810243');
     fbq('track', 'PageView');
   </script>
   <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8">
-  <link rel="icon" type="image/webp" href="/favicon.webp" />
+  <link rel="icon" type="image/webp" href="./favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente – Inovação e tecnologia voltada à sustentabilidade. 15 de agosto de 2026, Presencial.">
@@ -107,6 +107,7 @@
       background: #038C4C;
       transition: background 0.3s ease;
     }
+
     .brand-gradient-bg:hover {
       background: #034959;
     }
@@ -421,40 +422,6 @@
       background: linear-gradient(135deg, #038C4C, #034959);
     }
 
-    /* ============================================================
-       SCHEDULE TABS
-    ============================================================ */
-    .tab-content {
-      display: none;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    .tab-btn {
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      color: #010A15;
-      background: #fff;
-      border: 2px solid #e5e7eb;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .tab-btn:hover {
-      border-color: #038C4C;
-      color: #038C4C;
-    }
-
-    .tab-btn.active {
-      background: #038C4C;
-      border-color: #038C4C;
-      color: #F2F2F2;
-    }
 
     /* ============================================================
        FAQ ACCORDION
@@ -571,7 +538,10 @@
       font-weight: 800;
       font-size: 2.8rem;
       line-height: 1;
-      color: #010A15;
+      background: linear-gradient(90deg, #038C4C 0%, #034959 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .wave-bottom {
@@ -630,6 +600,47 @@
 
 <body class="font-body bg-[#F2F2F2] text-[#010A15] overflow-x-hidden">
 
+  <!-- ============================================================
+         STICKY BOTTOM BANNER
+    ============================================================ -->
+  <div id="sticky-banner" style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 99999; background-color: #010A15;"
+    class="border-t-[6px] border-[#FFB800] shadow-[0_-10px_30px_rgba(0,0,0,0.5)] flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 py-4 lg:px-8 gap-4 md:gap-10 w-full">
+    <div class="text-center">
+      <p id="promo-text" class="text-brand-white font-black text-base sm:text-lg uppercase tracking-widest">
+        COMPRE E GANHE <span class="brand-gradient-text-light">100% DE CASHBACK!</span>
+      </p>
+    </div>
+
+    <div class="flex items-center gap-1 sm:gap-3">
+      <div class="bg-white border border-gray-100 rounded px-2 sm:px-3 py-1.5 text-center min-w-[50px] shadow-sm">
+        <div class="font-display font-black text-lg sm:text-xl text-brand-dark leading-none cd-days">--</div>
+        <div class="text-[10px] text-brand-dark/60 uppercase font-bold tracking-wider">Dias</div>
+      </div>
+      <span class="text-brand-white/30 font-black mb-3 text-lg">:</span>
+      <div class="bg-white border border-gray-100 rounded px-2 sm:px-3 py-1.5 text-center min-w-[50px] shadow-sm">
+        <div class="font-display font-black text-lg sm:text-xl text-brand-dark leading-none cd-hours">--</div>
+        <div class="text-[10px] text-brand-dark/60 uppercase font-bold tracking-wider">Hrs</div>
+      </div>
+      <span class="text-brand-white/30 font-black mb-3 text-lg">:</span>
+      <div class="bg-white border border-gray-100 rounded px-2 sm:px-3 py-1.5 text-center min-w-[50px] shadow-sm">
+        <div class="font-display font-black text-lg sm:text-xl text-brand-dark leading-none cd-minutes">--</div>
+        <div class="text-[10px] text-brand-dark/60 uppercase font-bold tracking-wider">Min</div>
+      </div>
+      <span class="text-brand-white/30 font-black mb-3 text-lg">:</span>
+      <div class="bg-white border border-gray-100 rounded px-2 sm:px-3 py-1.5 text-center min-w-[50px] shadow-sm">
+        <div class="font-display font-black text-lg sm:text-xl text-brand-dark leading-none cd-seconds">--</div>
+        <div class="text-[10px] text-brand-dark/60 uppercase font-bold tracking-wider">Seg</div>
+      </div>
+    </div>
+
+    <div class="hidden sm:block">
+      <a href="#ingressos"
+        class="inline-block px-8 py-3 brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-wider rounded-md shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all">
+        Garantir Agora
+      </a>
+    </div>
+  </div>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTZ9NFFN" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -649,7 +660,7 @@
        NAVIGATION
   ============================================================ -->
   <nav id="navbar"
-    class="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 border-b border-brand-teal/20 backdrop-blur-md"
+    class="fixed top-0 left-0 right-0 z-50 bg-[#010A15]/40 border-b border-white/10 backdrop-blur-xl backdrop-saturate-150 shadow-[0_8px_32px_rgba(0,0,0,0.2)]"
     role="navigation" aria-label="Navegação principal">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="flex items-center justify-between w-full h-24">
@@ -707,10 +718,8 @@
       <!-- Divider -->
       <div style="height:1px; background: rgba(0,151,178,0.2); margin: 6px 8px;"></div>
       <!-- CTA -->
-      <a href="#ingressos"
-        class="mobile-link brand-gradient-bg text-brand-white font-bold text-center"
-        style="border-radius:10px; margin-top:2px;"
-        onclick="closeMobileMenu()">QUERO PARTICIPAR</a>
+      <a href="#ingressos" class="mobile-link brand-gradient-bg text-brand-white font-bold text-center"
+        style="border-radius:10px; margin-top:2px;" onclick="closeMobileMenu()">QUERO PARTICIPAR</a>
     </div>
   </nav>
 
@@ -719,11 +728,15 @@
     <!-- ============================================================
           HERO
     ============================================================ -->
-        <section id="hero" class="relative bg-brand-dark min-h-screen flex items-center pt-24 pb-20 overflow-hidden carto-grid-subtle" style="background-image: url('/hero-bg.png'); background-size: cover; background-position: right center;"
+    <section id="hero"
+      class="relative bg-brand-dark min-h-screen flex items-center pt-24 pb-20 overflow-hidden carto-grid-subtle"
+      style="background-image: url('/hero-bg.png'); background-size: cover; background-position: right center;"
       aria-label="Apresentação do congresso">
 
       <!-- Minimalist Dark Overlay -->
-      <div class="absolute inset-0 bg-brand-dark/70 bg-gradient-to-tr from-brand-dark/90 via-brand-dark/70 to-brand-teal/30 pointer-events-none"></div>
+      <div
+        class="absolute inset-0 bg-brand-dark/70 bg-gradient-to-tr from-brand-dark/90 via-brand-dark/70 to-brand-teal/30 pointer-events-none">
+      </div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 w-full z-10">
         <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -734,25 +747,34 @@
             <div
               class="inline-flex items-center gap-3 bg-brand-white/[0.03] border border-brand-white/10 rounded-full px-5 py-2 mb-8 reveal backdrop-blur-sm">
               <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
-              <span class="text-brand-white/90 text-xs font-semibold tracking-widest uppercase">Inscrições Abertas</span>
+              <span class="text-brand-white/90 text-xs font-semibold tracking-widest uppercase">Inscrições
+                Abertas</span>
               <span class="text-brand-white/20 text-xs">|</span>
-              <span class="text-brand-white/70 text-xs font-medium uppercase tracking-wider">São Paulo · Presencial</span>
+              <span class="text-brand-white/70 text-xs font-medium uppercase tracking-wider">São Paulo ·
+                Presencial</span>
             </div>
 
             <!-- Title -->
-            <h1 class="font-display leading-[1.05] text-brand-white mb-6 reveal" style="font-size: clamp(2.2rem, 5.5vw, 3.6rem); letter-spacing: -0.02em;">
-              <span class="font-light text-brand-white/50 block text-base sm:text-lg uppercase tracking-[0.3em] mb-4">Congresso Nacional</span>
+            <h1 class="font-display leading-[1.05] text-brand-white mb-6 reveal"
+              style="font-size: clamp(2.2rem, 5.5vw, 3.6rem); letter-spacing: -0.02em;">
+              <span
+                class="font-light text-brand-white/50 block text-base sm:text-lg uppercase tracking-[0.3em] mb-4">Congresso
+                Nacional</span>
               <span class="font-extralight block tracking-tight text-brand-white/90">Inteligência Artificial</span>
-              <span class="font-black bg-gradient-to-r from-brand-teal via-[#4F9E43] to-[#8AD341] bg-clip-text text-transparent block mt-2 pb-1">
+              <span
+                class="font-black bg-gradient-to-r from-brand-teal via-[#4F9E43] to-[#8AD341] bg-clip-text text-transparent block mt-2 pb-1">
                 Aplicada ao Meio Ambiente
               </span>
             </h1>
 
             <!-- Description -->
-            <p class="text-brand-white/70 text-base sm:text-lg font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-10 reveal">
-              O maior encontro de inteligência artificial aplicada ao meio ambiente do Brasil. Domine algoritmos, processamento de dados ambientais e tecnologias inovadoras em um dia de imersão com grandes especialistas do setor.
+            <p
+              class="text-brand-white/70 text-base sm:text-lg font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-10 reveal">
+              O maior encontro de inteligência artificial aplicada ao meio ambiente do Brasil. Domine algoritmos,
+              processamento de dados ambientais e tecnologias inovadoras em um dia de imersão com grandes especialistas
+              do setor.
             </p>
- 
+
             <!-- Info Row -->
             <div
               class="reveal mb-8 flex flex-wrap justify-center lg:justify-start gap-8 text-brand-white/90 font-medium uppercase tracking-wider text-xs sm:text-sm">
@@ -761,7 +783,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <span>15 de Agosto, 2026</span>
+                <span>15 de Agosto, 2026 - das 8h às 20h</span>
               </div>
               <div class="flex items-center gap-3">
                 <svg class="w-4 h-4 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -780,22 +802,25 @@
             <!-- Minimalist Form Card -->
             <div
               class="w-full max-w-md bg-brand-white/[0.02] backdrop-blur-2xl border border-brand-white/10 rounded-2xl p-8 shadow-2xl relative reveal">
-              
-              <h3 class="text-brand-white font-semibold text-xs uppercase tracking-widest mb-4 flex items-center gap-3 border-b border-brand-white/10 pb-4">
+
+              <h3
+                class="text-brand-white font-semibold text-xs uppercase tracking-widest mb-4 flex items-center gap-3 border-b border-brand-white/10 pb-4">
                 <span>INSCRIÇÃO ONLINE</span>
               </h3>
 
               <form action="/api/register" method="POST" class="space-y-6 registration-form">
                 <div class="group relative">
                   <label for="f-name"
-                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Nome Completo</label>
+                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Nome
+                    Completo</label>
                   <input type="text" id="f-name" name="nome" placeholder="Digite seu nome completo" required
                     class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none">
                 </div>
 
                 <div class="group relative">
                   <label for="f-email"
-                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">E-mail Profissional</label>
+                    class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">E-mail
+                    Profissional</label>
                   <input type="email" id="f-email" name="email" placeholder="seu@email.com" required
                     class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none">
                 </div>
@@ -804,12 +829,13 @@
                   <div class="group relative">
                     <label for="f-tel"
                       class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Telefone</label>
-                    <input type="tel" id="f-tel" name="telefone" placeholder="(00) 00000-0000" required
+                    <input type="tel" id="f-tel" name="telefone" placeholder="11900000000 ou +..." required
                       class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none tel-input">
                   </div>
                   <div class="group relative">
                     <label for="f-area"
-                      class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Sua Área</label>
+                      class="block text-brand-white/40 font-semibold text-xs uppercase tracking-widest mb-1 group-focus-within:text-brand-teal transition-colors">Sua
+                      Área</label>
                     <div class="relative">
                       <select id="f-area" name="area" required
                         class="w-full bg-transparent border-b border-brand-white/20 py-2.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm rounded-none appearance-none cursor-pointer">
@@ -823,7 +849,9 @@
                         <option value="outro" class="bg-brand-dark">Outro</option>
                       </select>
                       <span class="absolute right-0 top-3 text-brand-white/30 pointer-events-none">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
                       </span>
                     </div>
                   </div>
@@ -838,25 +866,28 @@
 
             <!-- Countdown -->
             <div class="w-full max-w-md reveal">
-              <p
-                class="text-brand-white/30 text-xs uppercase tracking-widest mb-4 font-semibold text-center">
+              <p class="text-brand-white/30 text-xs uppercase tracking-widest mb-4 font-semibold text-center">
                 Faltam para o início</p>
 
               <div class="grid grid-cols-4 gap-4">
                 <div class="bg-brand-white/[0.01] border border-brand-white/5 rounded-xl py-3 px-2 text-center">
-                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1" id="cd-days">--</div>
+                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1"
+                    id="cd-days">--</div>
                   <div class="text-[10px] text-brand-white/40 uppercase tracking-wider font-semibold">Dias</div>
                 </div>
                 <div class="bg-brand-white/[0.01] border border-brand-white/5 rounded-xl py-3 px-2 text-center">
-                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1" id="cd-hours">--</div>
+                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1"
+                    id="cd-hours">--</div>
                   <div class="text-[10px] text-brand-white/40 uppercase tracking-wider font-semibold">Hrs</div>
                 </div>
                 <div class="bg-brand-white/[0.01] border border-brand-white/5 rounded-xl py-3 px-2 text-center">
-                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1" id="cd-minutes">--</div>
+                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1"
+                    id="cd-minutes">--</div>
                   <div class="text-[10px] text-brand-white/40 uppercase tracking-wider font-semibold">Min</div>
                 </div>
                 <div class="bg-brand-white/[0.01] border border-brand-white/5 rounded-xl py-3 px-2 text-center">
-                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1" id="cd-seconds">--</div>
+                  <div class="font-display font-semibold text-2xl sm:text-3xl text-brand-white leading-none mb-1"
+                    id="cd-seconds">--</div>
                   <div class="text-[10px] text-brand-white/40 uppercase tracking-wider font-semibold">Seg</div>
                 </div>
               </div>
@@ -878,7 +909,9 @@
           <h2 class="font-display font-bold text-[#010A15] mb-4"
             style="font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -0.01em;">SOBRE O CONGRESSO</h2>
           <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            O <strong class="text-[#010A15]">Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente 2026</strong> é o maior evento nacional dedicado a soluções inteligentes, focado em tecnologia, dados e inovação prática na área ambiental.
+            O <strong class="text-[#010A15]">Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente
+              2026</strong> é o maior evento nacional dedicado a soluções inteligentes, focado em tecnologia, dados e
+            inovação prática na área ambiental.
           </p>
         </div>
 
@@ -892,7 +925,8 @@
             <div class="stat-num">12h</div>
             <div class="text-[#038C4C] font-semibold text-sm uppercase tracking-wide mt-1">de Certificação</div>
           </div>
-          <div class="reveal reveal-delay-3 bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 flex flex-col justify-center overflow-hidden">
+          <div
+            class="reveal reveal-delay-3 bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 flex flex-col justify-center overflow-hidden">
             <div class="stat-num !text-xl sm:!text-3xl mb-1">Presencial</div>
             <div class="text-[#038C4C] font-semibold text-sm uppercase tracking-wide mt-1">Networking Real</div>
           </div>
@@ -903,18 +937,21 @@
           <div class="space-y-6">
             <p class="text-brand-dark/70 text-lg leading-relaxed">
               O congresso foi planejado para entregar atualização direta sobre as tecnologias que estão <strong
-                class="text-brand-teal">redefinindo a sustentabilidade e a conservação ambiental</strong>, capacitando profissionais para
+                class="text-brand-teal">redefinindo a sustentabilidade e a conservação ambiental</strong>, capacitando
+              profissionais para
               dominarem o novo ecossistema de dados, sensoriamento e modelagem preditiva com IA.
             </p>
             <p class="text-brand-dark/70 text-lg leading-relaxed">
               Ao longo da imersão, a programação prioriza a <strong class="text-brand-teal">aplicação prática e a
-                estratégia técnica</strong> diante das rápidas mudanças na área de inteligência artificial voltada ao meio ambiente.
+                estratégia técnica</strong> diante das rápidas mudanças na área de inteligência artificial voltada ao
+              meio ambiente.
             </p>
           </div>
 
           <blockquote class="border-l-4 border-brand-teal pl-8 py-4 bg-brand-dark/5 signature-shape-sm">
             <p class="text-brand-dark font-bold text-xl italic leading-relaxed">
-              "O ponto de encontro definitivo para quem busca alinhar tecnologia, IA e inovação na sustentabilidade ambiental brasileira."
+              "O ponto de encontro definitivo para quem busca alinhar tecnologia, IA e inovação na sustentabilidade
+              ambiental brasileira."
             </p>
           </blockquote>
 
@@ -929,13 +966,13 @@
           </div>
         </div>
       </div>
-      </div>
     </section>
 
     <!-- ============================================================
          PÚBLICO-ALVO
     ============================================================ -->
-    <section id="publico" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Público-alvo do congresso">
+    <section id="publico" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden"
+      aria-label="Público-alvo do congresso">
       <div class="absolute top-0 right-0 glow-line-h w-1/3 opacity-30"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -948,49 +985,69 @@
               class="brand-gradient-text">CONGRESSO</span></h2>
           <p class="text-brand-white/80 text-lg max-w-2xl mx-auto font-medium">O evento foi criado para reunir
             profissionais e
-            estudantes interessados no futuro da sustentabilidade e inteligência artificial aplicada ao meio ambiente.</p>
+            estudantes interessados no futuro da sustentabilidade e inteligência artificial aplicada ao meio ambiente.
+          </p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="reveal reveal-delay-1 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
+          <div
+            class="reveal reveal-delay-1 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
 
-            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Engenheiros e Ambientais</h3>
-            <p class="text-brand-white/70 text-base leading-relaxed">Profissionais focados em dominar novas ferramentas de IA e análise de dados aplicadas ao setor ambiental.</p>
+            <h3
+              class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">
+              Engenheiros e Ambientais</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Profissionais focados em dominar novas ferramentas
+              de IA e análise de dados aplicadas ao setor ambiental.</p>
           </div>
 
           <div
             class="reveal reveal-delay-2 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
 
-            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Gestores e Fiscais</h3>
-            <p class="text-brand-white/70 text-base leading-relaxed">Gestores que buscam otimizar a fiscalização e o monitoramento ambiental com inteligência artificial.</p>
+            <h3
+              class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">
+              Gestores e Fiscais</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Gestores que buscam otimizar a fiscalização e o
+              monitoramento ambiental com inteligência artificial.</p>
           </div>
 
           <div
             class="reveal reveal-delay-3 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
 
-            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Empresas de Tecnologia</h3>
-            <p class="text-brand-white/70 text-base leading-relaxed">Empresas e startups desenvolvendo soluções sustentáveis and análises ecológicas inteligentes.</p>
+            <h3
+              class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">
+              Empresas de Tecnologia</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Empresas e startups desenvolvendo soluções
+              sustentáveis and análises ecológicas inteligentes.</p>
           </div>
 
           <div
             class="reveal reveal-delay-1 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
 
-            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Peritos e Consultores</h3>
-            <p class="text-brand-white/70 text-base leading-relaxed">Especialistas focados em acelerar laudos, perícias e relatórios técnicos usando ferramentas de IA.</p>
+            <h3
+              class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">
+              Peritos e Consultores</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Especialistas focados em acelerar laudos, perícias
+              e relatórios técnicos usando ferramentas de IA.</p>
           </div>
 
           <div
             class="reveal reveal-delay-2 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
 
-            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Advogados do Setor</h3>
-            <p class="text-brand-white/70 text-base leading-relaxed">Advogados que buscam usar IA para gerar dados periciais sólidos e embasar teses jurídicas ambientais.</p>
+            <h3
+              class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">
+              Advogados do Setor</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Advogados que buscam usar IA para gerar dados
+              periciais sólidos e embasar teses jurídicas ambientais.</p>
           </div>
 
           <div
             class="reveal reveal-delay-3 bg-brand-white/5 p-8 border border-brand-white/10 signature-shape hover:border-brand-deep/40 hover:scale-[1.02] transition-all group">
 
-            <h3 class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">Estudantes e Pesquisadores</h3>
-            <p class="text-brand-white/70 text-base leading-relaxed">Pesquisadores e estudantes que buscam novas tecnologias e conexões com o mercado de trabalho.</p>
+            <h3
+              class="font-bold text-brand-white group-hover:text-brand-deep text-xl mb-4 uppercase tracking-wider transition-colors">
+              Estudantes e Pesquisadores</h3>
+            <p class="text-brand-white/70 text-base leading-relaxed">Pesquisadores e estudantes que buscam novas
+              tecnologias e conexões com o mercado de trabalho.</p>
           </div>
         </div>
       </div>
@@ -1005,24 +1062,28 @@
 
         <div class="text-center mb-20 reveal">
           <span
-             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Lineup</span>
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Lineup</span>
           <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight break-words"
             style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">PALESTRANTES <br><span
               class="brand-gradient-text-dark">CONFIRMADOS</span></h2>
-          <p class="text-gray-600 text-lg max-w-2xl mx-auto font-medium">Os maiores especialistas do mercado em inteligência artificial aplicada à gestão e sustentabilidade ambiental.</p>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto font-medium">Os maiores especialistas do mercado em
+            inteligência artificial aplicada à gestão e sustentabilidade ambiental.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 justify-center">
           <article class="reveal reveal-delay-1 group cursor-pointer w-full">
             <div
-              class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-brand-green2/30 transition-all">
-              <img src="/faculty/henrique.webp" alt="Henrique Gonzalez"
+              class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-brand-green2/30 transition-all">
+              <img src="/faculty/henrique.webp" alt="Henrique Gonzalez" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6">
-                <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Henrique Gonzalez</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental (UFRJ)</p>
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                <h3
+                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  Henrique Gonzalez</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                  Engenheiro Ambiental (UFRJ)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1030,14 +1091,17 @@
 
           <article class="reveal reveal-delay-2 group cursor-pointer w-full">
             <div
-              class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="/faculty/hermann.webp" alt="Hermann Fernandes"
+              class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/hermann.webp" alt="Hermann Fernandes" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6">
-                <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Hermann Fernandes</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental (UFRJ) e Especialista em Ciência de Dados</p>
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                <h3
+                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  Hermann Fernandes</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                  Engenheiro Ambiental (UFRJ) e Especialista em Ciência de Dados</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1045,14 +1109,17 @@
 
           <article class="reveal reveal-delay-3 group cursor-pointer w-full">
             <div
-              class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="/faculty/vinicius.webp" alt="Vinícius Ragghianti"
+              class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/vinicius.webp" alt="Vinícius Ragghianti" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6">
-                <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Vinícius Ragghianti</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Ambiental e Sanitarista, MBA em Gestão de Projetos</p>
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                <h3
+                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  Vinícius Ragghianti</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                  Engenheiro Ambiental e Sanitarista, MBA em Gestão de Projetos</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1060,14 +1127,35 @@
 
           <article class="reveal reveal-delay-4 group cursor-pointer w-full">
             <div
-              class="relative aspect-[4/5] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="/faculty/victor.webp" alt="Victor Valente Silvestre"
+              class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/victor.webp" alt="Victor Valente Silvestre" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
               </div>
-              <div class="absolute bottom-0 left-0 right-0 p-6">
-                <h3 class="font-bold text-brand-white text-xl mb-1 group-hover:brand-gradient-text-light transition-colors">Victor Valente Silvestre</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">Engenheiro Sanitarista e Ambiental, Mestre e Pesquisador</p>
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                <h3
+                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  Victor Valente Silvestre</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                  Engenheiro Sanitarista e Ambiental, Mestre e Pesquisador</p>
+                <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal reveal-delay-4 group cursor-pointer w-full">
+            <div
+              class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/gabriela.webp" alt="Gabriela Luchetti" width="300" height="400"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-4">
+                <h3
+                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  Gabriela Luchetti</h3>
+                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                  Engenheira Ambiental, Mestre e Doutoranda</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1076,64 +1164,202 @@
       </div>
     </section>
 
-
-<!-- ============================================================
-     PROGRAMAÇÃO
+    <!-- ============================================================
+     PROGRAMAÇÃO / SCHEDULE
     ============================================================ -->
-    <section id="programacao" class="py-16 sm:py-24 bg-white relative overflow-hidden"
-      aria-label="Programação e Temas das Palestras">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="cronograma" class="py-16 sm:py-24 bg-[#F8F9FA] relative overflow-hidden" aria-label="Cronograma do Evento">
+      
+      <!-- Background details -->
+      <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-brand-green2/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-brand-green1/10 rounded-full blur-3xl"></div>
 
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         <div class="text-center mb-16 reveal">
-          <span
-             class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Programação</span>
-          <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight break-words"
-            style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">TEMAS DAS <br><span
-              class="brand-gradient-text-dark">PALESTRAS</span></h2>
+          <span class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block shadow-md">Cronograma</span>
+          <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight break-words" style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">PROGRAMAÇÃO DO <br><span class="brand-gradient-text-dark">EVENTO</span></h2>
+          <p class="text-gray-500 max-w-xl mx-auto">Acompanhe os horários e temas das palestras para não perder nenhum conteúdo deste dia incrível.</p>
         </div>
 
-        <div class="max-w-4xl mx-auto space-y-6">
-          <!-- Henrique -->
-          <div class="reveal reveal-delay-1 bg-[#F2F2F2] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 border border-gray-200 hover:border-brand-green2/50 transition-colors">
-            <div>
-              <h3 class="font-display font-black text-brand-teal text-xl md:text-2xl uppercase tracking-wide mb-2">Henrique Gonzalez</h3>
-              <p class="text-gray-700 font-medium">Geotecnologias e IA: Estratégias Práticas para Profissionais de Vanguarda</p>
-            </div>
-          </div>
+        <div class="relative max-w-3xl mx-auto">
+          <!-- Linha vertical -->
+          <div class="absolute left-[27px] sm:left-[35px] top-6 bottom-6 w-1 rounded-full bg-gradient-to-b from-brand-green1 via-brand-green2 to-gray-200"></div>
 
-          <!-- Hermann -->
-          <div class="reveal reveal-delay-2 bg-[#F2F2F2] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 border border-gray-200 hover:border-[#6FA638]/50 transition-colors">
-            <div>
-              <h3 class="font-display font-black text-brand-teal text-xl md:text-2xl uppercase tracking-wide mb-2">Hermann Fernandes</h3>
-              <p class="text-gray-700 font-medium">O ativo ambiental invisível: Transformando dados em capacidade de decisão e em base sólida pra IA</p>
+          <div class="space-y-6 relative">
+            
+            <!-- Item 1 -->
+            <div class="reveal relative pl-16 sm:pl-24 group">
+              <!-- Dot -->
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  08:00 - 09:00
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg">Credenciamento dos participantes</h4>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <!-- Vinícius -->
-          <div class="reveal reveal-delay-3 bg-[#F2F2F2] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 border border-gray-200 hover:border-[#6FA638]/50 transition-colors">
-            <div>
-              <h3 class="font-display font-black text-brand-teal text-xl md:text-2xl uppercase tracking-wide mb-2">Vinícius Ragghianti</h3>
-              <p class="text-gray-700 font-medium">Da simulação à decisão: Gêmeos Digitais, IA e governança ambiental</p>
+            <!-- Item 2 -->
+            <div class="reveal reveal-delay-1 relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  09:00 - 09:20
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Abertura</h4>
+                  <p class="text-brand-green2 font-bold text-xs mt-2 uppercase tracking-wide">Henrique Gonzalez</p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <!-- Victor -->
-          <div class="reveal reveal-delay-4 bg-[#F2F2F2] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6 border border-gray-200 hover:border-[#6FA638]/50 transition-colors">
-            <div>
-              <h3 class="font-display font-black text-brand-teal text-xl md:text-2xl uppercase tracking-wide mb-2">Victor Valente Silvestre</h3>
-              <p class="text-gray-700 font-medium">Consultoria Ambiental 5.0: como a IA está redefinindo o mercado e tornando a atuação mais segura, ágil e lucrativa</p>
+            <!-- Item 3 -->
+            <div class="reveal reveal-delay-2 relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  09:20 - 10:20
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Consultoria Ambiental 5.0: como a IA está redefinindo o mercado e tornando a atuação mais segura, ágil e lucrativa</h4>
+                  <p class="text-brand-green2 font-bold text-xs mt-2 uppercase tracking-wide">Victor Valente</p>
+                </div>
+              </div>
             </div>
+
+            <!-- Item 4 -->
+            <div class="reveal relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  10:20 - 11:20
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">O ativo ambiental invisível: Transformando dados em capacidade de decisão e em base sólida pra IA</h4>
+                  <p class="text-brand-green2 font-bold text-xs mt-2 uppercase tracking-wide">Hermann Fernandes</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="reveal reveal-delay-1 relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  11:20 - 12:20
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Predição de cenários futuros do uso da terra com IA</h4>
+                  <p class="text-brand-green2 font-bold text-xs mt-2 uppercase tracking-wide">Gabriela Luchetti</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="reveal reveal-delay-2 relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  12:20 - 14:00
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Almoço / Networking</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="reveal relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  14:00 - 15:00
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Geotecnologias e IA: Estratégias Práticas para Profissionais de Vanguarda</h4>
+                  <p class="text-brand-green2 font-bold text-xs mt-2 uppercase tracking-wide">Henrique Gonzalez</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="reveal reveal-delay-1 relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  15:00 - 16:00
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Da simulação à decisão: Gêmeos Digitais, IA e governança ambiental</h4>
+                  <p class="text-brand-green2 font-bold text-xs mt-2 uppercase tracking-wide">Vinícius Ragghianti</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 9 -->
+            <div class="reveal reveal-delay-2 relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  16:45 - 18:00
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Coffee Break</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 10 -->
+            <div class="reveal relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  18:20 - 19:50
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Mesa Redonda com os palestrantes</h4>
+                  <p class="text-brand-green2 font-bold text-xs mt-2 uppercase tracking-wide">Momento para debate e interação com o público</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 11 -->
+            <div class="reveal reveal-delay-1 relative pl-16 sm:pl-24 group">
+              <div class="absolute left-[21px] sm:left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-brand-green1 shadow-[0_0_0_6px_#F8F9FA] group-hover:scale-125 group-hover:bg-brand-green2 transition-all duration-300"></div>
+              
+              <div class="bg-white rounded-2xl p-5 sm:p-6 flex flex-col md:flex-row md:items-center gap-3 sm:gap-6 border border-gray-100 hover:border-brand-green2/50 transition-all shadow-sm group-hover:shadow-lg">
+                <div class="bg-gray-50 text-brand-dark border border-gray-100 px-4 py-1.5 rounded-full font-bold text-sm whitespace-nowrap w-max group-hover:bg-brand-green2/10 group-hover:text-brand-green1 group-hover:border-brand-green2/20 transition-colors">
+                  19:50 - 20:00
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-900 text-base md:text-lg leading-tight">Fechamento</h4>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-
       </div>
     </section>
-<!-- ============================================================
+
+    <!-- ============================================================
      CERTIFICADO
     ============================================================ -->
     <section id="certificado" class="py-16 sm:py-32 bg-brand-dark relative overflow-hidden"
       aria-label="Certificado de participação">
-      
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid lg:grid-cols-2 gap-20 items-center">
 
@@ -1145,7 +1371,8 @@
               <div
                 class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-dark signature-shape-sm backdrop-blur-xl border border-white/20 flex items-center justify-center p-4 shadow-xl">
                 <p class="text-white font-bold text-sm text-center uppercase leading-tight">12 Horas de
-                  <br>Certificação</p>
+                  <br>Certificação
+                </p>
               </div>
             </div>
           </div>
@@ -1200,7 +1427,7 @@
     ============================================================ -->
     <section id="local" class="py-16 sm:py-24 bg-white relative overflow-hidden" aria-label="Local do evento">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div class="text-center mb-16 reveal">
           <div class="accent-line mx-auto mb-5"></div>
           <h2 class="font-display font-bold text-brand-dark mb-4 uppercase tracking-tight"
@@ -1221,21 +1448,26 @@
 
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-center">
           <!-- Imagem 1 -->
-          <div class="reveal reveal-delay-1 overflow-hidden signature-shape shadow-lg hover:shadow-xl transition-shadow group border border-gray-200">
+          <div
+            class="reveal reveal-delay-1 overflow-hidden signature-shape shadow-lg hover:shadow-xl transition-shadow group border border-gray-200">
             <img src="/crea-1.webp" alt="CREA-SP Coworking Nestor Pestana - Área Interna"
-              class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="400">
+              class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+              width="600" height="400">
           </div>
 
           <!-- Imagem 2 -->
-          <div class="reveal reveal-delay-2 overflow-hidden signature-shape shadow-lg hover:shadow-xl transition-shadow group border border-gray-200">
+          <div
+            class="reveal reveal-delay-2 overflow-hidden signature-shape shadow-lg hover:shadow-xl transition-shadow group border border-gray-200">
             <img src="/crea-2.webp" alt="CREA-SP Coworking Nestor Pestana - Espaço de Trabalho"
-              class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500" width="600" height="400">
+              class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+              width="600" height="400">
           </div>
         </div>
 
         <!-- Google Maps Link Button -->
         <div class="text-center mt-12 reveal">
-          <a href="https://maps.google.com/?q=Condomínio+Edifício+Guaporé+-+R.+Nestor+Pestana,+87+-+Consolação,+São+Paulo+-+SP,+01303-010" target="_blank"
+          <a href="https://maps.google.com/?q=Condomínio+Edifício+Guaporé+-+R.+Nestor+Pestana,+87+-+Consolação,+São+Paulo+-+SP,+01303-010"
+            target="_blank"
             class="inline-flex items-center gap-3 border-2 border-brand-teal text-brand-teal hover:bg-brand-teal hover:text-white font-bold text-sm uppercase tracking-wider px-8 py-4 signature-shape transition-all">
             <span>COMO CHEGAR (GOOGLE MAPS)</span>
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1248,13 +1480,13 @@
       </div>
     </section>
 
-    
+
     <!-- ============================================================
          DIVERSIDADE GEOGRÁFICA
     ============================================================ -->
     <section id="diversidade" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden"
       aria-label="Diversidade geográfica dos inscritos">
-      
+
       <!-- Background elements -->
       <div class="absolute inset-0 z-0 opacity-10">
         <div class="absolute -top-1/4 -left-1/4 w-1/2 h-1/2 bg-brand-green2/30 rounded-full blur-[120px]"></div>
@@ -1263,15 +1495,19 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div class="reveal">
-          <span class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Networking Nacional</span>
+          <span
+            class="brand-gradient-bg px-5 py-1.5 signature-shape-sm text-brand-white font-bold text-sm uppercase tracking-widest mb-4 inline-block">Networking
+            Nacional</span>
           <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight break-words"
-            style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">O BRASIL TODO <br><span class="brand-gradient-text-light">REUNIDO</span></h2>
-          <p class="text-brand-white/80 text-lg max-w-2xl mx-auto font-medium mb-12">Profissionais de todas as regiões já garantiram sua vaga no CBIAMA.</p>
+            style="font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 0.9;">O BRASIL TODO <br><span
+              class="brand-gradient-text-light">REUNIDO</span></h2>
+          <p class="text-brand-white/80 text-lg max-w-2xl mx-auto font-medium mb-12">Profissionais de todas as regiões
+            já garantiram sua vaga no CBIAMA.</p>
         </div>
 
         <div class="reveal flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 mt-8">
           <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm max-w-sm w-full">
-            <p class="text-6xl font-bold brand-gradient-text-light mb-2">+8</p>
+            <p class="text-6xl font-bold brand-gradient-text-light mb-2">+11</p>
             <p class="text-brand-white font-medium uppercase tracking-wider text-sm">Estados Diferentes</p>
           </div>
           <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm max-w-sm w-full">
@@ -1285,71 +1521,70 @@
 
 
 
-    
-    <!-- ============================================================
-         CASHBACK
-    ============================================================ -->
-    <section id="cashback" class="py-16 sm:py-20 bg-brand-dark relative overflow-hidden"
-      aria-label="Benefício de Cashback">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-8 lg:gap-12 reveal">
-          <div class="lg:w-1/2 text-center lg:text-left">
-            <span class="bg-brand-dark text-brand-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Bônus Exclusivo</span>
-            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-dark mb-4 uppercase leading-tight">100% do seu ingresso vira <span class="text-brand-teal">cashback</span></h2>
-            <p class="text-gray-600 text-lg mb-6">O valor integral pago no seu ingresso presencial poderá ser abatido na matrícula de qualquer curso da Ambiental Pro disponível na data do evento.</p>
-            <p class="text-sm text-gray-500 font-medium">* O cashback é válido para novas matrículas realizadas nos dias do evento e não é cumulativo com outras promoções.</p>
-          </div>
-          <div class="lg:w-1/2 flex justify-center">
-            <div class="relative w-56 h-56 md:w-80 md:h-80 bg-brand-dark/5 rounded-full flex items-center justify-center p-8">
-              <!-- Rotating border -->
-              <div class="absolute inset-0 border-4 border-dashed border-brand-teal/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
-              
-              <!-- Content -->
-              <div class="text-center relative z-10">
-                <p class="text-5xl md:text-7xl font-bold text-brand-teal mb-2">100%</p>
-                <p class="text-brand-dark font-black uppercase tracking-widest text-lg md:text-xl">De Retorno</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
     <!-- ============================================================
          PROMOÇÃO
     ============================================================ -->
-    <section id="promocao" class="py-16 sm:py-20 brand-gradient-bg relative overflow-hidden"
+    <section id="promocao" class="pt-16 sm:pt-20 pb-8 sm:pb-4 bg-[#F2F2F2] relative overflow-hidden"
       aria-label="Promoção Compre 1 Leve 2">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-8 lg:gap-12 reveal">
-          <div class="lg:w-3/5 text-center lg:text-left">
-            <span class="bg-brand-dark text-brand-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Promoção Especial</span>
-            <h2 class="text-3xl sm:text-5xl font-display font-bold text-white mb-4 uppercase leading-tight">Na compra de 1 ingresso, <br><span class="text-brand-dark font-black">LEVE OUTRO!</span></h2>
-            <p class="text-white/90 text-lg mb-8 font-medium">Não vá sozinho! Garanta o seu passaporte para o Congresso Presencial e ganhe um ingresso extra para levar um acompanhante. Compartilhem juntos a maior experiência de inteligência artificial aplicada ao meio ambiente do ano.</p>
-            <a href="#ingressos" class="inline-block py-4 px-10 bg-brand-dark text-brand-white font-bold text-sm uppercase tracking-wider rounded-md shadow-xl hover:-translate-y-1 hover:shadow-2xl transition-all">Garantir Meu Ingresso Duplo</a>
-          </div>
-          <div class="lg:w-2/5 flex justify-center relative">
-            <div class="relative w-48 h-48 md:w-64 md:h-64 transform rotate-[-5deg] hover:rotate-0 transition-all duration-500">
-              <!-- Back Ticket -->
-              <div class="absolute inset-0 bg-brand-dark rounded-xl shadow-2xl transform translate-x-4 translate-y-4 rotate-[10deg] flex items-center justify-center border border-white/10 overflow-hidden">
-                <div class="absolute left-0 w-4 h-8 bg-brand-teal/20 rounded-r-full border-r border-t border-b border-white/10 top-1/2 -translate-y-1/2"></div>
-                <div class="absolute right-0 w-4 h-8 bg-brand-teal/20 rounded-l-full border-l border-t border-b border-white/10 top-1/2 -translate-y-1/2"></div>
-                <div class="text-center">
-                  <p class="text-white/30 text-xs font-bold uppercase tracking-widest mb-1">Acompanhante</p>
-                  <p class="text-brand-teal text-xl font-black uppercase">Ingresso 2</p>
-                </div>
-              </div>
-              <!-- Front Ticket -->
-              <div class="absolute inset-0 bg-white rounded-xl shadow-2xl flex items-center justify-center border-2 border-brand-teal overflow-hidden">
-                <div class="absolute left-0 w-4 h-8 bg-brand-teal/20 rounded-r-full border-r-2 border-t-2 border-b-2 border-brand-teal top-1/2 -translate-y-1/2"></div>
-                <div class="absolute right-0 w-4 h-8 bg-brand-teal/20 rounded-l-full border-l-2 border-t-2 border-b-2 border-brand-teal top-1/2 -translate-y-1/2"></div>
-                <div class="text-center">
-                  <p class="text-brand-dark/40 text-xs font-bold uppercase tracking-widest mb-1">Titular</p>
-                  <p class="text-brand-dark text-xl font-black uppercase">Ingresso 1</p>
-                </div>
-              </div>
+        <div
+          class="bg-white border-2 border-brand-teal/20 rounded-3xl p-8 md:p-12 shadow-2xl shadow-brand-teal/10 reveal relative overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+          <div class="absolute top-0 left-0 w-full h-1.5 brand-gradient-bg"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full max-w-6xl mx-auto">
+
+            <!-- Left Side: Text -->
+            <div class="text-center lg:text-left">
+              <span
+                class="bg-brand-teal/10 text-brand-teal px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4 inline-block">Promoção
+                Especial</span>
+              <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-brand-dark mb-6 uppercase leading-tight">
+                Na compra de 1 ingresso, <br><span class="brand-gradient-text-dark font-black">LEVE OUTRO!</span></h2>
+              <p class="text-gray-600 text-lg mb-0 font-medium leading-relaxed">Garanta o seu passaporte
+                para o Congresso Presencial e ganhe um ingresso extra para levar um acompanhante. Compartilhem juntos a
+                maior experiência de inteligência artificial aplicada ao meio ambiente do ano.</p>
             </div>
+
+            <!-- Right Side: Countdown and CTA -->
+            <div
+              class="flex flex-col items-center justify-center bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-100">
+              <p class="text-brand-dark text-base sm:text-lg uppercase tracking-widest mb-6 font-black text-center">A
+                oferta encerra em</p>
+
+              <div class="grid grid-cols-4 gap-3 sm:gap-4 mb-8 w-full max-w-lg mx-auto">
+                <div class="bg-white border border-gray-200 shadow-sm rounded-xl py-4 px-2 text-center">
+                  <div class="font-display font-black text-3xl sm:text-4xl text-yellow-500 leading-none mb-2 cd-days">--
+                  </div>
+                  <div class="text-[10px] sm:text-xs text-brand-dark/80 uppercase tracking-wider font-bold">Dias</div>
+                </div>
+                <div class="bg-white border border-gray-200 shadow-sm rounded-xl py-4 px-2 text-center">
+                  <div class="font-display font-black text-3xl sm:text-4xl text-yellow-500 leading-none mb-2 cd-hours">
+                    --</div>
+                  <div class="text-[10px] sm:text-xs text-brand-dark/80 uppercase tracking-wider font-bold">Hrs</div>
+                </div>
+                <div class="bg-white border border-gray-200 shadow-sm rounded-xl py-4 px-2 text-center">
+                  <div
+                    class="font-display font-black text-3xl sm:text-4xl text-yellow-500 leading-none mb-2 cd-minutes">--
+                  </div>
+                  <div class="text-[10px] sm:text-xs text-brand-dark/80 uppercase tracking-wider font-bold">Min</div>
+                </div>
+                <div class="bg-white border border-gray-200 shadow-sm rounded-xl py-4 px-2 text-center">
+                  <div
+                    class="font-display font-black text-3xl sm:text-4xl text-yellow-500 leading-none mb-2 cd-seconds">--
+                  </div>
+                  <div class="text-[10px] sm:text-xs text-brand-dark/80 uppercase tracking-wider font-bold">Seg</div>
+                </div>
+              </div>
+
+              <a href="#ingressos"
+                class="inline-block w-full sm:w-auto text-center py-4 px-10 brand-gradient-bg text-brand-white font-bold text-sm sm:text-base uppercase tracking-wider rounded-md shadow-xl shadow-brand-green1/20 hover:-translate-y-1 hover:shadow-2xl transition-all">
+                Garantir Meu Ingresso Duplo
+              </a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -1358,8 +1593,49 @@
     <!-- ============================================================
          INGRESSOS
     ============================================================ -->
-    <section id="ingressos" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden" aria-label="Ingressos e preços">
+    <section id="ingressos" class="pt-8 sm:pt-10 pb-16 sm:pb-24 bg-[#F2F2F2] relative overflow-hidden"
+      aria-label="Ingressos e preços">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- CASHBACK CARD -->
+        <div id="cashback-card" style="display: none;" class="bg-[#010A15] rounded-3xl p-8 sm:p-12 shadow-2xl shadow-brand-teal/20 max-w-4xl mx-auto border border-brand-teal/30 reveal reveal-delay-1 mb-16 text-center relative overflow-hidden transform hover:-translate-y-1 transition-all">
+          <div class="absolute top-0 left-0 w-full h-1.5 brand-gradient-bg"></div>
+          
+          <!-- Ambient Glows -->
+          <div class="absolute top-0 right-0 w-64 h-64 bg-brand-teal/20 rounded-full blur-[80px] z-0 translate-x-1/2 -translate-y-1/2"></div>
+          <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-green1/20 rounded-full blur-[80px] z-0 -translate-x-1/2 translate-y-1/2"></div>
+          
+          <div class="relative z-10">
+            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-brand-white mb-4 uppercase leading-tight tracking-tight">
+              100% do seu ingresso vira <br class="hidden sm:block">
+              <span class="brand-gradient-text-light text-4xl sm:text-5xl lg:text-6xl mt-2 inline-block">CASHBACK</span>
+            </h3>
+            <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-medium">O valor integral pago no seu ingresso presencial poderá ser abatido na matrícula de qualquer curso da Ambiental Pro.</p>
+            
+            <!-- Cashback Timer -->
+            <div class="flex items-center justify-center gap-2 sm:gap-4 mt-8">
+              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
+                <div class="font-display font-black text-2xl sm:text-3xl text-yellow-500 leading-none cd-days">--</div>
+                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Dias</div>
+              </div>
+              <span class="text-white/30 font-black text-xl">:</span>
+              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
+                <div class="font-display font-black text-2xl sm:text-3xl text-yellow-500 leading-none cd-hours">--</div>
+                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Hrs</div>
+              </div>
+              <span class="text-white/30 font-black text-xl">:</span>
+              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
+                <div class="font-display font-black text-2xl sm:text-3xl text-yellow-500 leading-none cd-minutes">--</div>
+                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Min</div>
+              </div>
+              <span class="text-white/30 font-black text-xl">:</span>
+              <div class="bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2 text-center min-w-[60px] shadow-sm backdrop-blur-md">
+                <div class="font-display font-black text-2xl sm:text-3xl text-yellow-500 leading-none cd-seconds">--</div>
+                <div class="text-xs text-white/60 uppercase font-bold tracking-wider mt-1">Seg</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="text-center mb-20 reveal">
           <span
@@ -1368,30 +1644,26 @@
           <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight"
             style="font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.9;">ESCOLHA SEU <br><span
               class="brand-gradient-text-dark">PASSAPORTE</span></h2>
-          <p class="text-brand-dark/60 text-lg max-w-xl mx-auto font-medium">Garanta seu lugar no maior evento de inteligência artificial aplicada ao meio ambiente do ano.</p>
+          <p class="text-brand-dark/60 text-lg max-w-xl mx-auto font-medium mb-10">Garanta seu lugar no maior evento de
+            inteligência artificial aplicada ao meio ambiente do ano.</p>
+
         </div>
 
-        <div class="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
 
           <!-- Básico -->
           <div
             class="reveal reveal-delay-1 bg-white signature-shape p-8 border border-gray-200 flex flex-col hover:border-brand-deep/40 hover:scale-[1.02] transition-all group shadow-xl shadow-gray-200/50">
             <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Básico</p>
             <div class="mb-2">
-              <span class="font-display font-semibold text-brand-dark dynamic-price-basico" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 397</span>
-              <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+              <span class="font-display font-semibold text-brand-dark dynamic-price-basico"
+                style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 597</span>
+              <span class="text-brand-dark/40 text-sm font-bold">,00</span>
             </div>
-            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-6 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
-
-            <div class="bg-brand-teal/10 text-brand-deep rounded-md p-3 mb-8 text-center border border-brand-teal/30 font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm">
-              <svg class="w-5 h-5 text-brand-teal flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
-              </svg>
-              <span>Na compra de 1 ingresso, <span class="text-brand-teal font-black">leve outro!</span></span>
-            </div>
+            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Último Lote</p>
 
             <ul class="space-y-5 mb-12 flex-1">
-              <li class="flex items-start gap-4 text-brand-dark/70 text-sm">
+              <li class="flex items-start gap-4 text-brand-dark/70 text-base">
                 <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
@@ -1404,7 +1676,6 @@
               class="w-full py-5 signature-shape border-2 border-brand-deep text-brand-deep font-bold text-sm uppercase tracking-wider group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
               SELECIONAR BÁSICO
             </button>
-            <p class="text-brand-dark/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
           </div>
 
           <!-- PRO -->
@@ -1416,39 +1687,34 @@
 
             <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Pro</p>
             <div class="mb-2">
-              <span class="font-display font-semibold text-brand-dark dynamic-price-pro" style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 497</span>
-              <span class="text-brand-dark/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+              <span class="font-display font-semibold text-brand-dark dynamic-price-pro"
+                style="font-size: clamp(2.2rem, 10vw, 3.2rem); line-height: 1;">R$ 697</span>
+              <span class="text-brand-dark/40 text-sm font-bold">,00</span>
             </div>
-            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-6 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
-
-            <div class="brand-gradient-bg text-brand-white rounded-md p-3 mb-8 text-center font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md">
-              <svg class="w-5 h-5 text-brand-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
-              </svg>
-              <span>Na compra de 1 ingresso, <span class="text-brand-dark font-black bg-white/20 px-2 py-0.5 rounded ml-1">leve outro!</span></span>
-            </div>
+            <p class="text-brand-dark/40 text-sm font-bold uppercase tracking-widest mb-10 dynamic-lote-text">Último Lote</p>
 
             <ul class="space-y-5 mb-12 flex-1">
-              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
+              <li class="flex items-start gap-4 text-brand-dark/90 text-base">
                 <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
                 <span class="font-bold">Acesso ao Evento Presencial</span>
               </li>
-              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
+              <li class="flex items-start gap-4 text-brand-dark/90 text-base">
                 <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
                 <span class="font-bold">Acesso à Gravação do Congresso Presencial</span>
               </li>
-              <li class="flex items-start gap-4 text-brand-dark/90 text-sm">
+              <li class="flex items-start gap-4 text-brand-dark/90 text-base">
                 <svg class="w-5 h-5 text-brand-deep flex-shrink-0" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
-                <span class="font-bold">Acesso a todos os Congressos Online da Ambiental Pro em 2026 (incluindo gravações passadas)</span>
+                <span class="font-bold">Acesso a todos os Congressos Online da Ambiental Pro em 2026 (incluindo
+                  gravações passadas)</span>
               </li>
             </ul>
 
@@ -1456,18 +1722,18 @@
               class="w-full py-5 signature-shape brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-wider shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
               GARANTIR INGRESSO PRO
             </button>
-            <p class="text-brand-dark/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
           </div>
 
         </div>
+
       </div>
     </section>
 
-<!-- ============================================================
+    <!-- ============================================================
          FAQ
     ============================================================ -->
     <section id="faq" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Perguntas frequentes">
-      
+
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div class="text-center mb-20 reveal">
@@ -1514,7 +1780,8 @@
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">O evento é
-                100% presencial, focado em networking real e experiência prática. O local do evento será o CREA-SP - Coworking Nestor Pestana (Rua Nestor Pestana, 87 - Consolação, São Paulo - SP).</p>
+                100% presencial, focado em networking real e experiência prática. O local do evento será o CREA-SP -
+                Coworking Nestor Pestana (Rua Nestor Pestana, 87 - Consolação, São Paulo - SP).</p>
             </div>
           </div>
 
@@ -1532,7 +1799,9 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Aceitamos cartões de crédito (com parcelamento em até 12x), boleto bancário e PIX. Para inscrições corporativas em grupo, entre em contato com nosso suporte via WhatsApp.</p>
+              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Aceitamos cartões de crédito (com
+                parcelamento em até 12x), boleto bancário e PIX. Para inscrições corporativas em grupo, entre em contato
+                com nosso suporte via WhatsApp.</p>
             </div>
           </div>
 
@@ -1550,7 +1819,8 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Sim! Mas o acesso à gravação completa das palestras é um benefício exclusivo do Ingresso PRO.</p>
+              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Sim! Mas o acesso à gravação
+                completa das palestras é um benefício exclusivo do Ingresso PRO.</p>
             </div>
           </div>
 
@@ -1568,7 +1838,9 @@
               </div>
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Não, teremos coffee breaks inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
+              <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Não, teremos coffee breaks
+                inclusos em períodos estratégicos para networking. O almoço não está incluso no valor do ingresso, mas o
+                local do evento conta com diversas opções de restaurantes parceiros nas proximidades.</p>
             </div>
           </div>
         </div>
@@ -1578,74 +1850,76 @@
     <!-- ============================================================
          FORMULÁRIO / INSCRIÇÃO
     ============================================================ -->
-  <!-- ============================================================
+    <!-- ============================================================
        REGISTRATION MODAL
   ============================================================ -->
-  <div id="inscricao-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300"
-    style="background: rgba(0, 16, 39, 0.9); backdrop-filter: blur(12px);">
-    <div class="bg-brand-dark signature-shape max-w-lg w-full p-8 border border-brand-white/10 shadow-lg relative transform scale-95 transition-transform duration-300">
-      
-      <button onclick="closeRegistrationModal()"
-        class="absolute top-4 right-4 text-brand-white/40 hover:text-brand-white transition-colors">
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+    <div id="inscricao-modal"
+      class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300"
+      style="background: rgba(0, 16, 39, 0.9); backdrop-filter: blur(12px);">
+      <div
+        class="bg-brand-dark signature-shape max-w-lg w-full p-8 border border-brand-white/10 shadow-lg relative transform scale-95 transition-transform duration-300">
 
-      <h3 class="text-brand-white font-bold text-sm uppercase tracking-widest mb-4 flex items-center gap-3">
-        <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
-        Me inscrever agora
-      </h3>
-
-      <form action="/api/register" method="POST" class="space-y-4 registration-form">
-        <div class="group">
-          <label for="m-name"
-            class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
-            Completo</label>
-          <input type="text" id="m-name" name="nome" placeholder="Seu nome" required
-            class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm">
-        </div>
-
-        <div class="group">
-          <label for="m-email"
-            class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
-            Profissional</label>
-          <input type="email" id="m-email" name="email" placeholder="seu@email.com" required
-            class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm">
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="group">
-            <label for="m-tel"
-              class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
-            <input type="tel" id="m-tel" name="telefone" placeholder="(00) 00000-0000" required
-              class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm tel-input">
-          </div>
-          <div class="group">
-            <label for="m-area"
-              class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
-              Área</label>
-            <select id="m-area" name="area" required
-              class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm appearance-none">
-              <option value="" disabled selected>Selecione...</option>
-              <option value="biologia">Biologia</option>
-              <option value="geografia">Geografia</option>
-              <option value="engenharia">Engenharia</option>
-              <option value="direito">Direito</option>
-              <option value="tecnologia">Tecnologia</option>
-              <option value="estudante">Estudante</option>
-              <option value="outro">Outro</option>
-            </select>
-          </div>
-        </div>
-
-        <button type="submit"
-          class="w-full brand-gradient-bg text-brand-dark font-bold text-sm uppercase tracking-wider py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
-          <span class="btn-text">GARANTIR MINHA VAGA</span>
+        <button onclick="closeRegistrationModal()"
+          class="absolute top-4 right-4 text-brand-white/40 hover:text-brand-white transition-colors">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
         </button>
-      </form>
+
+        <h3 class="text-brand-white font-bold text-sm uppercase tracking-widest mb-4 flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
+          Me inscrever agora
+        </h3>
+
+        <form action="/api/register" method="POST" class="space-y-4 registration-form">
+          <div class="group">
+            <label for="m-name"
+              class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
+              Completo</label>
+            <input type="text" id="m-name" name="nome" placeholder="Seu nome" required
+              class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm">
+          </div>
+
+          <div class="group">
+            <label for="m-email"
+              class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">E-mail
+              Profissional</label>
+            <input type="email" id="m-email" name="email" placeholder="seu@email.com" required
+              class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-teal transition-all text-sm">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="group">
+              <label for="m-tel"
+                class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Telefone</label>
+              <input type="tel" id="m-tel" name="telefone" placeholder="11900000000 ou +..." required
+                class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white placeholder-brand-white/10 focus:outline-none focus:border-brand-green1 transition-all text-sm tel-input">
+            </div>
+            <div class="group">
+              <label for="m-area"
+                class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-teal transition-colors">Sua
+                Área</label>
+              <select id="m-area" name="area" required
+                class="w-full bg-brand-dark/50 border border-brand-white/10 signature-shape-sm px-5 py-3.5 text-brand-white focus:outline-none focus:border-brand-teal transition-all text-sm appearance-none">
+                <option value="" disabled selected>Selecione...</option>
+                <option value="biologia">Biologia</option>
+                <option value="geografia">Geografia</option>
+                <option value="engenharia">Engenharia</option>
+                <option value="direito">Direito</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="estudante">Estudante</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit"
+            class="w-full brand-gradient-bg text-brand-dark font-bold text-sm uppercase tracking-wider py-4 signature-shape shadow-lg shadow-brand-green1/20 hover:scale-[1.02] active:scale-95 transition-all mt-2 btn-submit">
+            <span class="btn-text">GARANTIR MINHA VAGA</span>
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
 
 
   </main>
@@ -1660,7 +1934,8 @@
         <div class="lg:col-span-2">
           <img src="logo.webp" alt="Ambiental Pro Logo" class="h-8 mb-4 brightness-0 opacity-80">
           <p class="text-brand-dark/60 text-sm leading-relaxed max-w-xs font-medium">
-            Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente. 15 de agosto de 2026. São Paulo, SP.
+            Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente. 15 de agosto de 2026. São Paulo,
+            SP.
           </p>
         </div>
 
@@ -1685,7 +1960,7 @@
         <div>
           <h4 class="font-bold text-brand-dark text-sm uppercase tracking-widest mb-4">Suporte</h4>
           <div class="space-y-4">
-            <a href="https://wa.link/6on3xe" target="_blank"
+            <a href="https://api.whatsapp.com/send/?phone=5521982639824&text=Ol%C3%A1!%20Tenho%20interesse%20em%20participar%20do%20Congresso%20Brasileiro%20de%20Mapeamento%20e%20Intelig%C3%AAncia%20Ambiental.&type=phone_number&app_absent=0" target="_blank"
               class="flex items-center gap-3 text-brand-dark/60 hover:text-brand-teal transition-colors group">
               <div
                 class="w-8 h-8 signature-shape-sm bg-brand-dark/5 flex items-center justify-center group-hover:bg-brand-teal/20">
@@ -1721,9 +1996,7 @@
       class="bg-brand-dark signature-shape max-w-5xl w-full max-h-[90vh] overflow-y-auto p-10 sm:p-16 border border-brand-white/10 shadow-lg relative animate-in">
 
       <div class="absolute top-0 right-0 p-8">
-        <button
-          onclick="closeSuccessModal()"
-          class="text-brand-white/20 hover:text-brand-white transition-colors">
+        <button onclick="closeSuccessModal()" class="text-brand-white/20 hover:text-brand-white transition-colors">
           <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -1744,16 +2017,11 @@
           class="bg-brand-white/5 signature-shape p-10 border border-brand-white/10 flex flex-col hover:border-brand-deep/40 transition-all group">
           <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Básico</p>
           <div class="mb-2">
-            <span class="font-display font-semibold text-brand-white dynamic-price-basico" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 397</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+            <span class="font-display font-semibold text-brand-white dynamic-price-basico"
+              style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 597</span><span
+              class="text-brand-white/40 text-sm font-bold">,00</span>
           </div>
-          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-6 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
-          
-          <div class="bg-brand-white/10 text-brand-white rounded-md p-3 mb-8 text-center border border-brand-white/20 font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2">
-            <svg class="w-5 h-5 text-brand-teal flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
-            </svg>
-            <span>Na compra de 1 ingresso, <span class="text-brand-teal font-black">leve outro!</span></span>
-          </div>
+          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Último Lote</p>
 
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/60 text-sm font-bold uppercase tracking-wider">
@@ -1767,7 +2035,6 @@
             class="btn-basico w-full py-4 signature-shape border-2 border-brand-deep text-brand-deep font-bold text-sm uppercase tracking-widest group-hover:bg-brand-deep group-hover:text-brand-white transition-all">
             SELECIONAR BÁSICO
           </button>
-          <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
         </div>
 
         <!-- PRO -->
@@ -1778,16 +2045,11 @@
             RECOMENDADO</div>
           <p class="font-bold text-brand-deep text-sm uppercase tracking-widest mb-4">Ingresso Pro</p>
           <div class="mb-2">
-            <span class="font-display font-semibold text-brand-white dynamic-price-pro" style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 497</span><span class="text-brand-white/40 text-sm font-bold">,00<span class="text-base dynamic-asterisk">*</span></span>
+            <span class="font-display font-semibold text-brand-white dynamic-price-pro"
+              style="font-size: clamp(2.5rem, 12vw, 3.5rem); line-height: 1;">R$ 697</span><span
+              class="text-brand-white/40 text-sm font-bold">,00</span>
           </div>
-          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-6 dynamic-lote-text">Lote de Pré-Venda (exclusiva para alunos)</p>
-
-          <div class="brand-gradient-bg text-brand-white rounded-md p-3 mb-8 text-center font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md">
-            <svg class="w-5 h-5 text-brand-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
-            </svg>
-            <span>Na compra de 1 ingresso, <span class="text-brand-dark font-black bg-white/20 px-2 py-0.5 rounded ml-1">leve outro!</span></span>
-          </div>
+          <p class="text-brand-white/30 text-sm font-bold uppercase tracking-widest mb-8 dynamic-lote-text">Último Lote</p>
 
           <ul class="space-y-3 mb-8 text-left">
             <li class="flex items-center gap-3 text-brand-white/90 text-sm font-bold uppercase tracking-wider">
@@ -1813,338 +2075,381 @@
             class="btn-pro w-full py-4 signature-shape brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-widest shadow-lg shadow-brand-green1/20 hover:-translate-y-1 transition-all">
             GARANTIR INGRESSO PRO
           </button>
-          <p class="text-brand-white/40 text-sm text-center mt-3 dynamic-student-text">* Preço de estudante/meia solidária</p>
         </div>
       </div>
     </div>
-  </section>
+    </section>
 
-  <script>
-    // ============================================================
-    // UTMS & ACTIVE CAMPAIGN INTEGRATION
-    // ============================================================
-    let currentContactId = null;
-    let pendingTicket = null;
+    <script>
+      // ============================================================
+      // UTMS & ACTIVE CAMPAIGN INTEGRATION
+      // ============================================================
+      let currentContactId = null;
+      let pendingTicket = null;
 
-    function getUtms() {
-      const utms = {};
-      const params = new URLSearchParams(window.location.search);
-      for (const [key, value] of params.entries()) {
-        const lowerKey = key.toLowerCase();
-        if (lowerKey.startsWith('utm_') || lowerKey.startsWith('cbmig_') || lowerKey.startsWith('ia_')) {
-          utms[key] = value;
+      function getUtms() {
+        const utms = {};
+        const params = new URLSearchParams(window.location.search);
+        for (const [key, value] of params.entries()) {
+          const lowerKey = key.toLowerCase();
+          if (lowerKey.startsWith('utm_') || lowerKey.startsWith('cbmig_') || lowerKey.startsWith('ia_')) {
+            utms[key] = value;
+          }
         }
-      }
-      return utms;
-    }
-
-    const forms = document.querySelectorAll('.registration-form');
-    const modal = document.getElementById('success-modal');
-
-    forms.forEach(form => {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const btnSubmit = form.querySelector('.btn-submit');
-        const btnText = form.querySelector('.btn-text');
-
-        // Coleta dados
-        const formData = new FormData(form);
-        const utms = getUtms();
-
-        const payload = {
-          name: formData.get('nome'),
-          email: formData.get('email'),
-          phone: formData.get('telefone'),
-          area: formData.get('area'),
-          graduacao: formData.get('graduacao') || '',
-          utm_source: utms['utm_source'] || '',
-          utm_medium: utms['utm_medium'] || '',
-          utm_campaign: utms['utm_campaign'] || '',
-          utm_content: utms['utm_content'] || '',
-          utm_term: utms['utm_term'] || '',
-          utm_possui_graduacao: utms['utm_possui_graduacao'] || utms['utm_grad'] || utms['utm_graduacao'] || '',
-          utm_area_de_formacao: utms['utm_area_de_formacao'] || utms['utm_area'] || ''
-        };
-
-        currentContactId = formData.get('email');
-
-        // Abre o modal IMEDIATAMENTE
-        const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
-        
-        if (pendingTicket === 'basico') {
-          window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/QTSkah' : 'https://pay.voompcreators.com.br/14712/offer/4iFfHo';
-        } else if (pendingTicket === 'pro') {
-          window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/fIOTQu' : 'https://pay.voompcreators.com.br/14712/offer/OSkouA';
-        } else {
-          closeRegistrationModal();
-          openSuccessModal();
-        }
-
-        // Envia para o ActiveCampaign via Vercel Serverless Function
-        fetch('/api/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        })
-        .then(res => res.json())
-        .then(data => console.log('ActiveCampaign Sync Success:', data))
-        .catch(err => console.error('ActiveCampaign Sync Error:', err));
-
-        // Envia para a API do Google Sheets em segundo plano (fire & forget)
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbc5ij7lcYBMHABEuCMFlAZZLfXo_5pSH2hbT2TnwPVZWcU7tkMjdPtDfTcvFnr0u9Aw/exec';
-        fetch(SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        }).catch(err => console.warn('Erro ao enviar dados para Google Sheets:', err));
-      });
-    });
-
-    async function selectTicket(type) {
-      pendingTicket = type;
-
-      if (!currentContactId) {
-        openRegistrationModal();
-        return;
+        return utms;
       }
 
-      // Se já tiver o ID, redireciona direto
-      const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
-      
-      if (type === 'basico') {
-        window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/QTSkah' : 'https://pay.voompcreators.com.br/14712/offer/4iFfHo';
-      } else {
-        window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/fIOTQu' : 'https://pay.voompcreators.com.br/14712/offer/OSkouA';
-      }
-    }
+      const forms = document.querySelectorAll('.registration-form');
+      const modal = document.getElementById('success-modal');
 
-    // ============================================================
-    // VIRADA DE LOTE AUTOMÁTICA
-    // ============================================================
-    function checkLoteTurn() {
-      const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
-      if (isLote1) {
-        document.querySelectorAll('.dynamic-price-basico').forEach(el => el.textContent = 'R$ 597');
-        document.querySelectorAll('.dynamic-price-pro').forEach(el => el.textContent = 'R$ 697');
-        document.querySelectorAll('.dynamic-lote-text').forEach(el => el.textContent = 'Lote 1');
-        document.querySelectorAll('.dynamic-asterisk').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.dynamic-student-text').forEach(el => el.style.display = 'none');
-      }
-    }
-    checkLoteTurn();
-    setInterval(checkLoteTurn, 1000);
+      forms.forEach(form => {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
 
-    // ============================================================
-    // COUNTDOWN
-    // ============================================================
-    function updateCountdown() {
-      const target = new Date('2026-08-14T08:00:00-03:00').getTime();
-      const now = Date.now();
-      const diff = target - now;
-      if (diff <= 0) {
-        ['cd-days', 'cd-hours', 'cd-minutes', 'cd-seconds'].forEach(id => {
-          const el = document.getElementById(id);
-          if (el) el.textContent = '00';
-        });
-        return;
-      }
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
+          const btnSubmit = form.querySelector('.btn-submit');
+          const btnText = form.querySelector('.btn-text');
 
-      const setEl = (id, val) => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = String(val).padStart(2, '0');
-      };
+          // Coleta dados
+          const formData = new FormData(form);
+          const utms = getUtms();
 
-      setEl('cd-days', d);
-      setEl('cd-hours', h);
-      setEl('cd-minutes', m);
-      setEl('cd-seconds', s);
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+          const payload = {
+            name: formData.get('nome'),
+            email: formData.get('email'),
+            phone: formData.get('telefone'),
+            area: formData.get('area'),
+            graduacao: formData.get('graduacao') || '',
+            utm_source: utms['utm_source'] || '',
+            utm_medium: utms['utm_medium'] || '',
+            utm_campaign: utms['utm_campaign'] || '',
+            utm_content: utms['utm_content'] || '',
+            utm_term: utms['utm_term'] || '',
+            utm_possui_graduacao: utms['utm_possui_graduacao'] || utms['utm_grad'] || utms['utm_graduacao'] || '',
+            utm_area_de_formacao: utms['utm_area_de_formacao'] || utms['utm_area'] || ''
+          };
 
-    // ============================================================
-    // NAVBAR SCROLL & LOGO RESIZE
-    // ============================================================
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    }, { passive: true });
+          currentContactId = formData.get('email');
 
-    // ============================================================
-    // MOBILE MENU (DROPDOWN PANEL)
-    // ============================================================
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuBackdrop = document.getElementById('menu-backdrop');
-    let menuOpen = false;
+          // Envia para o ActiveCampaign via Vercel Serverless Function
+          const p1 = fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).catch(err => console.error('ActiveCampaign Sync Error:', err));
 
-    function openMobileMenu() {
-      menuOpen = true;
-      mobileMenu.classList.add('open');
-      menuBackdrop.classList.add('open');
-      hamburgerBtn.setAttribute('aria-expanded', 'true');
-    }
+          // Envia para a API do Google Sheets em segundo plano
+          const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbc5ij7lcYBMHABEuCMFlAZZLfXo_5pSH2hbT2TnwPVZWcU7tkMjdPtDfTcvFnr0u9Aw/exec';
+          const p2 = fetch(SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).catch(err => console.warn('Erro ao enviar dados para Google Sheets:', err));
 
-    function closeMobileMenu() {
-      menuOpen = false;
-      mobileMenu.classList.remove('open');
-      menuBackdrop.classList.remove('open');
-      hamburgerBtn.setAttribute('aria-expanded', 'false');
-    }
+          // Aguarda envios antes do redirecionamento
+          await Promise.all([p1, p2]);
 
-    if (hamburgerBtn) {
-      hamburgerBtn.addEventListener('click', () => {
-        menuOpen ? closeMobileMenu() : openMobileMenu();
-      });
-    }
+          const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
 
-    // ============================================================
-    // SCHEDULE TABS
-    // ============================================================
-    function showTab(id) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-        btn.setAttribute('aria-selected', 'false');
-      });
-      const target = document.getElementById(id);
-      if (target) target.classList.add('active');
-
-      const btn = document.querySelector(`[aria-controls="${id}"]`);
-      if (btn) { btn.classList.add('active'); btn.setAttribute('aria-selected', 'true'); }
-    }
-
-    // ============================================================
-    // FAQ ACCORDION
-    // ============================================================
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      if (!item) return;
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(el => {
-        el.classList.remove('open');
-        el.querySelector('button').setAttribute('aria-expanded', 'false');
-      });
-      if (!isOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    }
-
-    // ============================================================
-    // SCROLL REVEAL
-    // ============================================================
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReduced) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
+          if (pendingTicket === 'basico') {
+            window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/QTSkah' : 'https://pay.voompcreators.com.br/14712/offer/4iFfHo';
+          } else if (pendingTicket === 'pro') {
+            window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/fIOTQu' : 'https://pay.voompcreators.com.br/14712/offer/OSkouA';
+          } else {
+            closeRegistrationModal();
+            openSuccessModal();
           }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    } else {
-      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-    }
-
-    // ============================================================
-    // PHONE MASK
-    // ============================================================
-    const telInputs = document.querySelectorAll('.tel-input');
-    telInputs.forEach(input => {
-      input.addEventListener('input', (e) => {
-        let v = e.target.value.replace(/\D/g, '').slice(0, 11);
-        if (v.length > 6) v = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
-        else if (v.length > 2) v = `(${v.slice(0, 2)}) ${v.slice(2)}`;
-        else if (v.length > 0) v = `(${v}`;
-        e.target.value = v;
       });
-    });
 
-    // ============================================================
-    // REGISTRATION MODAL LOGIC
-    // ============================================================
-    const regModal = document.getElementById('inscricao-modal');
-    
-    function openRegistrationModal() {
-      if(regModal) {
-        regModal.classList.remove('hidden');
-        regModal.classList.add('flex');
-        // trigger animation
-        setTimeout(() => {
-          regModal.classList.remove('opacity-0');
-          regModal.querySelector('div').classList.remove('scale-95');
-        }, 10);
-        document.body.style.overflow = 'hidden';
-      }
-    }
+      async function selectTicket(type) {
+        pendingTicket = type;
 
-    function closeRegistrationModal() {
-      if(regModal) {
-        regModal.classList.add('opacity-0');
-        regModal.querySelector('div').classList.add('scale-95');
-        setTimeout(() => {
-          regModal.classList.add('hidden');
-          regModal.classList.remove('flex');
-          document.body.style.overflow = '';
-        }, 300);
-      }
-    }
-
-    function openSuccessModal() {
-      const modal = document.getElementById('success-modal');
-      if (modal) {
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        setTimeout(() => {
-          modal.classList.add('open');
-        }, 10);
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeSuccessModal() {
-      const modal = document.getElementById('success-modal');
-      if (modal) {
-        modal.classList.remove('open');
-        setTimeout(() => {
-          modal.classList.add('hidden');
-          modal.classList.remove('flex');
-          document.body.style.overflow = '';
-        }, 300);
-      }
-    }
-
-    // ============================================================
-    // SMOOTH SCROLL WITHOUT HASH IN URL
-    // ============================================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href === '#') return;
-        const targetElement = document.querySelector(href);
-        if (targetElement) {
-          e.preventDefault();
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
+        if (!currentContactId) {
+          openRegistrationModal();
+          return;
         }
-      });
-    });
 
-  </script>
+        // Se já tiver o ID, redireciona direto
+        const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
+
+        if (type === 'basico') {
+          window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/QTSkah' : 'https://pay.voompcreators.com.br/14712/offer/4iFfHo';
+        } else {
+          window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/fIOTQu' : 'https://pay.voompcreators.com.br/14712/offer/OSkouA';
+        }
+      }
+
+
+
+      // ============================================================
+      // WEEKEND PROMO & COUNTDOWN
+      // ============================================================
+      function updatePromo() {
+        const dateNow = new Date();
+        const now = dateNow.getTime();
+        const dayOfWeek = dateNow.getDay(); // 0: Sun, 1: Mon, ..., 5: Fri, 6: Sat
+        
+        let isPromoActive = false;
+        let isCashbackActive = false;
+        let isWeekendPromoActive = false;
+        let target = null;
+        let promoText = '';
+
+        // Activate on Weekend (Saturday 6, Sunday 0)
+        if (dayOfWeek === 6 || dayOfWeek === 0) {
+          isPromoActive = true;
+          isWeekendPromoActive = true;
+          const daysUntilSunday = (7 - dayOfWeek) % 7;
+          const endOfSunday = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate() + daysUntilSunday, 23, 59, 59, 999);
+          target = endOfSunday.getTime();
+          promoText = 'NA COMPRA DE 1 INGRESSO, <span class="brand-gradient-text-light">LEVE OUTRO!</span>';
+        }
+        // Activate on Tuesday (2) and Wednesday (3)
+        else if (dayOfWeek === 2 || dayOfWeek === 3) {
+          isPromoActive = true;
+          isCashbackActive = true;
+          const daysUntilTarget = dayOfWeek === 2 ? 1 : 0; 
+          const endOfTarget = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate() + daysUntilTarget, 23, 59, 59, 999);
+          target = endOfTarget.getTime();
+          promoText = 'COMPRE E GANHE <span class="brand-gradient-text-light">100% DE CASHBACK!*</span>';
+        }
+
+        const stickyBanner = document.getElementById('sticky-banner');
+        const promoSection = document.getElementById('promocao');
+        const promoTextEl = document.getElementById('promo-text');
+        const cashbackCard = document.getElementById('cashback-card');
+
+        if (isPromoActive) {
+          if (stickyBanner) stickyBanner.style.display = 'flex';
+          if (promoSection) promoSection.style.display = isWeekendPromoActive ? 'block' : 'none';
+          if (promoTextEl) promoTextEl.innerHTML = promoText;
+          if (cashbackCard) cashbackCard.style.display = isCashbackActive ? 'block' : 'none';
+
+          const diff = target - now;
+          if (diff > 0) {
+            const d = Math.floor(diff / 86400000);
+            const h = Math.floor((diff % 86400000) / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            const s = Math.floor((diff % 60000) / 1000);
+
+            const setEl = (id, val) => {
+              document.querySelectorAll('.' + id).forEach(el => {
+                el.textContent = String(val).padStart(2, '0');
+              });
+            };
+
+            setEl('cd-days', d);
+            setEl('cd-hours', h);
+            setEl('cd-minutes', m);
+            setEl('cd-seconds', s);
+          }
+        } else {
+          if (stickyBanner) stickyBanner.style.display = 'none';
+          if (promoSection) promoSection.style.display = 'none';
+          if (cashbackCard) cashbackCard.style.display = 'none';
+        }
+      }
+      updatePromo();
+      setInterval(updatePromo, 1000);
+
+      // ============================================================
+      // HERO COUNTDOWN
+      // ============================================================
+      function updateCountdown() {
+        const target = new Date('2026-08-14T08:00:00-03:00').getTime();
+        const now = Date.now();
+        const diff = target - now;
+        if (diff <= 0) {
+          ['cd-days', 'cd-hours', 'cd-minutes', 'cd-seconds'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = '00';
+          });
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+
+        const setEl = (id, val) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = String(val).padStart(2, '0');
+        };
+
+        setEl('cd-days', d);
+        setEl('cd-hours', h);
+        setEl('cd-minutes', m);
+        setEl('cd-seconds', s);
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // ============================================================
+      // NAVBAR SCROLL & LOGO RESIZE
+      // ============================================================
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }, { passive: true });
+
+      // ============================================================
+      // MOBILE MENU (DROPDOWN PANEL)
+      // ============================================================
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuBackdrop = document.getElementById('menu-backdrop');
+      let menuOpen = false;
+
+      function openMobileMenu() {
+        menuOpen = true;
+        mobileMenu.classList.add('open');
+        menuBackdrop.classList.add('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeMobileMenu() {
+        menuOpen = false;
+        mobileMenu.classList.remove('open');
+        menuBackdrop.classList.remove('open');
+        hamburgerBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+          menuOpen ? closeMobileMenu() : openMobileMenu();
+        });
+      }
+
+
+
+      // ============================================================
+      // FAQ ACCORDION
+      // ============================================================
+      function toggleFaq(btn) {
+        const item = btn.closest('.faq-item');
+        if (!item) return;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('button').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      }
+
+      // ============================================================
+      // SCROLL REVEAL
+      // ============================================================
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      } else {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      }
+
+      // ============================================================
+      // PHONE MASK
+      // ============================================================
+      const telInputs = document.querySelectorAll('.tel-input');
+      telInputs.forEach(input => {
+        input.addEventListener('input', (e) => {
+          let v = e.target.value;
+          if (v.startsWith('+')) {
+            v = '+' + v.replace(/\D/g, '').slice(0, 15);
+          } else {
+            v = v.replace(/\D/g, '').slice(0, 15);
+          }
+          e.target.value = v;
+        });
+      });
+
+      // ============================================================
+      // REGISTRATION MODAL LOGIC
+      // ============================================================
+      const regModal = document.getElementById('inscricao-modal');
+
+      function openRegistrationModal() {
+        if (regModal) {
+          regModal.classList.remove('hidden');
+          regModal.classList.add('flex');
+          // trigger animation
+          setTimeout(() => {
+            regModal.classList.remove('opacity-0');
+            regModal.querySelector('div').classList.remove('scale-95');
+          }, 10);
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeRegistrationModal() {
+        if (regModal) {
+          regModal.classList.add('opacity-0');
+          regModal.querySelector('div').classList.add('scale-95');
+          setTimeout(() => {
+            regModal.classList.add('hidden');
+            regModal.classList.remove('flex');
+            document.body.style.overflow = '';
+          }, 300);
+        }
+      }
+
+      function openSuccessModal() {
+        const modal = document.getElementById('success-modal');
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          setTimeout(() => {
+            modal.classList.add('open');
+          }, 10);
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeSuccessModal() {
+        const modal = document.getElementById('success-modal');
+        if (modal) {
+          modal.classList.remove('open');
+          setTimeout(() => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+          }, 300);
+        }
+      }
+
+      // ============================================================
+      // SMOOTH SCROLL WITHOUT HASH IN URL
+      // ============================================================
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const targetElement = document.querySelector(href);
+          if (targetElement) {
+            e.preventDefault();
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+    </script>
 
 
 
