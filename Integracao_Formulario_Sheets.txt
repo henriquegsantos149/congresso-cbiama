@@ -1,0 +1,74 @@
+// ==============================================================================
+// SCRIPT DE INTEGRAÇÃO: FORMULÁRIO DO CONGRESSO -> GOOGLE SHEETS
+// ==============================================================================
+// 
+// PASSO A PASSO PARA CONFIGURAR:
+// 
+// 1. Crie uma nova planilha no Google Sheets (ou abra uma existente).
+// 2. No menu superior, vá em "Extensões" > "Apps Script".
+// 3. Apague todo o código existente no editor do Apps Script e COLE ESTE CÓDIGO ABAIXO.
+// 4. Clique no botão azul "Implantar" (no canto superior direito) > "Nova implantação".
+// 5. Clique no ícone de engrenagem ao lado de "Selecionar tipo" e escolha "App da Web".
+// 6. Preencha:
+//    - Descrição: Integração Formulário Congresso
+//    - Executar como: "Eu (seu-email@gmail.com)"
+//    - Quem pode acessar: "Qualquer pessoa" (MUITO IMPORTANTE!)
+// 7. Clique em "Implantar".
+// 8. O Google vai pedir autorização. Clique em "Autorizar acesso", escolha sua conta, 
+//    clique em "Avançado" e depois em "Acessar (não seguro)".
+// 9. Copie a "URL do app da Web" gerada (termina com /exec).
+// 10. No seu arquivo `formulario.html`, substitua a constante WEB_APP_URL com essa URL:
+//     const WEB_APP_URL = "SUA_URL_COPIADA_AQUI";
+//
+// ==============================================================================
+
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = JSON.parse(e.postData.contents);
+    
+    // Se a planilha estiver vazia (sem cabeçalhos), gera os cabeçalhos automaticamente com os títulos das perguntas
+    if (sheet.getLastRow() === 0) {
+      var headers = ["Data/Hora"];
+      
+      if (data.answers && Array.isArray(data.answers)) {
+        data.answers.forEach(function(item) {
+          headers.push("Q" + item.id + ": " + item.title);
+        });
+      }
+      
+      sheet.appendRow(headers);
+      
+      // Formatar o cabeçalho (Negrito, fundo verde, texto branco)
+      var headerRange = sheet.getRange(1, 1, 1, headers.length);
+      headerRange.setFontWeight("bold");
+      headerRange.setBackground("#038C4C");
+      headerRange.setFontColor("#FFFFFF");
+      sheet.setFrozenRows(1);
+    }
+    
+    // Data e Hora do envio
+    var dataHora = data.timestamp || Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "dd/MM/yyyy HH:mm:ss");
+    var row = [dataHora];
+    
+    // Adiciona a resposta de cada pergunta na ordem correspondente
+    if (data.answers && Array.isArray(data.answers)) {
+      data.answers.forEach(function(item) {
+        row.push(item.answer || "");
+      });
+    }
+    
+    sheet.appendRow(row);
+    
+    return ContentService.createTextOutput(JSON.stringify({ "success": true, "message": "Dados salvos com sucesso!" }))
+      .setMimeType(ContentService.MimeType.JSON);
+      
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({ "success": false, "error": error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doGet(e) {
+  return ContentService.createTextOutput("O Web App do Formulário está ativo e pronto para receber POSTs.");
+}
