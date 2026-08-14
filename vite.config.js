@@ -12,7 +12,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         sp: resolve(__dirname, 'sp/index.html'),
         brasil: resolve(__dirname, 'brasil/index.html'),
-        pesquisa: resolve(__dirname, 'pesquisa.html')
+        pesquisa: resolve(__dirname, 'pesquisa/index.html')
       }
     }
   }

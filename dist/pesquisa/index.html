@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/webp" href="./favicon.webp" />
+  <link rel="icon" type="image/webp" href="/favicon.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Pesquisa de Opinião - Congresso Brasileiro de Inteligência Artificial Aplicada ao Meio Ambiente.">
@@ -165,26 +165,6 @@
       background: rgba(3, 140, 76, 0.08);
       box-shadow: 0 0 15px rgba(3, 140, 76, 0.25);
     }
-
-    /* RATING BUTTONS */
-    .rating-btn {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      transition: all 0.2s ease;
-    }
-
-    .rating-btn:hover {
-      background: rgba(3, 140, 76, 0.2);
-      border-color: #038C4C;
-      color: #FFFFFF;
-    }
-
-    .rating-btn.selected {
-      background: #038C4C;
-      border-color: #6FA638;
-      color: #FFFFFF;
-      box-shadow: 0 0 15px rgba(3, 140, 76, 0.4);
-    }
   </style>
 </head>
 
@@ -199,13 +179,13 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       <!-- Logo -->
       <div class="flex items-center">
-        <img src="./logo.webp" alt="Logo do Congresso" class="h-12 sm:h-14 object-contain" width="220" height="60" />
+        <img src="/logo.webp" alt="Logo do Congresso" class="h-12 sm:h-14 object-contain" width="220" height="60" />
       </div>
 
       <!-- Header actions / info -->
       <div class="flex items-center gap-4">
         <span id="step-counter-text" class="text-xs font-semibold uppercase tracking-wider text-brand-deep">
-          Pergunta 1 de 12
+          Pergunta 1 de 13
         </span>
       </div>
     </div>
@@ -220,7 +200,7 @@
 
         <!-- PROGRESS BAR -->
         <div class="w-full bg-white/10 h-2 rounded-full mb-8 overflow-hidden">
-          <div id="progress-bar" class="h-full brand-gradient-bg transition-all duration-500 ease-out" style="width: 8.33%;"></div>
+          <div id="progress-bar" class="h-full brand-gradient-bg transition-all duration-500 ease-out" style="width: 7.69%;"></div>
         </div>
 
         <!-- FORM STEP CONTENT -->
@@ -268,13 +248,11 @@
     const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwBgodRLxAlajV-tvQkLqeEomrqmeohDawRifhyM4DLKQ4VC87fqsgb6HVT9cltB8eJXA/exec";
 
     // ============================================================
-    // QUESTIONS CONFIGURATION (12 PLACEHOLDER QUESTIONS)
-    // Substitua os textos e opções conforme necessário!
+    // QUESTIONS CONFIGURATION
     // ============================================================
     const questions = [
       {
         id: 1,
-        category: "O evento",
         title: "Como você avalia o congresso como um todo?",
         description: "Selecione a opção que melhor descreve sua avaliação geral.",
         type: "single",
