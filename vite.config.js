@@ -6,6 +6,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
+  plugins: [
+    {
+      name: 'rewrite-routes',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url === '/pesquisa') req.url = '/pesquisa/';
+          if (req.url === '/sp') req.url = '/sp/';
+          if (req.url === '/brasil') req.url = '/brasil/';
+          next();
+        });
+      }
+    }
+  ],
   build: {
     rollupOptions: {
       input: {
