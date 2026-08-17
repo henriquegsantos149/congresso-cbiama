@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/((?!pesquisa).*)",
+      "destination": "https://www.ambientalpro.com.br",
+      "permanent": true
+    }
+  ]
+}
