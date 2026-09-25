@@ -7,11 +7,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const apiKey = process.env.ACTIVE_API_KEY;
-  const apiBase = 'https://ambientalpro.api-us1.com/api/3';
+  const apiKey = process.env.ACTIVE_API_KEY || process.env.API_KEY_ACTIVE;
+  const apiBase = (process.env.API_URL_ACTIVE ? `${process.env.API_URL_ACTIVE}/api/3` : null) || 'https://ambientalpro.api-us1.com/api/3';
 
   if (!apiKey) {
-    return res.status(500).json({ error: 'Missing ACTIVE_API_KEY environment variable' });
+    return res.status(500).json({ error: 'Missing ACTIVE_API_KEY or API_KEY_ACTIVE environment variable' });
   }
 
   try {
@@ -44,48 +44,78 @@ export default async function handler(req, res) {
     const firstName = nameParts[0];
     const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
 
-    // Map custom fields (fieldValues)
+    // Cache or fetch custom field IDs from ActiveCampaign
+    let fieldMap = {};
+    try {
+      const fieldsRes = await fetch(`${apiBase}/fields?limit=100`, {
+        method: 'GET',
+        headers: { 'Api-Token': apiKey }
+      });
+      const fieldsData = await fieldsRes.json();
+      if (fieldsData.fields && Array.isArray(fieldsData.fields)) {
+        fieldsData.fields.forEach(f => {
+          fieldMap[f.title.trim().toLowerCase()] = f.id;
+        });
+      }
+    } catch (e) {
+      console.warn('Erro ao carregar campos customizados do ActiveCampaign:', e);
+    }
+
+    const getFieldId = (title, fallbackId) => {
+      const lower = title.trim().toLowerCase();
+      return fieldMap[lower] || fallbackId;
+    };
+
+    // Map custom fields (fieldValues) com os IDs exatos de [C2][CBIAMA] no ActiveCampaign
     const fieldValues = [];
 
-    // [C1][CBIAMA] UTM Term -> 780
+    // [C2][CBIAMA] UTM Term -> ID 908
     if (utm_term) {
-      fieldValues.push({ field: '780', value: utm_term });
+      const fieldId = getFieldId('[C2][CBIAMA] UTM Term', '908');
+      fieldValues.push({ field: fieldId, value: utm_term });
     }
 
-    // [C1][CBIAMA] UTM Possui Graduação -> 782
+    // [C2][CBIAMA] UTM Possui Graduação -> ID 910
     const possuiGrad = utm_possui_graduacao || utm_graduacao || utm_grad;
     if (possuiGrad) {
-      fieldValues.push({ field: '782', value: possuiGrad });
+      const fieldId = getFieldId('[C2][CBIAMA] UTM Possui Graduação', '910');
+      fieldValues.push({ field: fieldId, value: possuiGrad });
     }
 
-    // [C1][CBIAMA] UTM Área de Formação -> 783 (fallback to the selected 'area' form field)
+    // [C2][CBIAMA] UTM Área de Formação -> ID 911 (fallback para a área selecionada no form)
     const areaFormacao = utm_area_de_formacao || utm_area || area;
     if (areaFormacao) {
-      fieldValues.push({ field: '783', value: areaFormacao });
+      const fieldId = getFieldId('[C2][CBIAMA] UTM Área de Formação', '911');
+      fieldValues.push({ field: fieldId, value: areaFormacao });
     }
 
-    // [C1][CBIAMA] UTM Campaign -> 784
+    // [C2][CBIAMA] UTM Campaign -> ID 912
     if (utm_campaign) {
-      fieldValues.push({ field: '784', value: utm_campaign });
+      const fieldId = getFieldId('[C2][CBIAMA] UTM Campaign', '912');
+      fieldValues.push({ field: fieldId, value: utm_campaign });
     }
 
-    // [C1][CBIAMA] UTM Source -> 785
+    // [C2][CBIAMA] UTM Source -> ID 913
     if (utm_source) {
-      fieldValues.push({ field: '785', value: utm_source });
+      const fieldId = getFieldId('[C2][CBIAMA] UTM Source', '913');
+      fieldValues.push({ field: fieldId, value: utm_source });
     }
 
-    // [C1][CBIAMA] UTM Medium -> 786
+    // [C2][CBIAMA] UTM Medium -> ID 914
     if (utm_medium) {
-      fieldValues.push({ field: '786', value: utm_medium });
+      const fieldId = getFieldId('[C2][CBIAMA] UTM Medium', '914');
+      fieldValues.push({ field: fieldId, value: utm_medium });
     }
 
-    // [C1][CBIAMA] UTM Content -> 787
+    // [C2][CBIAMA] UTM Content -> ID 915
     if (utm_content) {
-      fieldValues.push({ field: '787', value: utm_content });
+      const fieldId = getFieldId('[C2][CBIAMA] UTM Content', '915');
+      fieldValues.push({ field: fieldId, value: utm_content });
     }
 
-    // UTM Data de Inscrição (Preencha com new Date().toISOString()) -> 781
-    fieldValues.push({ field: '781', value: new Date().toISOString() });
+    // [C2][CBIAMA] UTM Data de Inscrição -> ID 909
+    const dataInscricaoFieldId = getFieldId('[C2][CBIAMA] UTM Data de Inscrição', '909');
+    fieldValues.push({ field: dataInscricaoFieldId, value: new Date().toISOString() });
 
     const contactPayload = {
       contact: {
@@ -116,26 +146,45 @@ export default async function handler(req, res) {
     const contactId = syncData.contact.id;
     console.log(`Contato sincronizado com sucesso. ID: ${contactId}`);
 
-    // 2. Add Tag [C1][CBIAMA] Lead (ID: 454) to Contact
-    const tagResponse = await fetch(`${apiBase}/contactTags`, {
-      method: 'POST',
-      headers: {
-        'Api-Token': apiKey,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        contactTag: {
-          contact: contactId,
-          tag: '454'
-        }
-      }),
-    });
+    // 2. Add Tag [C2][CBIAMA] Lead (ID: 488) to Contact
+    const targetTagName = '[C2][CBIAMA] Lead';
+    let tagId = '488';
 
-    if (!tagResponse.ok) {
-      const tagData = await tagResponse.json();
-      console.warn(`Aviso: Falha ao adicionar tag ao contato. ${tagData.message || ''}`);
-    } else {
-      console.log(`Tag [C1][CBIAMA] Lead adicionada com sucesso ao contato ${contactId}`);
+    try {
+      const searchRes = await fetch(`${apiBase}/tags?search=${encodeURIComponent(targetTagName)}`, {
+        method: 'GET',
+        headers: { 'Api-Token': apiKey }
+      });
+      const searchData = await searchRes.json();
+      if (searchData.tags && searchData.tags.length > 0) {
+        const found = searchData.tags.find(t => t.tag === targetTagName);
+        if (found) tagId = found.id;
+      }
+    } catch (errTagSearch) {
+      console.warn('Erro ao buscar tag no ActiveCampaign:', errTagSearch);
+    }
+
+    if (tagId) {
+      const tagResponse = await fetch(`${apiBase}/contactTags`, {
+        method: 'POST',
+        headers: {
+          'Api-Token': apiKey,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contactTag: {
+            contact: contactId,
+            tag: tagId
+          }
+        }),
+      });
+
+      if (!tagResponse.ok) {
+        const tagData = await tagResponse.json();
+        console.warn(`Aviso: Falha ao adicionar tag ao contato. ${tagData.message || ''}`);
+      } else {
+        console.log(`Tag ${targetTagName} (ID: ${tagId}) adicionada com sucesso ao contato ${contactId}`);
+      }
     }
 
     return res.status(200).json({

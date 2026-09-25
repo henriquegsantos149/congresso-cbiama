@@ -599,46 +599,57 @@
 </head>
 
 <body class="font-body bg-[#F2F2F2] text-[#010A15] overflow-x-hidden">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTZ9NFFN"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- ============================================================
          STICKY BOTTOM BANNER
     ============================================================ -->
-  <div id="sticky-banner" style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 99999; background-color: #010A15;"
-    class="border-t-[6px] border-[#FFB800] shadow-[0_-10px_30px_rgba(0,0,0,0.5)] flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 py-4 lg:px-8 gap-4 md:gap-10 w-full">
-    <div class="text-center">
-      <p id="promo-text" class="text-brand-white font-black text-base sm:text-lg uppercase tracking-widest">
-        COMPRE E GANHE <span class="brand-gradient-text-light">100% DE CASHBACK!</span>
-      </p>
-    </div>
+  <!-- ============================================================
+       BANNER FIXO INFERIOR — VIRADA DE LOTE
+  ============================================================ -->
+  <div id="lote-banner"
+    style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 99999; display: flex;"
+    class="bg-[#010A15] border-t-4 border-brand-teal shadow-[0_-8px_40px_rgba(0,0,0,0.6)] flex-col sm:flex-row items-center justify-center px-4 sm:px-6 py-3 lg:px-8 gap-3 sm:gap-8 w-full">
 
-    <div class="flex items-center gap-1 sm:gap-3">
-      <div class="bg-white border border-gray-100 rounded px-2 sm:px-3 py-1.5 text-center min-w-[50px] shadow-sm">
-        <div class="font-display font-black text-lg sm:text-xl text-brand-dark leading-none cd-days">--</div>
-        <div class="text-[10px] text-brand-dark/60 uppercase font-bold tracking-wider">Dias</div>
-      </div>
-      <span class="text-brand-white/30 font-black mb-3 text-lg">:</span>
-      <div class="bg-white border border-gray-100 rounded px-2 sm:px-3 py-1.5 text-center min-w-[50px] shadow-sm">
-        <div class="font-display font-black text-lg sm:text-xl text-brand-dark leading-none cd-hours">--</div>
-        <div class="text-[10px] text-brand-dark/60 uppercase font-bold tracking-wider">Hrs</div>
-      </div>
-      <span class="text-brand-white/30 font-black mb-3 text-lg">:</span>
-      <div class="bg-white border border-gray-100 rounded px-2 sm:px-3 py-1.5 text-center min-w-[50px] shadow-sm">
-        <div class="font-display font-black text-lg sm:text-xl text-brand-dark leading-none cd-minutes">--</div>
-        <div class="text-[10px] text-brand-dark/60 uppercase font-bold tracking-wider">Min</div>
-      </div>
-      <span class="text-brand-white/30 font-black mb-3 text-lg">:</span>
-      <div class="bg-white border border-gray-100 rounded px-2 sm:px-3 py-1.5 text-center min-w-[50px] shadow-sm">
-        <div class="font-display font-black text-lg sm:text-xl text-brand-dark leading-none cd-seconds">--</div>
-        <div class="text-[10px] text-brand-dark/60 uppercase font-bold tracking-wider">Seg</div>
+    <!-- Lote info -->
+    <div class="flex items-center gap-3">
+      <div class="flex flex-col items-center sm:items-start">
+        <span id="lote-banner-label" class="text-brand-teal font-black text-xs uppercase tracking-widest">Lote 1 — Pré-venda</span>
+        <span id="lote-banner-msg" class="text-brand-white font-bold text-sm sm:text-base">Virada de lote em:</span>
       </div>
     </div>
 
-    <div class="hidden sm:block">
-      <a href="#ingressos"
-        class="inline-block px-8 py-3 brand-gradient-bg text-brand-white font-bold text-sm uppercase tracking-wider rounded-md shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all">
-        Garantir Agora
-      </a>
+    <!-- Countdown -->
+    <div class="flex items-center gap-1.5">
+      <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
+        <div id="lote-cd-days" class="font-display font-black text-xl text-brand-white leading-none">--</div>
+        <div class="text-[9px] text-brand-white/50 uppercase font-bold tracking-wider mt-0.5">Dias</div>
+      </div>
+      <span class="text-brand-teal/60 font-black text-lg">:</span>
+      <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
+        <div id="lote-cd-hours" class="font-display font-black text-xl text-brand-white leading-none">--</div>
+        <div class="text-[9px] text-brand-white/50 uppercase font-bold tracking-wider mt-0.5">Hrs</div>
+      </div>
+      <span class="text-brand-teal/60 font-black text-lg">:</span>
+      <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
+        <div id="lote-cd-minutes" class="font-display font-black text-xl text-brand-white leading-none">--</div>
+        <div class="text-[9px] text-brand-white/50 uppercase font-bold tracking-wider mt-0.5">Min</div>
+      </div>
+      <span class="text-brand-teal/60 font-black text-lg">:</span>
+      <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
+        <div id="lote-cd-seconds" class="font-display font-black text-xl text-brand-white leading-none">--</div>
+        <div class="text-[9px] text-brand-white/50 uppercase font-bold tracking-wider mt-0.5">Seg</div>
+      </div>
     </div>
+
+    <!-- CTA -->
+    <a href="#ingressos"
+      class="inline-block px-6 py-2.5 brand-gradient-bg text-brand-white font-extrabold text-xs uppercase tracking-widest rounded-lg shadow-lg hover:-translate-y-0.5 hover:shadow-brand-teal/30 transition-all whitespace-nowrap">
+      Garantir pelo preço atual
+    </a>
   </div>
 
   <!-- Google Tag Manager (noscript) -->
@@ -1430,7 +1441,7 @@
               <div class="mb-6 border-b border-gray-100 pb-6">
                 <span class="font-display font-black text-brand-dark dynamic-price-basico"
                   style="font-size: clamp(2.4rem, 8vw, 3.2rem); line-height: 1;">R$ 197</span>
-                <span class="text-brand-dark/40 text-sm font-bold">,00</span>
+                <span class="text-brand-dark/40 text-sm font-bold dynamic-centavos-basico">,00</span>
                 <span class="text-brand-dark/40 text-xs font-bold block mt-1 uppercase tracking-widest dynamic-lote-text">Lote Promocional</span>
               </div>
 
@@ -1459,6 +1470,12 @@
                   </svg>
                   <span class="font-medium">Interação ao vivo via Chat e Q&A</span>
                 </li>
+                <li class="flex items-start gap-3 text-brand-dark/80 text-sm">
+                  <svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="font-medium">Slidedecks, Apresentações e Materiais de Apoio para Download</span>
+                </li>
               </ul>
             </div>
 
@@ -1482,7 +1499,7 @@
               <div class="mb-6 border-b border-gray-100 pb-6">
                 <span class="font-display font-black text-brand-dark dynamic-price-pro"
                   style="font-size: clamp(2.4rem, 8vw, 3.2rem); line-height: 1;">R$ 297</span>
-                <span class="text-brand-dark/40 text-sm font-bold">,00</span>
+                <span class="text-brand-dark/40 text-sm font-bold dynamic-centavos-pro">,00</span>
                 <span class="text-brand-dark/40 text-xs font-bold block mt-1 uppercase tracking-widest dynamic-lote-text">Lote Promocional</span>
               </div>
 
@@ -1498,12 +1515,6 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Acesso VITALÍCIO às gravações de todas as palestras e oficinas</span>
-                </li>
-                <li class="flex items-start gap-3 text-brand-dark font-semibold text-sm">
-                  <svg class="w-5 h-5 text-brand-deep flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Slidedecks, Apresentações e Materiais de Apoio para Download</span>
                 </li>
               </ul>
             </div>
@@ -1609,6 +1620,32 @@
               </p>
             </div>
           </div>
+            <div class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+              <button class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none" aria-expanded="false" onclick="toggleFaq(this)">
+                <span class="font-bold text-brand-white text-base">Posso parcelar o pagamento?</span>
+                <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+                  <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Sim, o pagamento pode ser parcelado em até 3 vezes no cartão de crédito, conforme a operadora.</p>
+              </div>
+            </div>
+            <div class="faq-item reveal bg-brand-white/5 signature-shape border border-brand-white/10 overflow-hidden hover:border-brand-teal/30 transition-all shadow-sm">
+              <button class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none" aria-expanded="false" onclick="toggleFaq(this)">
+                <span class="font-bold text-brand-white text-base">Como receberei o acesso ao congresso após a inscrição?</span>
+                <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
+                  <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">Após a confirmação do pagamento, você receberá um e‑mail com login e senha para acessar a plataforma onde as transmissões estarão disponíveis.</p>
+              </div>
+            </div>
 
         </div>
       </div>
@@ -1640,7 +1677,7 @@
           Me inscrever agora
         </h3>
 
-        <form action="/api/register" method="POST" class="space-y-4 registration-form">
+        <form action="/api/subscribe" method="POST" class="space-y-4 registration-form">
           <div class="group">
             <label for="m-name"
               class="block text-brand-white/40 font-bold text-sm uppercase tracking-widest mb-1.5 group-focus-within:text-brand-green1 transition-colors">Nome
@@ -1871,6 +1908,104 @@
       let currentContactId = null;
       let pendingTicket = null;
 
+      // ============================================================
+      // SISTEMA DE LOTES — configuração centralizada
+      // ============================================================
+      const LOTES = [
+        {
+          nome: 'Lote 1 — Pré-venda',
+          fim:  new Date('2026-10-01T00:00:00-03:00'), // até 30/09
+          precoBasico: 'R$ 97',
+          centavosBasico: ',00',
+          precoBasicoNum: 97,
+          precoPro: 'R$ 147',
+          centavosPro: ',00',
+          precoProNum: 147,
+          urlBasico: 'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/uI6zYq',
+          urlPro:    'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/95F8Cs',
+        },
+        {
+          nome: 'Lote 2',
+          fim:  new Date('2026-10-04T00:00:00-03:00'),
+          precoBasico: 'R$ 116',
+          centavosBasico: ',00',
+          precoBasicoNum: 116.00,
+          precoPro: 'R$ 176',
+          centavosPro: ',40',
+          precoProNum: 176.40,
+          urlBasico: 'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/qC2kvl', // TODO: atualizar link
+          urlPro:    'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/7Vwarg', // TODO: atualizar link
+        },
+        {
+          nome: 'Lote 3',
+          fim:  new Date('2026-10-07T00:00:00-03:00'),
+          precoBasico: 'R$ 139',
+          centavosBasico: ',68',
+          precoBasicoNum: 139.68,
+          precoPro: 'R$ 211',
+          centavosPro: ',68',
+          precoProNum: 211.68,
+          urlBasico: 'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/41U6RH', // TODO: atualizar link
+          urlPro:    'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/0wyHds', // TODO: atualizar link
+        },
+        {
+          nome: 'Lote 4',
+          fim:  new Date('2026-10-10T00:00:00-03:00'),
+          precoBasico: 'R$ 167',
+          centavosBasico: ',62',
+          precoBasicoNum: 167.62,
+          precoPro: 'R$ 254',
+          centavosPro: ',02',
+          precoProNum: 254.02,
+          urlBasico: 'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/uI6zYq', // TODO: atualizar link
+          urlPro:    'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/95F8Cs', // TODO: atualizar link
+        },
+        {
+          nome: 'Lote 5',
+          fim:  new Date('2026-10-13T00:00:00-03:00'),
+          precoBasico: 'R$ 201',
+          centavosBasico: ',14',
+          precoBasicoNum: 201.14,
+          precoPro: 'R$ 304',
+          centavosPro: ',82',
+          precoProNum: 304.82,
+          urlBasico: 'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/uI6zYq', // TODO: atualizar link
+          urlPro:    'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/95F8Cs', // TODO: atualizar link
+        },
+        {
+          nome: 'Lote 6',
+          fim:  new Date('2026-10-16T00:00:00-03:00'),
+          precoBasico: 'R$ 241',
+          centavosBasico: ',37',
+          precoBasicoNum: 241.37,
+          precoPro: 'R$ 365',
+          centavosPro: ',78',
+          precoProNum: 365.78,
+          urlBasico: 'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/uI6zYq', // TODO: atualizar link
+          urlPro:    'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/95F8Cs', // TODO: atualizar link
+        },
+        {
+          nome: 'Lote 7',
+          fim:  new Date('2026-10-20T17:00:00-03:00'),
+          precoBasico: 'R$ 289',
+          centavosBasico: ',64',
+          precoBasicoNum: 289.64,
+          precoPro: 'R$ 438',
+          centavosPro: ',94',
+          precoProNum: 438.94,
+          urlBasico: 'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/uI6zYq', // TODO: atualizar link
+          urlPro:    'https://pay.voompcreators.com.br/XQycDzCupXNyZxpx/offer/95F8Cs', // TODO: atualizar link
+        },
+      ];
+
+      function getLoteAtual() {
+        const agora = new Date();
+        for (const lote of LOTES) {
+          if (agora < lote.fim) return lote;
+        }
+        return LOTES[LOTES.length - 1];
+      }
+
       function getUtms() {
         const utms = {};
         const params = new URLSearchParams(window.location.search);
@@ -1914,6 +2049,27 @@
 
           currentContactId = formData.get('email');
 
+          // Dispara eventos de conversão no Meta Pixel e GTM
+          if (typeof fbq === 'function') {
+            fbq('track', 'Lead', {
+              content_name: 'Inscrição II CBIAMA',
+              status: 'registered'
+            });
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({
+              event: 'lead_form_submitted',
+              formName: 'Inscrição II CBIAMA',
+              leadTag: '[C2][CBIAMA] Lead',
+              area: payload.area,
+              utm_source: payload.utm_source,
+              utm_medium: payload.utm_medium,
+              utm_campaign: payload.utm_campaign,
+              utm_term: payload.utm_term,
+              utm_content: payload.utm_content
+            });
+          }
+
           // Envia para o ActiveCampaign via Vercel Serverless Function
           const p1 = fetch('/api/subscribe', {
             method: 'POST',
@@ -1933,12 +2089,25 @@
           // Aguarda envios antes do redirecionamento
           await Promise.all([p1, p2]);
 
-          const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
+          const loteAtual = getLoteAtual();
 
-          if (pendingTicket === 'basico') {
-            window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/QTSkah' : 'https://pay.voompcreators.com.br/14712/offer/4iFfHo';
-          } else if (pendingTicket === 'pro') {
-            window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/fIOTQu' : 'https://pay.voompcreators.com.br/14712/offer/OSkouA';
+          if (pendingTicket === 'basico' || pendingTicket === 'pro') {
+            if (typeof fbq === 'function') {
+              fbq('track', 'InitiateCheckout', {
+                content_name: pendingTicket === 'basico' ? 'Ingresso Básico' : 'Ingresso Pro',
+                value: pendingTicket === 'basico' ? loteAtual.precoBasicoNum : loteAtual.precoProNum,
+                currency: 'BRL'
+              });
+            }
+            if (window.dataLayer) {
+              window.dataLayer.push({
+                event: 'initiate_checkout',
+                ticketType: pendingTicket,
+                ticketPrice: pendingTicket === 'basico' ? loteAtual.precoBasicoNum : loteAtual.precoProNum,
+                lote: loteAtual.nome
+              });
+            }
+            window.location.href = pendingTicket === 'basico' ? loteAtual.urlBasico : loteAtual.urlPro;
           } else {
             closeRegistrationModal();
             openSuccessModal();
@@ -1955,24 +2124,101 @@
         }
 
         // Se já tiver o ID, redireciona direto
-        const isLote1 = new Date().getTime() >= new Date('2026-05-21T21:00:00-03:00').getTime();
+        const loteAtual = getLoteAtual();
+
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', {
+            content_name: type === 'basico' ? 'Ingresso Básico' : 'Ingresso Pro',
+            value: type === 'basico' ? loteAtual.precoBasicoNum : loteAtual.precoProNum,
+            currency: 'BRL'
+          });
+        }
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            event: 'initiate_checkout',
+            ticketType: type,
+            ticketPrice: type === 'basico' ? loteAtual.precoBasicoNum : loteAtual.precoProNum,
+            lote: loteAtual.nome
+          });
+        }
 
         if (type === 'basico') {
-          window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/QTSkah' : 'https://pay.voompcreators.com.br/14712/offer/4iFfHo';
+          window.location.href = loteAtual.urlBasico;
         } else {
-          window.location.href = isLote1 ? 'https://pay.voompcreators.com.br/14712/offer/fIOTQu' : 'https://pay.voompcreators.com.br/14712/offer/OSkouA';
+          window.location.href = loteAtual.urlPro;
         }
       }
 
 
 
       // ============================================================
-      // WEEKEND PROMO & COUNTDOWN
+      // BANNER DE LOTE — COUNTDOWN + PREÇOS DINÂMICOS
+      // ============================================================
+      function updateLoteBanner() {
+        const agora = new Date();
+        const now = agora.getTime();
+        const lote = getLoteAtual();
+
+        // Atualiza preços nos cards
+        document.querySelectorAll('.dynamic-price-basico').forEach(el => {
+          el.textContent = lote.precoBasico;
+        });
+        document.querySelectorAll('.dynamic-price-pro').forEach(el => {
+          el.textContent = lote.precoPro;
+        });
+        document.querySelectorAll('.dynamic-lote-text').forEach(el => {
+          el.textContent = lote.nome;
+        });
+        // Atualiza centavos
+        const centavosBasicoEls = document.querySelectorAll('.dynamic-centavos-basico');
+        centavosBasicoEls.forEach(el => el.textContent = lote.centavosBasico);
+        const centavosProEls = document.querySelectorAll('.dynamic-centavos-pro');
+        centavosProEls.forEach(el => el.textContent = lote.centavosPro);
+
+        // Atualiza banner
+        const banner = document.getElementById('lote-banner');
+        const labelEl = document.getElementById('lote-banner-label');
+        const msgEl = document.getElementById('lote-banner-msg');
+
+        const diff = lote.fim.getTime() - now;
+
+        if (diff <= 0) {
+          // Lote encerrado / evento iniciado
+          if (labelEl) labelEl.textContent = 'Inscrições Encerradas';
+          if (msgEl) msgEl.textContent = 'O congresso já começou!';
+          document.getElementById('lote-cd-days').textContent = '00';
+          document.getElementById('lote-cd-hours').textContent = '00';
+          document.getElementById('lote-cd-minutes').textContent = '00';
+          document.getElementById('lote-cd-seconds').textContent = '00';
+          return;
+        }
+
+        if (labelEl) labelEl.textContent = lote.nome;
+
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+
+        const pad = v => String(v).padStart(2, '0');
+        document.getElementById('lote-cd-days').textContent    = pad(d);
+        document.getElementById('lote-cd-hours').textContent   = pad(h);
+        document.getElementById('lote-cd-minutes').textContent = pad(m);
+        document.getElementById('lote-cd-seconds').textContent = pad(s);
+
+        if (msgEl) msgEl.textContent = 'Virada de lote em:';
+      }
+
+      updateLoteBanner();
+      setInterval(updateLoteBanner, 1000);
+
+      // ============================================================
+      // WEEKEND PROMO (mantido mas sem sticky banner próprio)
       // ============================================================
       function updatePromo() {
         const dateNow = new Date();
         const now = dateNow.getTime();
-        const dayOfWeek = dateNow.getDay(); // 0: Sun, 1: Mon, ..., 5: Fri, 6: Sat
+        const dayOfWeek = dateNow.getDay();
         
         let isPromoActive = false;
         let isCashbackActive = false;
@@ -1980,7 +2226,6 @@
         let target = null;
         let promoText = '';
 
-        // Activate on Weekend (Saturday 6, Sunday 0)
         if (dayOfWeek === 6 || dayOfWeek === 0) {
           isPromoActive = true;
           isWeekendPromoActive = true;
@@ -1989,7 +2234,6 @@
           target = endOfSunday.getTime();
           promoText = 'NA COMPRA DE 1 INGRESSO, <span class="brand-gradient-text-light">LEVE OUTRO!</span>';
         }
-        // Activate on Tuesday (2) and Wednesday (3)
         else if (dayOfWeek === 2 || dayOfWeek === 3) {
           isPromoActive = true;
           isCashbackActive = true;
@@ -1999,37 +2243,13 @@
           promoText = 'COMPRE E GANHE <span class="brand-gradient-text-light">100% DE CASHBACK!*</span>';
         }
 
-        const stickyBanner = document.getElementById('sticky-banner');
         const promoSection = document.getElementById('promocao');
-        const promoTextEl = document.getElementById('promo-text');
         const cashbackCard = document.getElementById('cashback-card');
 
         if (isPromoActive) {
-          if (stickyBanner) stickyBanner.style.display = 'flex';
           if (promoSection) promoSection.style.display = isWeekendPromoActive ? 'block' : 'none';
-          if (promoTextEl) promoTextEl.innerHTML = promoText;
           if (cashbackCard) cashbackCard.style.display = isCashbackActive ? 'block' : 'none';
-
-          const diff = target - now;
-          if (diff > 0) {
-            const d = Math.floor(diff / 86400000);
-            const h = Math.floor((diff % 86400000) / 3600000);
-            const m = Math.floor((diff % 3600000) / 60000);
-            const s = Math.floor((diff % 60000) / 1000);
-
-            const setEl = (id, val) => {
-              document.querySelectorAll('.' + id).forEach(el => {
-                el.textContent = String(val).padStart(2, '0');
-              });
-            };
-
-            setEl('cd-days', d);
-            setEl('cd-hours', h);
-            setEl('cd-minutes', m);
-            setEl('cd-seconds', s);
-          }
         } else {
-          if (stickyBanner) stickyBanner.style.display = 'none';
           if (promoSection) promoSection.style.display = 'none';
           if (cashbackCard) cashbackCard.style.display = 'none';
         }
