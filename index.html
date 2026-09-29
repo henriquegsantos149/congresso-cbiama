@@ -1331,69 +1331,7 @@
 
 
 
-    <!-- ============================================================
-         PROMOÇÃO
-    ============================================================ -->
-    <section id="promocao" class="pt-16 sm:pt-20 pb-8 sm:pb-4 bg-[#F2F2F2] relative overflow-hidden"
-      aria-label="Promoção Compre 1 Leve 2">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div
-          class="bg-white border-2 border-brand-teal/20 rounded-3xl p-8 md:p-12 shadow-2xl shadow-brand-teal/10 reveal relative overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
-          <div class="absolute top-0 left-0 w-full h-1.5 brand-gradient-bg"></div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full max-w-6xl mx-auto">
-
-            <!-- Left Side: Text -->
-            <div class="text-center lg:text-left">
-              <h2
-                class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-brand-dark mb-6 uppercase leading-tight">
-                Na compra de 1 ingresso, <br><span class="brand-gradient-text-dark font-black">LEVE OUTRO!</span></h2>
-              <p class="text-gray-600 text-lg mb-0 font-medium leading-relaxed">Garanta o seu passaporte
-                para o Congresso Presencial e ganhe um ingresso extra para levar um acompanhante. Compartilhem juntos a
-                maior experiência de inteligência artificial aplicada ao meio ambiente do ano.</p>
-            </div>
-
-            <!-- Right Side: Countdown and CTA -->
-            <div
-              class="flex flex-col items-center justify-center bg-gray-50 p-6 sm:p-8 rounded-2xl border border-gray-100">
-              <p class="text-brand-dark text-base sm:text-lg uppercase tracking-widest mb-6 font-black text-center">A
-                oferta encerra em</p>
-
-              <div class="grid grid-cols-4 gap-3 sm:gap-4 mb-8 w-full max-w-lg mx-auto">
-                <div class="bg-white border border-gray-200 shadow-sm rounded-xl py-4 px-2 text-center">
-                  <div class="font-display font-black text-3xl sm:text-4xl text-yellow-500 leading-none mb-2 cd-days">--
-                  </div>
-                  <div class="text-[10px] sm:text-xs text-brand-dark/80 uppercase tracking-wider font-bold">Dias</div>
-                </div>
-                <div class="bg-white border border-gray-200 shadow-sm rounded-xl py-4 px-2 text-center">
-                  <div class="font-display font-black text-3xl sm:text-4xl text-yellow-500 leading-none mb-2 cd-hours">
-                    --</div>
-                  <div class="text-[10px] sm:text-xs text-brand-dark/80 uppercase tracking-wider font-bold">Hrs</div>
-                </div>
-                <div class="bg-white border border-gray-200 shadow-sm rounded-xl py-4 px-2 text-center">
-                  <div
-                    class="font-display font-black text-3xl sm:text-4xl text-yellow-500 leading-none mb-2 cd-minutes">--
-                  </div>
-                  <div class="text-[10px] sm:text-xs text-brand-dark/80 uppercase tracking-wider font-bold">Min</div>
-                </div>
-                <div class="bg-white border border-gray-200 shadow-sm rounded-xl py-4 px-2 text-center">
-                  <div
-                    class="font-display font-black text-3xl sm:text-4xl text-yellow-500 leading-none mb-2 cd-seconds">--
-                  </div>
-                  <div class="text-[10px] sm:text-xs text-brand-dark/80 uppercase tracking-wider font-bold">Seg</div>
-                </div>
-              </div>
-
-              <a href="#ingressos"
-                class="inline-block w-full sm:w-auto text-center py-4 px-10 brand-gradient-bg text-brand-white font-bold text-sm sm:text-base uppercase tracking-wider rounded-md shadow-xl shadow-brand-green1/20 hover:-translate-y-1 hover:shadow-2xl transition-all">
-                Garantir Meu Ingresso Duplo
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ============================================================
          INGRESSOS
@@ -1402,18 +1340,7 @@
       aria-label="Ingressos e preços">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <!-- CASHBACK CARD (PROMO DAYS) -->
-        <div id="cashback-card" style="display: none;" class="bg-[#010A15] rounded-3xl p-8 sm:p-12 shadow-2xl shadow-brand-teal/20 max-w-4xl mx-auto border border-brand-teal/30 reveal reveal-delay-1 mb-16 text-center relative overflow-hidden transform hover:-translate-y-1 transition-all">
-          <div class="absolute top-0 left-0 w-full h-1.5 brand-gradient-bg"></div>
-          
-          <div class="relative z-10">
-            <h3 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-brand-white mb-4 uppercase leading-tight tracking-tight">
-              100% do seu ingresso vira <br class="hidden sm:block">
-              <span class="brand-gradient-text-light text-4xl sm:text-5xl lg:text-6xl mt-2 inline-block">CASHBACK</span>
-            </h3>
-            <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-medium">O valor integral pago no seu ingresso online poderá ser abatido na matrícula de qualquer programa avançado da Ambiental Pro.</p>
-          </div>
-        </div>
+
 
         <div class="text-center mb-12 reveal">
           <h2 class="font-display font-black text-brand-dark mb-4 uppercase tracking-tight"
@@ -2217,50 +2144,7 @@
       updateLoteBanner();
       setInterval(updateLoteBanner, 1000);
 
-      // ============================================================
-      // WEEKEND PROMO (mantido mas sem sticky banner próprio)
-      // ============================================================
-      function updatePromo() {
-        const dateNow = new Date();
-        const now = dateNow.getTime();
-        const dayOfWeek = dateNow.getDay();
-        
-        let isPromoActive = false;
-        let isCashbackActive = false;
-        let isWeekendPromoActive = false;
-        let target = null;
-        let promoText = '';
 
-        if (dayOfWeek === 6 || dayOfWeek === 0) {
-          isPromoActive = true;
-          isWeekendPromoActive = true;
-          const daysUntilSunday = (7 - dayOfWeek) % 7;
-          const endOfSunday = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate() + daysUntilSunday, 23, 59, 59, 999);
-          target = endOfSunday.getTime();
-          promoText = 'NA COMPRA DE 1 INGRESSO, <span class="brand-gradient-text-light">LEVE OUTRO!</span>';
-        }
-        else if (dayOfWeek === 2 || dayOfWeek === 3) {
-          isPromoActive = true;
-          isCashbackActive = true;
-          const daysUntilTarget = dayOfWeek === 2 ? 1 : 0; 
-          const endOfTarget = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate() + daysUntilTarget, 23, 59, 59, 999);
-          target = endOfTarget.getTime();
-          promoText = 'COMPRE E GANHE <span class="brand-gradient-text-light">100% DE CASHBACK!*</span>';
-        }
-
-        const promoSection = document.getElementById('promocao');
-        const cashbackCard = document.getElementById('cashback-card');
-
-        if (isPromoActive) {
-          if (promoSection) promoSection.style.display = isWeekendPromoActive ? 'block' : 'none';
-          if (cashbackCard) cashbackCard.style.display = isCashbackActive ? 'block' : 'none';
-        } else {
-          if (promoSection) promoSection.style.display = 'none';
-          if (cashbackCard) cashbackCard.style.display = 'none';
-        }
-      }
-      updatePromo();
-      setInterval(updatePromo, 1000);
 
       // ============================================================
       // HERO COUNTDOWN
