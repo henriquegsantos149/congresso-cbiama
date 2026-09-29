@@ -683,7 +683,7 @@
         <!-- Desktop links -->
         <div class="hidden lg:flex items-center gap-8">
           <a href="#narrativa" class="nav-link text-xs uppercase tracking-wider">Narrativa</a>
-          <a href="#palestrantes" class="nav-link text-xs uppercase tracking-wider hidden">Palestrantes</a>
+          <a href="#palestrantes" class="nav-link text-xs uppercase tracking-wider">Palestrantes</a>
           <a href="#programacao" class="nav-link text-xs uppercase tracking-wider">Programação</a>
           <a href="#certificado" class="nav-link text-xs uppercase tracking-wider">Certificado</a>
           <a href="#ingressos" class="nav-link text-xs uppercase tracking-wider">Ingressos</a>
@@ -716,7 +716,7 @@
     <div id="mobile-menu" aria-label="Menu mobile" role="dialog">
       <!-- Links -->
       <a href="#narrativa" class="mobile-link" onclick="closeMobileMenu()">Narrativa</a>
-      <a href="#palestrantes" class="mobile-link hidden" onclick="closeMobileMenu()">Palestrantes</a>
+      <a href="#palestrantes" class="mobile-link" onclick="closeMobileMenu()">Palestrantes</a>
       <a href="#programacao" class="mobile-link" onclick="closeMobileMenu()">Programação</a>
       <a href="#certificado" class="mobile-link" onclick="closeMobileMenu()">Certificado</a>
       <a href="#ingressos" class="mobile-link" onclick="closeMobileMenu()">Ingressos</a>
@@ -1069,7 +1069,7 @@
     <!-- ============================================================
      PALESTRANTES
 ============================================================ -->
-    <section id="palestrantes" class="hidden py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden"
+    <section id="palestrantes" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden"
       aria-label="Palestrantes do congresso">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -1081,7 +1081,7 @@
             inteligência artificial aplicada à gestão e sustentabilidade ambiental.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
           <article class="reveal reveal-delay-1 group cursor-pointer w-full">
             <div
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-brand-green2/30 transition-all">
@@ -1131,24 +1131,6 @@
                   Vinícius Ragghianti</h3>
                 <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
                   Engenheiro Ambiental e Sanitarista, MBA em Gestão de Projetos</p>
-                <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="reveal reveal-delay-4 group cursor-pointer w-full">
-            <div
-              class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
-              <img src="/faculty/victor.webp" alt="Victor Valente Silvestre" width="300" height="400"
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
-                <h3
-                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
-                  Victor Valente Silvestre</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
-                  Engenheiro Sanitarista e Ambiental, Mestre e Pesquisador</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
               </div>
             </div>
@@ -1672,7 +1654,7 @@
             <li><a href="#narrativa"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Narrativa</a>
             </li>
-            <li class="hidden"><a href="#palestrantes"
+            <li><a href="#palestrantes"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Lineup</a>
             </li>
             <li><a href="#programacao"
