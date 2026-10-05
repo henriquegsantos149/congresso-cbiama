@@ -638,6 +638,7 @@
         <!-- Desktop links -->
         <div class="hidden lg:flex items-center gap-8">
           <a href="#narrativa" class="nav-link text-xs uppercase tracking-wider">Narrativa</a>
+          <a href="#eixos" class="nav-link text-xs uppercase tracking-wider">Eixos Temáticos</a>
           <a href="#palestrantes" class="nav-link text-xs uppercase tracking-wider">Palestrantes</a>
           <a href="#programacao" class="nav-link text-xs uppercase tracking-wider">Programação</a>
           <a href="#certificado" class="nav-link text-xs uppercase tracking-wider">Certificado</a>
@@ -645,13 +646,8 @@
           <a href="#faq" class="nav-link text-xs uppercase tracking-wider">FAQ</a>
         </div>
 
-        <!-- CTA + Hamburger -->
-        <div class="flex items-center gap-5">
-          <a href="#ingressos"
-            class="hidden sm:inline-flex items-center brand-gradient-bg text-white font-bold text-xs uppercase tracking-widest px-6 py-2.5 signature-shape-sm hover:-translate-y-1 transition-all shadow-md shadow-brand-teal/20">
-            GARANTIR INGRESSO
-          </a>
-
+        <!-- Hamburger (mobile) -->
+        <div class="flex items-center">
           <button id="hamburger-btn"
             class="lg:hidden p-2 text-white cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-green1 rounded-lg transition-transform active:scale-95"
             aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="mobile-menu">
@@ -671,6 +667,7 @@
     <div id="mobile-menu" aria-label="Menu mobile" role="dialog">
       <!-- Links -->
       <a href="#narrativa" class="mobile-link" onclick="closeMobileMenu()">Narrativa</a>
+      <a href="#eixos" class="mobile-link" onclick="closeMobileMenu()">Eixos Temáticos</a>
       <a href="#palestrantes" class="mobile-link" onclick="closeMobileMenu()">Palestrantes</a>
       <a href="#programacao" class="mobile-link" onclick="closeMobileMenu()">Programação</a>
       <a href="#certificado" class="mobile-link" onclick="closeMobileMenu()">Certificado</a>
@@ -932,6 +929,96 @@
           </div>
 
 
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EIXOS TEMÁTICOS
+    ============================================================ -->
+    <section id="eixos" class="py-16 sm:py-24 bg-brand-dark relative overflow-hidden" aria-label="Eixos Temáticos do Congresso">
+      <!-- Background details & ambient glow -->
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand-teal/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#6FA638]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute inset-0 carto-grid-subtle opacity-20 pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <!-- Section Header -->
+        <div class="text-center mb-12 reveal">
+          <h2 class="font-display font-bold text-brand-white mb-6 uppercase tracking-tight"
+            style="font-size: clamp(2rem, 4.5vw, 3.4rem); line-height: 1.05;">
+            EIXOS <span class="brand-gradient-text">TEMÁTICOS</span>
+          </h2>
+          <p class="text-brand-white/80 text-base sm:text-lg max-w-2xl mx-auto font-medium">
+            Os temas principais abordados durante as palestras e oficinas do II CBIAMA.
+          </p>
+        </div>
+
+        <!-- Eixos List (Apenas os Temas Principais) -->
+        <div class="space-y-4">
+
+          <!-- Item 1 -->
+          <div class="reveal reveal-delay-1 bg-brand-white/5 p-6 border border-brand-white/10 signature-shape hover:border-brand-teal/40 hover:bg-brand-white/[0.08] transition-all group flex items-center gap-6">
+            <div class="w-12 h-12 shrink-0 rounded-2xl bg-brand-teal/20 text-brand-teal flex items-center justify-center font-black text-xl group-hover:bg-brand-teal group-hover:text-white transition-all">
+              01
+            </div>
+            <h3 class="font-bold text-brand-white group-hover:text-brand-teal text-lg sm:text-xl transition-colors">
+              IA Generativa & Automação de Laudos e Estudos Ambientais
+            </h3>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="reveal reveal-delay-2 bg-brand-white/5 p-6 border border-brand-white/10 signature-shape hover:border-brand-teal/40 hover:bg-brand-white/[0.08] transition-all group flex items-center gap-6">
+            <div class="w-12 h-12 shrink-0 rounded-2xl bg-brand-teal/20 text-brand-teal flex items-center justify-center font-black text-xl group-hover:bg-brand-teal group-hover:text-white transition-all">
+              02
+            </div>
+            <h3 class="font-bold text-brand-white group-hover:text-brand-teal text-lg sm:text-xl transition-colors">
+              Visão Computacional & Sensoriamento Remoto Geoespacial
+            </h3>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="reveal reveal-delay-3 bg-brand-white/5 p-6 border border-brand-white/10 signature-shape hover:border-brand-teal/40 hover:bg-brand-white/[0.08] transition-all group flex items-center gap-6">
+            <div class="w-12 h-12 shrink-0 rounded-2xl bg-brand-teal/20 text-brand-teal flex items-center justify-center font-black text-xl group-hover:bg-brand-teal group-hover:text-white transition-all">
+              03
+            </div>
+            <h3 class="font-bold text-brand-white group-hover:text-brand-teal text-lg sm:text-xl transition-colors">
+              Sistemas de Agentes Autônomos de IA
+            </h3>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="reveal reveal-delay-1 bg-brand-white/5 p-6 border border-brand-white/10 signature-shape hover:border-brand-teal/40 hover:bg-brand-white/[0.08] transition-all group flex items-center gap-6">
+            <div class="w-12 h-12 shrink-0 rounded-2xl bg-brand-teal/20 text-brand-teal flex items-center justify-center font-black text-xl group-hover:bg-brand-teal group-hover:text-white transition-all">
+              04
+            </div>
+            <h3 class="font-bold text-brand-white group-hover:text-brand-teal text-lg sm:text-xl transition-colors">
+              IoT & Sensores de Monitoramento em Tempo Real
+            </h3>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="reveal reveal-delay-2 bg-brand-white/5 p-6 border border-brand-white/10 signature-shape hover:border-brand-teal/40 hover:bg-brand-white/[0.08] transition-all group flex items-center gap-6">
+            <div class="w-12 h-12 shrink-0 rounded-2xl bg-brand-teal/20 text-brand-teal flex items-center justify-center font-black text-xl group-hover:bg-brand-teal group-hover:text-white transition-all">
+              05
+            </div>
+            <h3 class="font-bold text-brand-white group-hover:text-brand-teal text-lg sm:text-xl transition-colors">
+              Gêmeos Digitais & Simulação Ambiental
+            </h3>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="reveal reveal-delay-3 bg-brand-white/5 p-6 border border-brand-white/10 signature-shape hover:border-brand-teal/40 hover:bg-brand-white/[0.08] transition-all group flex items-center gap-6">
+            <div class="w-12 h-12 shrink-0 rounded-2xl bg-brand-teal/20 text-brand-teal flex items-center justify-center font-black text-xl group-hover:bg-brand-teal group-hover:text-white transition-all">
+              06
+            </div>
+            <h3 class="font-bold text-brand-white group-hover:text-brand-teal text-lg sm:text-xl transition-colors">
+              Governança, Perícia Jurídica & Ética em IA
+            </h3>
+          </div>
 
         </div>
 
@@ -1582,6 +1669,9 @@
           <ul class="space-y-3">
             <li><a href="#narrativa"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Narrativa</a>
+            </li>
+            <li><a href="#eixos"
+                class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Eixos Temáticos</a>
             </li>
             <li><a href="#palestrantes"
                 class="text-brand-dark/60 hover:text-brand-teal transition-colors font-bold text-sm uppercase tracking-widest">Lineup</a>
