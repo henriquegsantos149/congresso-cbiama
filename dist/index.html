@@ -595,6 +595,47 @@
       background: #038C4C;
       border-radius: 4px;
     }
+
+    @media (max-width: 639px) {
+      #palestrantes .faculty-carousel {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-x: contain;
+        padding-bottom: 0.75rem;
+        scrollbar-width: thin;
+        scrollbar-color: #6FA638 transparent;
+      }
+
+      #palestrantes .faculty-carousel > article {
+        flex: 0 0 min(68%, 220px);
+        width: min(68%, 220px);
+        min-width: 0;
+        scroll-snap-align: start;
+      }
+
+      #palestrantes .faculty-carousel:focus-visible {
+        outline: 2px solid #6FA638;
+        outline-offset: 4px;
+      }
+    }
+
+    @media (max-width: 639px) {
+      .hero-edition-badge {
+        gap: 0.4rem;
+        padding-left: 0.65rem;
+        padding-right: 0.65rem;
+        white-space: nowrap;
+      }
+      .hero-edition-badge > span {
+        flex-shrink: 0;
+        font-size: clamp(8px, 2.4vw, 11px);
+        letter-spacing: 0.035em;
+      }
+    }
   </style>
 </head>
 
@@ -748,7 +789,7 @@
           <div class="lg:col-span-7 text-center lg:text-left">
             <!-- Sleek Badge -->
             <div
-              class="inline-flex items-center gap-3 bg-brand-white/[0.04] border border-brand-white/15 rounded-full px-5 py-2 mb-6 reveal backdrop-blur-md">
+              class="hero-edition-badge inline-flex items-center gap-3 bg-brand-white/[0.04] border border-brand-white/15 rounded-full px-5 py-2 mb-6 reveal backdrop-blur-md">
               <span class="w-2 h-2 rounded-full bg-brand-deep animate-pulse"></span>
               <span class="text-brand-white/90 text-xs font-extrabold tracking-widest uppercase">2ª Edição 100% Online</span>
               <span class="text-brand-white/20 text-xs">|</span>
@@ -1172,7 +1213,7 @@
 ============================================================ -->
     <section id="palestrantes" class="py-16 sm:py-24 bg-[#F2F2F2] relative overflow-hidden"
       aria-label="Palestrantes do congresso">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div class="text-center mb-20 reveal">
           <h2 class="font-display font-bold text-brand-dark mb-6 uppercase tracking-tight break-words"
@@ -1182,22 +1223,21 @@
             inteligência artificial aplicada à gestão e sustentabilidade ambiental.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 justify-center">
+        <p class="sm:hidden text-center text-sm text-gray-600 mb-4">Deslize para conhecer os palestrantes →</p>
+        <div class="faculty-carousel grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 justify-center" tabindex="0" role="region" aria-label="Palestrantes confirmados: deslize para os lados no celular">
           <article class="reveal reveal-delay-1 group cursor-pointer w-full">
             <div
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-brand-green2/30 transition-all">
               <img src="/faculty/henrique.webp" alt="Henrique Gonzalez" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
+            </div>
+            <div class="pt-4 px-1">
                 <h3
-                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  class="font-bold text-brand-dark text-lg mb-2 leading-tight">
                   Henrique Gonzalez</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                <p class="text-[#6FA638] text-sm font-semibold mb-3 leading-snug break-words">
                   Engenheiro Ambiental (UFRJ)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
-              </div>
             </div>
           </article>
 
@@ -1206,16 +1246,14 @@
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
               <img src="/faculty/hermann.webp" alt="Hermann Fernandes" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
+            </div>
+            <div class="pt-4 px-1">
                 <h3
-                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  class="font-bold text-brand-dark text-lg mb-2 leading-tight">
                   Hermann Fernandes</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                <p class="text-[#6FA638] text-sm font-semibold mb-3 leading-snug break-words">
                   Engenheiro Ambiental (UFRJ) e Especialista em Ciência de Dados</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
-              </div>
             </div>
           </article>
 
@@ -1224,16 +1262,14 @@
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
               <img src="/faculty/vinicius.webp" alt="Vinícius Ragghianti" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
+            </div>
+            <div class="pt-4 px-1">
                 <h3
-                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  class="font-bold text-brand-dark text-lg mb-2 leading-tight">
                   Vinícius Ragghianti</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                <p class="text-[#6FA638] text-sm font-semibold mb-3 leading-snug break-words">
                   Engenheiro Ambiental e Sanitarista, MBA em Gestão de Projetos</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
-              </div>
             </div>
           </article>
 
@@ -1242,16 +1278,14 @@
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
               <img src="/faculty/gabriela.webp" alt="Gabriela Luchetti" width="300" height="400"
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
+            </div>
+            <div class="pt-4 px-1">
                 <h3
-                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  class="font-bold text-brand-dark text-lg mb-2 leading-tight">
                   Gabriela Luchetti</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                <p class="text-[#6FA638] text-sm font-semibold mb-3 leading-snug break-words">
                   Engenheira Ambiental, Mestre e Doutoranda</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
-              </div>
             </div>
           </article>
 
@@ -1260,16 +1294,14 @@
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
               <img src="/faculty/dayana.webp" alt="Dayana Medeiros Garcia" width="1080" height="1080" loading="lazy"
                 class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700">
-              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80">
-              </div>
-              <div class="absolute bottom-0 left-0 right-0 p-4">
+            </div>
+            <div class="pt-4 px-1">
                 <h3
-                  class="font-bold text-brand-white text-lg mb-1 leading-tight group-hover:brand-gradient-text-light transition-colors">
+                  class="font-bold text-brand-dark text-lg mb-2 leading-tight">
                   Dayana Medeiros Garcia</h3>
-                <p class="text-[#6FA638] text-xs font-bold uppercase tracking-wider mb-3 leading-tight break-words">
+                <p class="text-[#6FA638] text-sm font-semibold mb-3 leading-snug break-words">
                   Engenheira Ambiental (UFMS) | Pós em ESG (PUC Campinas)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
-              </div>
             </div>
           </article>
         </div>
