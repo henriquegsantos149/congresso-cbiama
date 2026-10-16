@@ -75,6 +75,62 @@
     rel="stylesheet">
 
   <style>
+    /* Daily program */
+    #programacao { background: #f4f6f3; }
+    .schedule-tabs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin: 0 auto 28px; max-width: 650px; }
+    .schedule-tab { position: relative; padding: 18px 12px; border: 1px solid #dbe3dc; border-radius: 18px; background: #fff; color: #476058; cursor: pointer; transition: background .2s, box-shadow .2s, transform .2s; text-align: center; }
+    .schedule-tab[aria-selected="true"] { background: #034959; color: #fff; border-color: #034959; box-shadow: 0 8px 20px #03495922; transform: translateY(-3px); }
+    .schedule-tab[aria-selected="true"]::after { content: ''; position: absolute; bottom: -6px; left: calc(50% - 6px); width: 12px; height: 12px; background: #034959; transform: rotate(45deg); }
+    .schedule-tab[aria-selected="false"]:hover { background: #eaf2eb; transform: translateY(-2px); }
+    .schedule-tab:focus-visible { outline: 3px solid #6fa638; outline-offset: 4px; }
+    .schedule-tab-day { display: block; font-size: 10px; letter-spacing: .16em; font-weight: 800; opacity: .7; }
+    .schedule-tab-date { display: block; font-family: 'Outfit',sans-serif; font-size: 34px; font-weight: 700; line-height: 1.2; margin: 4px 0; }
+    .schedule-tab-date span { font-family: 'Montserrat',sans-serif; font-size: 11px; font-weight: 600; margin-left: 5px; }
+    .schedule-tab-weekday { display: block; font-size: 11px; }
+    .schedule-panel { background: #fff; border: 1px solid #dfe6e0; border-radius: 24px; overflow: hidden; box-shadow: 0 16px 50px #133d2410; }
+    .schedule-panel:not([hidden]) { animation: schedule-enter .25s ease-out; }
+    .schedule-day-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 26px 32px; color: #fff; background: linear-gradient(110deg,#012b34,#034959); }
+    .schedule-day-header > span { color: #c4e8b2; border-color: #ffffff25; font-size: 10px; }
+    .schedule-timeline { list-style: none; padding: 12px 32px 26px; margin: 0; }
+    .schedule-session { display: grid; grid-template-columns: 96px minmax(0,1fr); padding-top: 24px; }
+    .schedule-time { padding-top: 22px; color: #034959; }
+    .schedule-time time { display: block; font: 700 25px/1.2 'Outfit',sans-serif; }
+    .schedule-time span { display: block; margin-top: 4px; font-size: 11px; color: #7b8982; }
+    .schedule-session-body { position: relative; padding: 20px 24px 24px 30px; margin-left: 12px; border-left: 1px solid #dce7de; border-bottom: 1px solid #edf1ed; }
+    .schedule-session-body::before { content: ''; position: absolute; left: -5px; top: 31px; width: 9px; height: 9px; border-radius: 50%; background: #038c4c; box-shadow: 0 0 0 5px #eaf4ec; }
+    .schedule-session-type { color: #71946d; font-size: 9px; font-weight: 800; letter-spacing: .14em; }
+    .schedule-session h4 { margin: 7px 0 16px; font: 600 20px/1.4 'Outfit',sans-serif; color: #112d2c; }
+    .schedule-speaker { display: flex; gap: 10px; align-items: center; color: #577066; font-size: 12px; font-weight: 600; }
+    .schedule-speaker img,.schedule-avatar { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .schedule-avatar { display: grid; place-items: center; background: #e9f2eb; color: #038c4c; font-size: 10px; }
+    .schedule-workshop .schedule-session-body { background: #f3f7ed; border-radius: 0 16px 16px 0; border-bottom: 0; }
+    .schedule-workshop .schedule-session-type { color: #527f25; }
+    .schedule-break { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 20px 0 0; padding: 12px 16px; border-radius: 10px; background: #f4f6f4; color: #7c8981; font-size: 11px; }
+    .schedule-break-time { width: 92px; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+    .schedule-break-label { font-weight: 600; }
+    .schedule-break-label span { margin-right: 8px; }
+    @keyframes schedule-enter { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    @media(max-width: 639px) {
+      .schedule-tabs { gap: 8px; }
+      .schedule-tab { padding: 14px 6px; border-radius: 14px; }
+      .schedule-tab-date { font-size: 28px; }
+      .schedule-tab-weekday { font-size: 10px; }
+      .schedule-day-header { padding: 22px 20px; }
+      .schedule-day-header h3 { font-size: 25px; }
+      .schedule-timeline { padding: 4px 16px 22px; }
+      .schedule-session { grid-template-columns: 64px minmax(0,1fr); padding-top: 14px; }
+      .schedule-time { padding-top: 20px; }
+      .schedule-time time { font-size: 21px; }
+      .schedule-time span { font-size: 10px; }
+      .schedule-session-body { margin-left: 7px; padding: 18px 0 20px 19px; }
+      .schedule-session h4 { font-size: 17px; }
+      .schedule-speaker { font-size: 11px; gap: 8px; }
+      .schedule-workshop .schedule-session-body { padding-right: 12px; }
+      .schedule-break { padding: 10px; gap: 4px; font-size: 10px; }
+      .schedule-break-time { width: 82px; }
+    }
+    @media(prefers-reduced-motion: reduce) { .schedule-panel:not([hidden]) { animation: none; } .schedule-tab { transition: none; } }
+
     /* ============================================================
        BASE
     ============================================================ */
@@ -1372,6 +1428,20 @@
               <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
             </div>
           </article>
+
+          <article class="reveal reveal-delay-4 group w-full">
+            <div
+              class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/rafael.webp" alt="Rafael Tímbola" width="800" height="800" loading="lazy"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="pt-4 px-1">
+              <h3 class="font-bold text-brand-dark text-lg mb-2 leading-tight">Rafael Tímbola</h3>
+              <p class="text-[#6FA638] text-sm font-semibold mb-3 leading-snug break-words">
+                Engenheiro Ambiental, mestre em Engenharia (UPF) e Perito Judicial Ambiental</p>
+              <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -1379,79 +1449,153 @@
     <!-- ============================================================
      PROGRAMAÇÃO / SCHEDULE
     ============================================================ -->
-    <section id="programacao" class="py-16 sm:py-24 bg-[#F8F9FA] relative overflow-hidden" aria-label="Programação do Evento">
-      
-      <!-- Background details -->
-      <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-brand-green2/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-brand-green1/10 rounded-full blur-3xl"></div>
-
+    <section id="programacao" class="py-16 sm:py-24 bg-[#F8F9FA] relative overflow-hidden" aria-labelledby="programacao-titulo">
+      <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-brand-green2/10 rounded-full blur-3xl" aria-hidden="true"></div>
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div class="text-center mb-16 reveal">
-          <h2 class="font-display font-black text-brand-dark mb-6 uppercase tracking-tight break-words" style="font-size: clamp(1.8rem, 4.5vw, 3.4rem); line-height: 0.95;">
-            3 DIAS DE CONTEÚDO PRÁTICO <br><span class="brand-gradient-text-dark font-black">& VANGUARDA AMBIENTAL</span>
+        <div class="text-center mb-12 reveal">
+          <p class="text-brand-green1 font-bold text-xs uppercase tracking-widest mb-4">20 a 22 de outubro · Online e ao vivo</p>
+          <h2 id="programacao-titulo" class="font-display font-black text-brand-dark mb-6 uppercase tracking-tight break-words" style="font-size: clamp(1.8rem, 4.5vw, 3.4rem); line-height: 0.95;">
+            CONFIRA A <span class="brand-gradient-text-dark">PROGRAMAÇÃO</span>
           </h2>
-          <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
-            Imersão 100% online ao vivo com Palestras e Oficina Prática com os principais nomes da IA no Brasil.
-          </p>
+          <p class="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">Três dias de palestras e oficina prática sobre inteligência artificial aplicada ao meio ambiente.</p>
+          <p class="text-gray-500 text-sm mt-3">Todos os horários são de Brasília.</p>
         </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-          <!-- DIA 1: PALESTRAS -->
-          <div class="reveal reveal-delay-1 bg-white rounded-3xl p-6 border border-gray-200 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
-            <div>
-              <div class="text-brand-dark font-black text-2xl mb-1">20/10</div>
-              <div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-4">Terça-feira · 17h às 21h</div>
-              <h3 class="font-bold text-brand-dark text-base mb-3 leading-snug">
-                Palestras Ao Vivo · Dia 1
-              </h3>
-              <p class="text-gray-600 text-xs leading-relaxed mb-4">
-                Transmissões ao vivo com palestras de especialistas em inteligência artificial aplicada à gestão, sustentabilidade e inovação ambiental.
-              </p>
+        <div class="schedule-tabs" role="tablist" aria-label="Selecione o dia da programação">
+          <button type="button" id="programacao-tab-1" role="tab" aria-controls="programacao-painel-1" aria-selected="true" tabindex="0" class="schedule-tab">
+            <span class="schedule-tab-day">DIA 01</span><span class="schedule-tab-date">20<span>OUT</span></span><span class="schedule-tab-weekday">Terça-feira</span>
+          </button>
+          <button type="button" id="programacao-tab-2" role="tab" aria-controls="programacao-painel-2" aria-selected="false" tabindex="-1" class="schedule-tab">
+            <span class="schedule-tab-day">DIA 02</span><span class="schedule-tab-date">21<span>OUT</span></span><span class="schedule-tab-weekday">Quarta-feira</span>
+          </button>
+          <button type="button" id="programacao-tab-3" role="tab" aria-controls="programacao-painel-3" aria-selected="false" tabindex="-1" class="schedule-tab">
+            <span class="schedule-tab-day">DIA 03</span><span class="schedule-tab-date">22<span>OUT</span></span><span class="schedule-tab-weekday">Quinta-feira</span>
+          </button>
+        </div>
+        <div>
+          <article id="programacao-painel-1" role="tabpanel" aria-labelledby="programacao-tab-1" tabindex="0" class="schedule-panel">
+            <div class="schedule-day-header">
+              <div>
+                <h3 id="programacao-dia-1" class="font-display font-black text-3xl">20/10 <span class="text-sm font-medium ml-2">Terça-feira</span></h3>
+                <p class="text-white/80 text-sm mt-1">Dia 1 · Palestras ao vivo</p>
+              </div>
+              <span class="rounded-full border border-white/30 px-4 py-2 text-xs font-bold uppercase tracking-wider">Ao vivo</span>
             </div>
-            <div class="pt-4 border-t border-gray-100 text-[11px] font-bold text-brand-dark/50 uppercase">
-              Dia 1 de Evento Ao Vivo
+            <ol class="schedule-timeline">
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>17:10</time><span>até 18:00</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>IA na Perícia Ambiental</h4>
+                  <div class="schedule-speaker"><img src="/faculty/rafael.webp" alt="" width="36" height="36" loading="lazy"><p>Rafael Tímbola</p></div>
+                </div>
+              </li>
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>18:00</time><span>até 18:50</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>Consultoria Ambiental 5.0: como a IA está redefinindo o mercado e tornando a atuação mais segura, ágil e lucrativa</h4>
+                  <div class="schedule-speaker"><img src="/faculty/victor-silvestre.webp" alt="" width="36" height="36" loading="lazy"><p>Victor Valente Silvestre</p></div>
+                </div>
+              </li>
+                            <li class="schedule-break"><span class="schedule-break-time">18:50 — 19:00</span><span class="schedule-break-label"><span aria-hidden="true">↗</span> Breakout Room</span></li>
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>19:00</time><span>até 19:50</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>A IA é a ponta do iceberg: como uma consultoria ambiental está estruturando o uso da inteligência artificial</h4>
+                  <div class="schedule-speaker"><img src="/faculty/mauro.webp" alt="" width="36" height="36" loading="lazy"><p>Mauro Buarque</p></div>
+                </div>
+              </li>
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>19:50</time><span>até 20:40</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>Previsão de riscos climáticos com IA</h4>
+                  <div class="schedule-speaker"><img src="/faculty/tomas.webp" alt="" width="36" height="36" loading="lazy"><p>Thomas Martin</p></div>
+                </div>
+              </li>
+            </ol>
+          </article>
+          <article id="programacao-painel-2" role="tabpanel" aria-labelledby="programacao-tab-2" tabindex="0" hidden class="schedule-panel">
+            <div class="schedule-day-header">
+              <div>
+                <h3 id="programacao-dia-2" class="font-display font-black text-3xl">21/10 <span class="text-sm font-medium ml-2">Quarta-feira</span></h3>
+                <p class="text-white/80 text-sm mt-1">Dia 2 · Palestras + oficina prática</p>
+              </div>
+              <span class="rounded-full border border-white/30 px-4 py-2 text-xs font-bold uppercase tracking-wider">Oficina prática</span>
             </div>
-          </div>
-
-          <!-- DIA 2: PALESTRAS + OFICINA PRÁTICA -->
-          <div class="reveal reveal-delay-2 bg-[#010A15] text-white rounded-3xl p-6 border border-brand-teal/30 shadow-xl flex flex-col justify-between relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-brand-teal text-white font-extrabold text-[10px] px-4 py-1.5 rounded-bl-xl uppercase tracking-widest">
-              OFICINA PRÁTICA
+            <ol class="schedule-timeline">
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>17:10</time><span>até 18:00</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>Da simulação à decisão: Gêmeos Digitais, IA e governança ambiental</h4>
+                  <div class="schedule-speaker"><img src="/faculty/vinicius.webp" alt="" width="36" height="36" loading="lazy"><p>Vinícius Ragghianti</p></div>
+                </div>
+              </li>
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>18:00</time><span>até 18:50</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>O Futuro do Monitoramento Florestal - Integração de Sensores IoT, Sensoriamento Remoto e IA</h4>
+                  <div class="schedule-speaker"><img src="/faculty/esthevan.webp" alt="" width="36" height="36" loading="lazy"><p>Esthevan Augusto Goes Gasparoto</p></div>
+                </div>
+              </li>
+                            <li class="schedule-break"><span class="schedule-break-time">18:50 — 19:00</span><span class="schedule-break-label"><span aria-hidden="true">↗</span> Breakout Room</span></li>
+                            <li class="schedule-session schedule-workshop">
+                <div class="schedule-time"><time>19:00</time><span>até 21:00</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">OFICINA PRÁTICA</span>
+                  <h4>Oficina: Desenvolvimento de soluções ambientais com IA: Do conceito, protótipo funcional até a proposta comercial na prática</h4>
+                  <div class="schedule-speaker"><img src="/faculty/henrique.webp" alt="" width="36" height="36" loading="lazy"><p>Henrique Gonzalez</p></div>
+                </div>
+              </li>
+            </ol>
+          </article>
+          <article id="programacao-painel-3" role="tabpanel" aria-labelledby="programacao-tab-3" tabindex="0" hidden class="schedule-panel">
+            <div class="schedule-day-header">
+              <div>
+                <h3 id="programacao-dia-3" class="font-display font-black text-3xl">22/10 <span class="text-sm font-medium ml-2">Quinta-feira</span></h3>
+                <p class="text-white/80 text-sm mt-1">Dia 3 · Palestras ao vivo</p>
+              </div>
+              <span class="rounded-full border border-white/30 px-4 py-2 text-xs font-bold uppercase tracking-wider">Ao vivo</span>
             </div>
-            <div>
-              <div class="text-brand-deep font-black text-2xl mb-1">21/10</div>
-              <div class="text-white/40 font-bold text-xs uppercase tracking-wider mb-4">Quarta-feira · 17h às 21h</div>
-              <h3 class="font-bold text-white text-base mb-3 leading-snug">
-                Palestras + Oficina Prática
-              </h3>
-              <p class="text-gray-300 text-xs leading-relaxed mb-4">
-                Palestras focadas em metodologias práticas, soluções preditivas e a oficina prática mão na massa com ferramentas de IA.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-white/10 text-[11px] font-bold text-brand-deep uppercase">
-              Dia 2 de Evento Ao Vivo
-            </div>
-          </div>
-
-          <!-- DIA 3: PALESTRAS -->
-          <div class="reveal reveal-delay-3 bg-white rounded-3xl p-6 border border-gray-200 shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
-            <div>
-              <div class="text-brand-dark font-black text-2xl mb-1">22/10</div>
-              <div class="text-gray-400 font-bold text-xs uppercase tracking-wider mb-4">Quinta-feira · 17h às 21h</div>
-              <h3 class="font-bold text-brand-dark text-base mb-3 leading-snug">
-                Palestras Ao Vivo · Dia 3
-              </h3>
-              <p class="text-gray-600 text-xs leading-relaxed mb-4">
-                Palestras magnas de encerramento, apresentação de casos práticos e conclusão oficial do congresso.
-              </p>
-            </div>
-            <div class="pt-4 border-t border-gray-100 text-[11px] font-bold text-brand-dark/50 uppercase">
-              Dia 3 de Evento Ao Vivo
-            </div>
-          </div>
-
+            <ol class="schedule-timeline">
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>17:10</time><span>até 18:00</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>Predição de cenários futuros do uso da terra com IA</h4>
+                  <div class="schedule-speaker"><img src="/faculty/gabriela.webp" alt="" width="36" height="36" loading="lazy"><p>Gabriela Luchetti</p></div>
+                </div>
+              </li>
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>18:00</time><span>até 18:50</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>Revolução Ambiental: Como uma consultoria usa IA no dia a dia?</h4>
+                  <div class="schedule-speaker"><img src="/faculty/dayana.webp" alt="" width="36" height="36" loading="lazy"><p>Dayana Medeiros Garcia</p></div>
+                </div>
+              </li>
+                            <li class="schedule-break"><span class="schedule-break-time">18:50 — 19:00</span><span class="schedule-break-label"><span aria-hidden="true">↗</span> Breakout Room</span></li>
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>19:00</time><span>até 19:50</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>Tema a confirmar</h4>
+                  <div class="schedule-speaker"><img src="/faculty/vitor-sacramento.webp" alt="" width="36" height="36" loading="lazy"><p>Vitor Sacramento</p></div>
+                </div>
+              </li>
+                            <li class="schedule-session">
+                <div class="schedule-time"><time>19:50</time><span>até 20:40</span></div>
+                <div class="schedule-session-body">
+                  <span class="schedule-session-type">PALESTRA</span>
+                  <h4>Uso da IA na gestão de Unidades de Conservação</h4>
+                  <div class="schedule-speaker"><img src="/faculty/diego.webp" alt="" width="36" height="36" loading="lazy"><p>Diego Hernandes</p></div>
+                </div>
+              </li>
+            </ol>
+          </article>
         </div>
       </div>
     </section>
@@ -2593,6 +2737,33 @@
     })();
   </script>
 
+  <script>
+    (() => {
+      const tabs = Array.from(document.querySelectorAll('#programacao [role="tab"]'));
+      const selectDay = (selectedTab) => {
+        tabs.forEach((tab) => {
+          const active = tab === selectedTab;
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+          document.getElementById(tab.getAttribute('aria-controls')).hidden = !active;
+        });
+      };
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => selectDay(tab));
+        tab.addEventListener('keydown', (event) => {
+          let next;
+          if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+          if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === 'Home') next = 0;
+          if (event.key === 'End') next = tabs.length - 1;
+          if (next === undefined) return;
+          event.preventDefault();
+          selectDay(tabs[next]);
+          tabs[next].focus();
+        });
+      });
+    })();
+  </script>
 </body>
 
 </html>
