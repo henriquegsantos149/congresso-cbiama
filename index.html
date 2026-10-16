@@ -596,31 +596,39 @@
       border-radius: 4px;
     }
 
+
+    #palestrantes .faculty-carousel {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.5rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      padding-bottom: 0.75rem;
+    }
+    #palestrantes .faculty-carousel::-webkit-scrollbar { display: none; }
+    #palestrantes .faculty-carousel > article {
+      flex: 0 0 calc((100% - 4.5rem) / 4);
+      width: calc((100% - 4.5rem) / 4);
+      min-width: 0;
+      opacity: 1;
+      transform: none;
+    }
+    #palestrantes .faculty-carousel:focus-visible {
+      outline: 2px solid #6FA638;
+      outline-offset: 4px;
+    }
+    .faculty-carousel-shell { position: relative; padding: 0 3rem; }
+    .faculty-controls button { position: absolute; top: 35%; width: 2.5rem; height: 2.5rem; border: 1px solid #6FA638; border-radius: 999px; background: #F2F2F2; color: #010A15; font-size: 1.25rem; z-index: 2; }
+    .faculty-controls button:first-child { left: 0; }
+    .faculty-controls button:last-child { right: 0; }
+    .faculty-controls button:focus-visible { outline: 2px solid #034959; outline-offset: 3px; }
     @media (max-width: 639px) {
-      #palestrantes .faculty-carousel {
-        display: flex;
-        justify-content: flex-start;
-        gap: 1rem;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scroll-snap-type: x mandatory;
-        overscroll-behavior-x: contain;
-        padding-bottom: 0.75rem;
-        scrollbar-width: thin;
-        scrollbar-color: #6FA638 transparent;
-      }
-
-      #palestrantes .faculty-carousel > article {
-        flex: 0 0 min(68%, 220px);
-        width: min(68%, 220px);
-        min-width: 0;
-        scroll-snap-align: start;
-      }
-
-      #palestrantes .faculty-carousel:focus-visible {
-        outline: 2px solid #6FA638;
-        outline-offset: 4px;
-      }
+      .faculty-carousel-shell { padding: 0 2rem; }
+      .faculty-controls button { width: 1.75rem; height: 1.75rem; }
+      #palestrantes .faculty-carousel { gap: 1rem; }
+      #palestrantes .faculty-carousel > article { flex-basis: min(68%, 220px); width: min(68%, 220px); }
     }
 
     @media (max-width: 639px) {
@@ -658,31 +666,7 @@
     <!-- Lote info -->
     <div class="flex items-center gap-3">
       <div class="flex flex-col items-center sm:items-start">
-        <span id="lote-banner-label" class="text-brand-teal font-black text-xs uppercase tracking-widest">Lote 1 — Pré-venda</span>
-        <span id="lote-banner-msg" class="text-brand-white font-bold text-sm sm:text-base">Virada de lote em:</span>
-      </div>
-    </div>
-
-    <!-- Countdown -->
-    <div class="flex items-center gap-1.5">
-      <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
-        <div id="lote-cd-days" class="font-display font-black text-xl text-brand-white leading-none">--</div>
-        <div class="text-[9px] text-brand-white/50 uppercase font-bold tracking-wider mt-0.5">Dias</div>
-      </div>
-      <span class="text-brand-teal/60 font-black text-lg">:</span>
-      <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
-        <div id="lote-cd-hours" class="font-display font-black text-xl text-brand-white leading-none">--</div>
-        <div class="text-[9px] text-brand-white/50 uppercase font-bold tracking-wider mt-0.5">Hrs</div>
-      </div>
-      <span class="text-brand-teal/60 font-black text-lg">:</span>
-      <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
-        <div id="lote-cd-minutes" class="font-display font-black text-xl text-brand-white leading-none">--</div>
-        <div class="text-[9px] text-brand-white/50 uppercase font-bold tracking-wider mt-0.5">Min</div>
-      </div>
-      <span class="text-brand-teal/60 font-black text-lg">:</span>
-      <div class="bg-white/10 backdrop-blur border border-white/10 rounded-lg px-2.5 py-1.5 text-center min-w-[48px]">
-        <div id="lote-cd-seconds" class="font-display font-black text-xl text-brand-white leading-none">--</div>
-        <div class="text-[9px] text-brand-white/50 uppercase font-bold tracking-wider mt-0.5">Seg</div>
+        <span id="lote-banner-msg" class="text-brand-white font-bold text-sm sm:text-base">Garanta sua inscrição</span>
       </div>
     </div>
 
@@ -1224,7 +1208,7 @@
         </div>
 
         <p class="sm:hidden text-center text-sm text-gray-600 mb-4">Deslize para conhecer os palestrantes →</p>
-        <div class="faculty-carousel grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 justify-center" tabindex="0" role="region" aria-label="Palestrantes confirmados: deslize para os lados no celular">
+        <div class="faculty-carousel" tabindex="0" role="region" aria-label="Palestrantes confirmados — carrossel infinito">
           <article class="reveal reveal-delay-1 group cursor-pointer w-full">
             <div
               class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-brand-green2/30 transition-all">
@@ -1302,6 +1286,20 @@
                 <p class="text-[#6FA638] text-sm font-semibold mb-3 leading-snug break-words">
                   Engenheira Ambiental (UFMS) | Pós em ESG (PUC Campinas)</p>
                 <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
+            </div>
+          </article>
+
+          <article class="reveal reveal-delay-4 group w-full">
+            <div
+              class="relative aspect-[3/4] overflow-hidden signature-shape border border-gray-200 group-hover:border-[#6FA638]/30 transition-all">
+              <img src="/faculty/mauro.webp" alt="Mauro Buarque" width="800" height="800" loading="lazy"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700">
+            </div>
+            <div class="pt-4 px-1">
+              <h3 class="font-bold text-brand-dark text-lg mb-2 leading-tight">Mauro Buarque</h3>
+              <p class="text-[#6FA638] text-sm font-semibold mb-3 leading-snug break-words">
+                Biólogo, CEO da Método Ambiental e da Bioma Tecnologia e Inovação</p>
+              <div class="w-0 group-hover:w-full h-1 brand-gradient-bg transition-all duration-500"></div>
             </div>
           </article>
         </div>
@@ -2243,10 +2241,6 @@
         if (!lote.fim) {
           // Lote sem previsão de encerramento
           if (msgEl) msgEl.textContent = 'Último Lote Disponível';
-          document.getElementById('lote-cd-days').textContent    = '--';
-          document.getElementById('lote-cd-hours').textContent   = '--';
-          document.getElementById('lote-cd-minutes').textContent = '--';
-          document.getElementById('lote-cd-seconds').textContent = '--';
           return;
         }
 
@@ -2256,25 +2250,10 @@
           // Lote encerrado / evento iniciado
           if (labelEl) labelEl.textContent = 'Inscrições Encerradas';
           if (msgEl) msgEl.textContent = 'O congresso já começou!';
-          document.getElementById('lote-cd-days').textContent = '00';
-          document.getElementById('lote-cd-hours').textContent = '00';
-          document.getElementById('lote-cd-minutes').textContent = '00';
-          document.getElementById('lote-cd-seconds').textContent = '00';
           return;
         }
 
-        const d = Math.floor(diff / 86400000);
-        const h = Math.floor((diff % 86400000) / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-
-        const pad = v => String(v).padStart(2, '0');
-        document.getElementById('lote-cd-days').textContent    = pad(d);
-        document.getElementById('lote-cd-hours').textContent   = pad(h);
-        document.getElementById('lote-cd-minutes').textContent = pad(m);
-        document.getElementById('lote-cd-seconds').textContent = pad(s);
-
-        if (msgEl) msgEl.textContent = 'Virada de lote em:';
+        if (msgEl) msgEl.textContent = 'Garanta sua inscrição';
       }
 
       updateLoteBanner();
@@ -2481,6 +2460,68 @@
     </script>
 
 
+
+
+  <script>
+    (() => {
+      const track = document.querySelector('.faculty-carousel');
+      if (!track) return;
+      const cards = [...track.children];
+      const controls = document.createElement('div');
+      controls.className = 'faculty-controls';
+      controls.innerHTML = '<button type="button" aria-label="Palestrante anterior">←</button><button type="button" aria-label="Próximo palestrante">→</button>';
+      const shell = document.createElement('div');
+      shell.className = 'faculty-carousel-shell';
+      track.before(shell);
+      shell.append(track, controls);
+      for (const position of ['before', 'after']) {
+        const copies = cards.map(card => {
+          const copy = card.cloneNode(true);
+          copy.setAttribute('aria-hidden', 'true');
+          copy.inert = true;
+          return copy;
+        });
+        if (position === 'before') track.prepend(...copies);
+        else track.append(...copies);
+      }
+      let cycle = 0;
+      const measure = () => {
+        cycle = track.children[cards.length].offsetLeft - track.children[0].offsetLeft;
+        track.scrollLeft = cycle;
+      };
+      new ResizeObserver(measure).observe(track);
+      measure();
+      const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+      let hovering = false;
+      let resumeAt = 0;
+      track.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hovering = true; });
+      track.addEventListener('pointerleave', () => { hovering = false; });
+      for (const event of ['pointerdown', 'touchmove', 'wheel', 'keydown']) {
+        track.addEventListener(event, () => { resumeAt = performance.now() + 5000; }, { passive: true });
+      }
+      let loopTimer;
+      track.addEventListener('scroll', () => {
+        clearTimeout(loopTimer);
+        loopTimer = setTimeout(() => {
+          if (!cycle) return;
+          if (track.scrollLeft < cycle * 0.5) track.scrollLeft += cycle;
+          else if (track.scrollLeft >= cycle * 1.5) track.scrollLeft -= cycle;
+        }, 180);
+      }, { passive: true });
+      const step = direction => {
+        resumeAt = performance.now() + 5000;
+        const distance = track.children[1].offsetLeft - track.children[0].offsetLeft;
+        track.scrollBy({ left: direction * distance, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+      };
+      controls.children[0].addEventListener('click', () => step(-1));
+      controls.children[1].addEventListener('click', () => step(1));
+      setInterval(() => {
+        if (!reducedMotion.matches && !hovering && performance.now() > resumeAt && !document.hidden && !shell.matches(':focus-within')) {
+          step(1);
+        }
+      }, 6000);
+    })();
+  </script>
 
 </body>
 
