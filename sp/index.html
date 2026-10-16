@@ -1974,16 +1974,6 @@
 
           currentContactId = formData.get('email');
 
-          // Envio adicional independente; preserva integrações e rastreamento existentes.
-          fetch('/api/lead-webhook', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload),
-            keepalive: true
-          }).then(response => {
-            if (!response.ok) console.warn('Falha no envio adicional ao webhook');
-          }).catch(() => console.warn('Webhook adicional indisponível'));
-
           // Envia para o ActiveCampaign via Vercel Serverless Function
           const p1 = fetch('/api/subscribe', {
             method: 'POST',
