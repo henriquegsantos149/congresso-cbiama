@@ -1681,24 +1681,28 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 lg:gap-10 max-w-4xl mx-auto items-stretch">
+        <div class="grid grid-cols-1 gap-8 max-w-lg mx-auto items-stretch">
 
-          <!-- INGRESSO BÁSICO -->
+          <!-- INGRESSO PRO (MAIS VENDIDO) -->
           <div
-            class="reveal reveal-delay-1 bg-white signature-shape p-8 border border-gray-200 flex flex-col justify-between hover:border-brand-teal/40 hover:scale-[1.02] transition-all group shadow-xl shadow-gray-200/50">
+            class="reveal reveal-delay-2 bg-white signature-shape p-8 border-2 border-brand-deep flex flex-col justify-between relative shadow-2xl shadow-brand-deep/20 hover:scale-[1.02] transition-all">
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-extrabold text-[10px] px-6 py-1.5 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
+              RECOMENDADO / MAIS VENDIDO</div>
+
             <div>
-              <h3 class="font-bold text-brand-dark text-xl sm:text-2xl mb-2 mt-2">Ingresso Básico</h3>
-              <p class="text-gray-500 text-xs mb-6">Ideal para quem vai acompanhar todas as lives em tempo real.</p>
-              
+              <h3 class="font-bold text-brand-dark text-xl sm:text-2xl mb-2 mt-4">Ingresso Pro</h3>
+              <p class="text-gray-500 text-xs mb-6">Assista ao vivo e tenha acesso vitalício às gravações.</p>
+
               <div class="mb-6 border-b border-gray-100 pb-6">
-                <span class="font-display font-black text-brand-dark dynamic-price-basico"
-                  style="font-size: clamp(2.4rem, 8vw, 3.2rem); line-height: 1;">R$ 197</span>
-                <span class="text-brand-dark/40 text-sm font-bold dynamic-centavos-basico">,00</span>
+                <span class="font-display font-black text-brand-dark dynamic-price-pro"
+                  style="font-size: clamp(2.4rem, 8vw, 3.2rem); line-height: 1;">R$ 297</span>
+                <span class="text-brand-dark/40 text-sm font-bold dynamic-centavos-pro">,00</span>
                 <span class="text-brand-dark/40 text-xs font-bold block mt-1 uppercase tracking-widest dynamic-lote-text">Lote Promocional</span>
               </div>
 
               <ul class="space-y-4 mb-8">
-                <li class="flex items-start gap-3 text-brand-dark/80 text-sm">
+<li class="flex items-start gap-3 text-brand-dark/80 text-sm">
                   <svg class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                   </svg>
@@ -1727,40 +1731,6 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                   </svg>
                   <span class="font-medium">Slidedecks, Apresentações e Materiais de Apoio para Download</span>
-                </li>
-              </ul>
-            </div>
-
-            <button onclick="selectTicket('basico')"
-              class="w-full py-4 signature-shape border-2 border-brand-teal text-brand-teal font-extrabold text-xs uppercase tracking-wider group-hover:bg-brand-teal group-hover:text-brand-white transition-all">
-              GARANTIR INGRESSO BÁSICO
-            </button>
-          </div>
-
-          <!-- INGRESSO PRO (MAIS VENDIDO) -->
-          <div
-            class="reveal reveal-delay-2 bg-white signature-shape p-8 border-2 border-brand-deep flex flex-col justify-between relative shadow-2xl shadow-brand-deep/20 hover:scale-[1.02] transition-all">
-            <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 brand-gradient-bg text-brand-white font-extrabold text-[10px] px-6 py-1.5 signature-shape-sm uppercase tracking-widest whitespace-nowrap shadow-xl">
-              RECOMENDADO / MAIS VENDIDO</div>
-
-            <div>
-              <h3 class="font-bold text-brand-dark text-xl sm:text-2xl mb-2 mt-4">Ingresso Pro</h3>
-              <p class="text-gray-500 text-xs mb-6">Assista ao vivo e tenha acesso vitalício às gravações.</p>
-
-              <div class="mb-6 border-b border-gray-100 pb-6">
-                <span class="font-display font-black text-brand-dark dynamic-price-pro"
-                  style="font-size: clamp(2.4rem, 8vw, 3.2rem); line-height: 1;">R$ 297</span>
-                <span class="text-brand-dark/40 text-sm font-bold dynamic-centavos-pro">,00</span>
-                <span class="text-brand-dark/40 text-xs font-bold block mt-1 uppercase tracking-widest dynamic-lote-text">Lote Promocional</span>
-              </div>
-
-              <ul class="space-y-4 mb-8">
-                <li class="flex items-start gap-3 text-brand-dark font-semibold text-sm">
-                  <svg class="w-5 h-5 text-brand-deep flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Tudo do Ingresso Básico</span>
                 </li>
                 <li class="flex items-start gap-3 text-brand-dark font-extrabold text-sm text-brand-teal">
                   <svg class="w-5 h-5 text-brand-deep flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1839,7 +1809,7 @@
             <button
               class="w-full flex items-center justify-between gap-4 px-6 py-4 text-left cursor-pointer focus:outline-none"
               aria-expanded="false" onclick="toggleFaq(this)">
-              <span class="font-bold text-brand-white text-base">Qual a diferença entre o Ingresso Básico e o Ingresso Pro?</span>
+              <span class="font-bold text-brand-white text-base">O que está incluso no Ingresso Pro?</span>
               <div class="w-8 h-8 signature-shape-sm bg-brand-white/5 flex items-center justify-center flex-shrink-0">
                 <svg class="faq-icon w-4 h-4 text-brand-teal transition-transform duration-300" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor">
@@ -1849,7 +1819,7 @@
             </button>
             <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
               <p class="px-6 pb-4 text-brand-white/70 text-base leading-relaxed pt-1">
-                O Ingresso Básico dá acesso à transmissão ao vivo das palestras, oficina e certificado. O Ingresso Pro inclui tudo do Ingresso Básico e adiciona o acesso vitalício a todas as gravações do evento para você rever quando quiser, além do download dos materiais de apoio.
+                O Ingresso Pro inclui acesso à transmissão ao vivo das palestras, à oficina prática e ao certificado, além de acesso vitalício às gravações do evento e download dos materiais de apoio.
               </p>
             </div>
           </div>
@@ -2068,49 +2038,10 @@
           class="font-display font-bold text-brand-white text-4xl sm:text-5xl mb-6 uppercase tracking-tight">QUASE LÁ!
         </h2>
         <p class="text-brand-white/50 text-xl max-w-xl mx-auto font-medium">Seu interesse foi registrado. Agora, escolha
-          seu lote para garantir o valor atual.</p>
+          seu Ingresso Pro para garantir o valor atual.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
-        <!-- Básico -->
-        <div
-          class="bg-brand-white/5 signature-shape p-8 border border-brand-white/10 flex flex-col justify-between hover:border-brand-teal/40 transition-all group">
-          <div>
-            <p class="font-bold text-brand-teal text-xs uppercase tracking-widest mb-3">Transmissão Ao Vivo</p>
-            <h3 class="text-brand-white text-xl font-bold mb-2">Ingresso Básico</h3>
-            <div class="mb-4">
-              <span class="font-display font-bold text-brand-white dynamic-price-basico"
-                style="font-size: clamp(2.2rem, 10vw, 3rem); line-height: 1;">R$ 197</span><span
-                class="text-brand-white/40 text-sm font-bold">,00</span>
-            </div>
-
-            <ul class="space-y-3 mb-8 text-left">
-              <li class="flex items-center gap-3 text-brand-white/70 text-xs font-semibold uppercase tracking-wider">
-                <svg class="w-4 h-4 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                </svg>
-                Transmissão Ao Vivo das Palestras
-              </li>
-              <li class="flex items-center gap-3 text-brand-white/70 text-xs font-semibold uppercase tracking-wider">
-                <svg class="w-4 h-4 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                </svg>
-                Incluso Oficina 21/10 (com checkin)*
-              </li>
-              <li class="flex items-center gap-3 text-brand-white/70 text-xs font-semibold uppercase tracking-wider">
-                <svg class="w-4 h-4 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                </svg>
-                Certificado Digital Oficial
-              </li>
-            </ul>
-          </div>
-          <button onclick="selectTicket('basico')"
-            class="btn-basico w-full py-4 signature-shape border-2 border-brand-teal text-brand-teal font-extrabold text-xs uppercase tracking-widest group-hover:bg-brand-teal group-hover:text-brand-white transition-all">
-            GARANTIR INGRESSO BÁSICO
-          </button>
-        </div>
-
+      <div class="grid grid-cols-1 gap-8 max-w-lg mx-auto">
         <!-- Pro -->
         <div
           class="bg-brand-white/10 signature-shape p-8 border-2 border-brand-deep flex flex-col justify-between relative shadow-xl shadow-brand-deep/20">
@@ -2131,7 +2062,7 @@
                 <svg class="w-4 h-4 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
                 </svg>
-                Tudo do Ingresso Básico
+                Palestras ao vivo, oficina prática e certificado digital
               </li>
               <li class="flex items-center gap-3 text-brand-white font-extrabold text-xs uppercase tracking-wider text-brand-teal">
                 <svg class="w-4 h-4 text-brand-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -2371,6 +2302,7 @@
       });
 
       async function selectTicket(type) {
+        if (type !== 'pro') return;
         pendingTicket = type;
 
         if (!currentContactId) {
