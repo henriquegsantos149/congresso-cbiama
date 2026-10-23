@@ -4,5 +4,27 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://ambientalpro.com.br",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "destination": "https://ambientalpro.com.br",
+      "permanent": false
+    },
+    {
+      "source": "/sp/:path*",
+      "destination": "https://ambientalpro.com.br",
+      "permanent": false
+    },
+    {
+      "source": "/brasil/:path*",
+      "destination": "https://ambientalpro.com.br",
+      "permanent": false
+    }
   ]
 }
